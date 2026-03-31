@@ -1,6 +1,6 @@
 # FactSquid
-
-![FactSquid](transparent_kraken.png)
+> Change a fact. Let the squid work.
+<p align="center"><img src="transparent_kraken.png" width="400"></p>
 
 School policy management is broken in a predictable way. Policies live in Word documents and shared drives. Every change requires editing multiple files, reformatting for every channel, chasing approvals over email, and publishing to a website that nobody reads. Staff and parents call the school instead of consulting the handbook — because the handbook is a 60-page PDF that is already out of date.
 
