@@ -48,8 +48,11 @@ Every fact carries the following fields:
 | `channel_scope` | Which channels receive this fact on publication |
 | `approval_scope` | Which approval rule applies to changes on this fact |
 | `owner` | The role or user responsible for keeping this fact current |
-| `effective_date` | When this fact becomes live |
+| `publication_date` | When this fact is pushed to its channels — triggers the publication pipeline |
+| `effective_date` | When this fact's content is in force (e.g., a policy published in March but effective from September) |
 | `expiry_date` | When this fact triggers a review or sunset workflow |
+| `status` | `stub` or `live`. Stubs have metadata but no real content — placeholders proposed by the LLM to represent expected-but-unwritten sections. Stubs block publication on non-optional sections; they do not block commit. |
+| `group` | Optional. References a named group in tenant config. Facts inherit the group's shared metadata fields (`effective_date`, `expiry_date`, `approval_scope`). Per-fact overrides are allowed but flagged. Used for events and any other coherent publication bundle with shared lifecycle properties. |
 
 Scopes are multi-dimensional and independent. A fact can be visible to parents and staff (audience), appear in the handbook and newsletter (channel), and require legal sign-off (approval) — all configured separately.
 
@@ -65,18 +68,17 @@ Facts are stored as markdown files in a git repository. Metadata is stored as fr
 
 ---
 
-### D5 — Three document assembly models
+### D5 — Two document assembly models
 
-Documents are not uniformly structured. Three distinct assembly models were identified:
+Documents are not uniformly structured. Two distinct assembly models were identified:
 
 **Changelog (Newsletter)**
 Time-driven. Collects all facts changed within a period and assembles them into a narrative. The LLM writes connective language around the changed facts. No fixed structure — the structure emerges from what changed. Analogous to a game update changelog.
 
-**Taxonomy-driven (Policy / Handbook)**
+**Taxonomy-driven (Policy / Handbook / Event page)**
 Structure-driven. All facts matching a channel scope are assembled according to the channel template's section hierarchy. Topic tags determine placement. When a new fact is added, it auto-slots into the correct section. The document is always complete and always current.
 
-**Grouping-driven (Event)**
-Container-driven. An event is a named parent fact. Child facts of specific types (date, venue, schedule, dress code, catering) belong to it. The event renders as a self-contained unit — either a dedicated HTML page or a PDF. Facts need explicit typing for this model to work deterministically.
+Event pages are taxonomy-driven documents. An event's template defines sections (date, venue, schedule, dress code, catering); topic tags determine placement within those sections. The event's facts are scoped to the event's channels via `channel_scope`, and share lifecycle metadata via `group`. See D14.
 
 ---
 
@@ -126,7 +128,7 @@ The central loop of the system:
 4. **Coherence gate**: the system validates the bundle. If it would create an inconsistency, the bundle is extended with a resolution before being shown to the human
 5. **Human iteration**: the proposer reviews, edits, and confirms the bundle. The LLM adjusts on feedback
 6. **Approval routing**: the bundle is routed to approvers determined by the approval scope of the affected facts
-7. **Scheduled publication**: approved changes are queued for their effective date
+7. **Scheduled publication**: approved changes are queued for their publication date
 8. **Post-publish engagement**: triggered per fact change, based on engagement configuration
 
 **Key principle**: the LLM is not an assistant in this workflow — it is the primary author. The human's role is judgment and confirmation, not drafting.
@@ -217,6 +219,50 @@ The extracted approach was chosen on psychological grounds: administrators adopt
 Onboarding is structurally the first run of the change workflow, with document ingestion as the request. Administrators learn the review-and-confirm pattern on familiar content before any real change is made.
 
 **Cross-document deduplication**: schools uploading multiple documents (staff handbook, parent handbook, safeguarding policy) will have the same facts stated differently across them. The LLM detects overlapping content and proposes consolidation — one canonical fact with the appropriate channel and audience scope — rather than creating near-identical facts that will diverge over time. Proposed consolidations are surfaced explicitly during review, since merging two differently-worded statements of the same policy requires human judgement on which phrasing is authoritative.
+
+---
+
+### D14 — Event groups: shared metadata and multi-channel routing
+
+Events require two things the flat fact schema (D3) does not provide by default: shared lifecycle metadata across all facts belonging to the event, and multi-channel publication (PDF, HTML page, chatbot KB) from a single authoring act.
+
+**Shared metadata via the group registry**
+
+All facts in a spring break event share `publication_date`, `effective_date`, `expiry_date`, and `approval_scope`. Duplicating these across every fact creates a consistency risk — one mistyped date produces a valid-but-wrong fact the coherence gate cannot catch.
+
+Resolution: facts carry an optional `group` field referencing a named entry in tenant config (D12). The group definition holds the shared metadata:
+
+```yaml
+# Tenant config — group registry
+spring-break-2026:
+  publication_date: 2026-03-17
+  effective_date: 2026-04-14
+  expiry_date: 2026-04-22
+  approval_scope: head-of-school
+  default_channel_scope: [event-page, chatbot]
+```
+
+Facts in the group inherit these fields. Per-fact overrides are allowed (e.g., a logistics-only fact excluded from the chatbot) but are flagged during review. The coherence gate enforces that inherited and overridden dates are consistent within the group.
+
+**Multi-channel routing via `channel_scope`**
+
+Events publish to multiple channels: an event page (rendered as both HTML and PDF — two output formats of one channel), the chatbot KB, and optionally the newsletter. `channel_scope` handles this directly. The group's `default_channel_scope` sets the baseline; individual facts override where needed.
+
+**Progressive completion via stubs**
+
+An event is rarely fully detailed at creation time. When the LLM proposes a new event bundle, it examines the event template and proposes stub facts for all non-optional sections it cannot yet populate — each stub has full metadata (`type`, `group`, `topic_tags`, `owner`, `approval_scope`) but no real content. The administrator reviews and confirms the complete intended structure, including stubs, as part of the initial bundle. Stubs make gaps explicit and assignable from the first commit.
+
+Filling a stub is a normal D8 change workflow on an existing fact. The `owner` field creates the assignment — the stub is a concrete work item for a named role.
+
+Stubs do not block commit but do block publication on non-optional template sections. The publication pipeline checks for unresolved stubs before rendering and refuses to proceed if any remain. Reminders are sent to stub owners as `publication_date` approaches.
+
+**Why the grouping-driven model was retired (see D5)**
+
+The earlier framing — "an event is a named parent fact with child facts belonging to it" — introduced a fact-to-fact hierarchy, which D2 rejected for document structure. The same problem applies here. The group is not a fact; it is a configuration entity in the tenant config, already the established pattern for named approval rules and audience roles. Facts reference a config entity, not another fact. The flat fact store remains flat.
+
+**Why `type: event-detail/spring-break-2026` was rejected**
+
+The slash notation encodes both semantic category (`event-detail`) and instance identity (`spring-break-2026`) in a single field. This unbounds the type vocabulary — every new event creates a new type — and forces the pipeline to use prefix pattern-matching instead of exact matching. Type is a bounded semantic classifier. Instance identity belongs in `group`. Two fields, two concerns.
 
 ---
 
