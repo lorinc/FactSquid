@@ -2,7 +2,7 @@
 > Change a fact. Let the squid work.
 <p align="center"><img src="transparent_kraken.png" width="400"></p>
 
-School policy management is broken in a predictable way. Policies live in Word documents and shared drives. Every change requires editing multiple files, reformatting for every channel, chasing approvals over email, and publishing to a website that nobody reads. Staff and parents call the school instead of consulting the handbook — because the handbook is a 60-page PDF that is already out of date.
+School policy management is broken in a predictable way. Policies live in Word documents and shared drives. Newsletters are assembled by hand from scattered sources. Every change requires editing multiple files, reformatting for every channel, chasing approvals over email, and publishing to a website that nobody reads. Staff and parents call the school instead of consulting the handbook — because the handbook is a 60-page PDF that is already out of date, and the newsletter from last week contradicts it.
 
 FactSquid replaces documents with a **living corpus of facts**. A fact is a scoped paragraph on a single topic. Facts are the source of truth. Documents, newsletters, chatbot answers, and parent portals are all derived from the same facts — automatically, across every channel, every time something changes.
 
