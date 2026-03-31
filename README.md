@@ -1,6 +1,6 @@
 # FactSquid
 > Change a fact. Let the squid work.
-<p align="center"><img src="transparent_kraken.png" width="400"></p>
+<p align="center"><img src="data/transparent_kraken.png" width="400"></p>
 
 School policy management is broken in a predictable way. Policies live in Word documents and shared drives. Newsletters are assembled by hand from scattered sources. Every change requires editing multiple files, reformatting for every channel, chasing approvals over email, and publishing to a website that nobody reads. Staff and parents call the school instead of consulting the handbook — because the handbook is a 60-page PDF that is already out of date, and the newsletter from last week contradicts it.
 
@@ -22,6 +22,6 @@ FactSquid replaces documents with a **living corpus of facts**. A fact is a scop
 
 ## Design documents
 
-- [System Design](system-design.md) — full decision log with rationale for every architectural choice
-- [Change Loop — Workflow Diagram](workflow-change-loop.md) — the central workflow from request to post-publish engagement
-- [Core Data Model](data-model.md) — entities, relationships, and scope resolution rules
+- [System Design](docs/system-design.md) — full decision log with rationale for every architectural choice
+- [Change Loop — Workflow Diagram](docs/workflow-change-loop.md) — the central workflow from request to post-publish engagement
+- [Core Data Model](docs/data-model.md) — entities, relationships, and scope resolution rules
