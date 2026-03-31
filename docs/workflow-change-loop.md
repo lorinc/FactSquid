@@ -26,7 +26,7 @@ flowchart TD
     H -- rejected with notes --> F
     H -- approved --> I
 
-    I[Scheduled for effective date]
+    I[Scheduled for publication date]
     I --> J
 
     J([Publication date reached])

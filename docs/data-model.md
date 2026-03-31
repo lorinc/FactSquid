@@ -7,12 +7,14 @@ erDiagram
     TENANT ||--o{ CHANNEL : configures
     TENANT ||--o{ APPROVAL_RULE : configures
     TENANT ||--o{ AUDIENCE_ROLE : configures
+    TENANT ||--o{ GROUP : configures
 
     FACT }o--o{ TOPIC_TAG : tagged_with
     FACT }o--o{ CHANNEL : channel_scope
     FACT }o--o{ AUDIENCE_ROLE : audience_scope
     FACT }o--|| APPROVAL_RULE : approval_scope
     FACT ||--o{ CHANNEL_RENDITION : rendered_as
+    FACT }o--o| GROUP : belongs_to
 
     CHANNEL ||--|| CHANNEL_TEMPLATE : has
     CHANNEL_TEMPLATE ||--o{ TEMPLATE_SECTION : contains
@@ -40,7 +42,7 @@ erDiagram
 One school. Owns its entire corpus and all configuration. Strict data isolation — no cross-tenant visibility at any layer.
 
 **FACT**
-The atomic unit of the corpus. A markdown file in git. Carries five independent scope fields: `audience_scope`, `channel_scope`, `approval_scope`, `owner`, and temporal metadata (`effective_date`, `expiry_date`). The git log is the version history — no version entity in the application model.
+The atomic unit of the corpus. A markdown file in git. Carries five independent scope fields: `audience_scope`, `channel_scope`, `approval_scope`, `owner`, and temporal metadata (`publication_date`, `effective_date`, `expiry_date`). Also carries `status` (`stub` or `live`) and an optional `group` reference. Stubs have full metadata but no real content; they block publication on non-optional template sections but not commit. The git log is the version history — no version entity in the application model.
 
 **TOPIC_TAG**
 A flat label shared across facts and template sections. The join point between the corpus and document structure. Facts are tagged; sections declare which tags they display. A fact with tags `[dress-code, uniform]` appears in every section that maps to either tag, across all channels.
@@ -74,6 +76,9 @@ Post-publish engagement configuration for a specific change bundle. Type is eith
 
 **ENGAGEMENT_RESPONSE**
 One response per audience member per engagement. Tracks whether the member has acknowledged or submitted feedback, and when. Drives reminder logic and completion rate reporting.
+
+**GROUP**
+A named publication bundle defined in tenant config. Holds shared lifecycle metadata (`publication_date`, `effective_date`, `expiry_date`, `approval_scope`, `default_channel_scope`) inherited by all member facts. Per-fact overrides are allowed but flagged. Used for events and any other set of facts with a shared lifecycle. The group is not a fact — it is a configuration entity, consistent with the pattern used for approval rules and audience roles.
 
 ## Scope Resolution Rule
 
