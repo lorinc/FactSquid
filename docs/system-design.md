@@ -266,6 +266,43 @@ The slash notation encodes both semantic category (`event-detail`) and instance 
 
 ---
 
+### D15 — LLM call taxonomy: one output type per call, context by injection
+
+The system relies heavily on LLM judgment across every subsystem. Left unconstrained, LLM calls become the hardest part of the system to test, debug, and improve. The governing principle:
+
+**Each LLM call produces exactly one type of output.** Output types are: generate content, classify/tag, detect/identify, or infer structure. Calls that mix types fail in different ways simultaneously — the error is unlocatable, the call is untestable in isolation, and no single improvement to the prompt or model can fix both failure modes at once.
+
+**Context loss is not a reason to bundle.** The legitimate concern with splitting calls is that joint reasoning is lost — a single call drafting content and recommending tags can reason about both together. The mitigation is output chaining: the result of each call is passed as context into the next. A tag recommendation call receives the just-drafted content as input. The model has full context; the output is still narrow and validatable. Wider context is always addable to a narrow task. Bundling outputs is never the right solution to a context problem.
+
+**Structured output schemas are mandatory.** Every call in this taxonomy produces a machine-validatable output — a typed JSON schema with strict field requirements. Validation happens before the output is consumed by the next step. A call that returns a malformed structure is retried or escalated, not passed forward.
+
+#### Call taxonomy
+
+| # | Call | Subsystem | Output type | Output |
+|---|---|---|---|---|
+| 1 | Affected fact identification | Change workflow | Detect | Ranked list of fact IDs relevant to the request |
+| 2 | Fact content drafting | Change workflow | Generate | New or revised markdown content per fact |
+| 3 | Topic tag recommendation | Change workflow | Classify | Tag set per fact |
+| 4 | Template change identification | Change workflow | Infer structure | Required section additions or renames |
+| 5 | Coherence resolution | Change workflow | Generate | Specific resolution for one detected violation |
+| 6 | Bundle revision | Change workflow | Detect | Which bundle items to change, given human feedback |
+| 7 | Stub metadata generation | Event groups | Classify | Tags and owner suggestion per empty template section (no content) |
+| 8 | Heading hierarchy extraction | Onboarding | Infer structure | Section tree from document headings |
+| 9 | Topic tag inference | Onboarding | Classify | Tag set per section name |
+| 10 | Fact decomposition | Onboarding | Generate | List of atomic fact paragraphs per section |
+| 11 | Scope inference | Onboarding | Classify | `audience_scope` and `channel_scope` per document |
+| 12 | Overlap detection | Onboarding | Detect | Binary: do these two facts overlap? |
+| 13 | Consolidation drafting | Onboarding | Generate | Canonical merged fact content for an overlapping pair |
+| 14 | Channel transform | Publication | Generate | Channel-specific rendition of one fact for one channel |
+| 15 | Newsletter narrative assembly | Publication | Generate | Connective text linking changed facts in a changelog channel |
+| 16 | Q&A answer generation | Consumer interface | Generate | Grounded answer from retrieved facts |
+
+Calls 3 and 9 share a task type (tag classification) but operate in different contexts and will have different prompt configurations and evaluation sets. They are listed separately to make that explicit.
+
+Call 5 (coherence resolution) may loop — one call per violation, fed back into the coherence gate until the bundle is clean. Each iteration is a separate call with the current bundle state as context.
+
+---
+
 ## Supporting Documents
 
 - [Change Loop — Workflow Diagram](workflow-change-loop.md)
