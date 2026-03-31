@@ -20,6 +20,34 @@ FactSquid replaces documents with a **living corpus of facts**. A fact is a scop
 
 **Structural drift** → The system enforces corpus coherence as a hard constraint. A fact that appears nowhere, or a template section that references nothing, cannot be committed. Every proposed change ships as a coherent bundle.
 
+## What the system does automatically
+
+| When | What the system does |
+|---|---|
+| **Setting up a new school** | Reads your existing documents and maps their section structure |
+| | Infers which topic category each section belongs to |
+| | Splits each section into individual, self-contained policy facts |
+| | Works out who should see each document and which channels it belongs in |
+| | Spots when two documents say the same thing in different words |
+| | Drafts a single merged version of any duplicated content for your review |
+| **When a change is requested** | Finds which existing facts are affected by the request |
+| | Drafts updated or new policy text |
+| | Suggests which topic categories the new content belongs to |
+| | Identifies whether new document sections are needed to fit the new content |
+| | Adjusts the proposal in response to your feedback |
+| **Before anything is saved** | Detects when a change would leave a fact with nowhere to appear, or a section with nothing in it |
+| | Proposes a specific fix for each gap or inconsistency found |
+| **When publishing** | Rewrites each fact in the right tone for each channel — formal for policy documents, conversational for newsletters |
+| | Writes the connecting narrative that links updates together in a newsletter |
+| **When planning an event** | Generates placeholder entries for missing event sections with suggested owners |
+| **When someone asks a question** | Finds the relevant facts and writes a plain-language answer, noting exactly which facts it drew from |
+| **Always, in the background** | Manages the full change lifecycle — from request through approval to scheduled publication |
+| | Routes changes to the right approvers and tracks who has signed off |
+| | Schedules publication across all channels at the right time |
+| | Sends reminders for missing content and outstanding approvals |
+
+---
+
 ## Design documents
 
 - [System Design](docs/design/system-design.md) — full decision log with rationale for every architectural choice
