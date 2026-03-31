@@ -23,8 +23,7 @@ FactSquid replaces documents with a **living corpus of facts**. A fact is a scop
 ## Design documents
 
 - [System Design](docs/design/system-design.md) — full decision log with rationale for every architectural choice
-- [Change Loop — Workflow Diagram](docs/design/workflow-change-loop.md) — the central workflow from request to post-publish engagement
-- [Core Data Model](docs/design/data-model.md) — entities, relationships, and scope resolution rules
+- [Technical Design](docs/design/technical-design.md) — agent coding spec: project layout, module boundaries, LLM runtime, Temporal workflows, persistence layers, library manifest
 
 ## Build plan
 
