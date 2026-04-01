@@ -1,0 +1,40 @@
+[
+  {
+    "section": "2.4. Student Dress Code — General Guidance",
+    "fact_count": 12,
+    "overall": "The reconstruction contains missing content and a formatting issue in the rendering.",
+    "problems": [
+      {
+        "problem_type": "missing-content",
+        "description": "The reconstruction is missing the full context of the jewellery guideline: 'Jewellery must not dangle; no hoop earrings or large necklaces.' The phrase is incomplete and doesn't convey the full original guideline."
+      },
+      {
+        "problem_type": "wrong-render",
+        "description": "The item's section was labeled as 'General Everyday Style', but the bullet point rendering is inconsistent as it ends abruptly and does not properly conclude the thought, implying incomplete information."
+      }
+    ]
+  },
+  {
+    "section": "2.5. Staff Dress Code",
+    "fact_count": 8,
+    "overall": "The reconstruction omits key details and has structural issues affecting clarity.",
+    "problems": [
+      {
+        "problem_type": "missing-content",
+        "description": "The reconstruction is missing the end of the section with 'Underwear worn in' which is incomplete in the original, and this information is not carried over."
+      },
+      {
+        "problem_type": "wrong-render",
+        "description": "The bullet points should be combined into a continuous list without the 'Not acceptable:' repeated for each item, as the original format implies a singular list."
+      },
+      {
+        "problem_type": "over-atomized",
+        "description": "The phrase 'Indoor wearing of baseball caps or hats; high-heeled stiletto shoes or beach flip-flops (indoors).' was split into separate bullet points in the reconstruction, when it should remain as a single item."
+      },
+      {
+        "problem_type": "under-atomized",
+        "description": "The reconstruction has merged two distinct clothing categories, such as 'Leisure shorts, tracksuits, or sportswear' into one bullet, while these can be seen as separate categories in the original."
+      }
+    ]
+  }
+]

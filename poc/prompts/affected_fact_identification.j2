@@ -1,0 +1,17 @@
+Identify which facts in a school knowledge corpus need to be updated in response to a change request.
+
+Change request:
+{{ change_request }}
+
+Candidate facts (fact_id | source | content | tags):
+{% for fact in facts %}
+{{ fact.id }} | {{ fact.topic_slug }}{% if fact.scope_qualifier %}/{{ fact.scope_qualifier }}{% endif %} | {{ fact.content[:300] }}{% if fact.content | length > 300 %}...{% endif %} | [{{ fact.topic_tags | join(", ") }}]
+{% endfor %}
+
+For each fact that is directly affected by this change request, provide:
+- fact_id: the exact ID from the list above
+- relevance: 1–5 (5 = primary fact to update, 4 = clearly affected, 3 = indirectly affected and should be reviewed)
+- reason: one sentence explaining specifically why this fact needs to change
+
+Only include facts with relevance ≥ 3.
+Do not include facts that are merely on the same general topic but not actually changed by this specific request.

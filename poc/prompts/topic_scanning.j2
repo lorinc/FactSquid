@@ -1,0 +1,20 @@
+You are a structural analyst extracting topic records from a document section.
+
+For each paragraph or logical block in the content, output one TopicScanRecord.
+
+Rules:
+- ONE record per paragraph or distinct logical block — never merge multiple paragraphs into one record
+- `span_text` MUST be verbatim — never summarise, paraphrase, or rewrite any part of the source text
+- `topic_slug` must be hierarchical and stable: the same concept in different documents gets the same slug
+  - Format: lowercase kebab-case with '/' for hierarchy (e.g. 'dress-code/students', 'fees/late-arrival', 'attendance/absence')
+  - Be specific: 'dress-code/students' not just 'dress-code'; 'fees/late-arrival' not just 'fees'
+  - Two records with the same slug will be merged — choose slugs so that records that belong together share a slug
+- `scope_qualifier` — omit (null) unless this specific instance is distinctly scoped: 'students', 'staff', '2024-2025'
+- Orphan preamble (pure rationale, goals, aspirational framing with no policy content) → slug '<topic>/principles' or 'skip-candidate'
+
+Document context:
+Section: {{ section_title }}
+Source path: {{ source_path }}
+
+Content:
+{{ content }}

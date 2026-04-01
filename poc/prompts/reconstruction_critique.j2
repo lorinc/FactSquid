@@ -1,0 +1,25 @@
+Compare a topic document to its reconstruction from extracted facts.
+Identify specific extraction problems against the Five Tests.
+
+TOPIC DOCUMENT (source of truth):
+━━━
+{{ topic_document }}
+━━━
+
+RECONSTRUCTION (concatenated extracted facts):
+━━━
+{{ reconstructed_content }}
+━━━
+
+Find up to 4 specific problems. For each, classify as:
+- over-atomized: one logical unit split into too many facts
+- under-atomized: multiple distinct topics merged into one fact
+- missing-content: any obligation, permission, exception, or numerical value absent from reconstruction
+- not-standalone: fails Test 1 — implied "who", "when", or "except what" without stating it explicitly
+- not-canonical: fails Test 4 — navigation language, passive construction, redundant preamble
+- not-template-ready: fails Test 5 — audience-specific or channel-specific framing baked in
+- wrong-tags: topic tags missing or inconsistent with topic_slug
+- other: any other quality issue
+
+Quote exact text from the topic document when describing each problem.
+If the reconstruction is good, return an empty problems list.

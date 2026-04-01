@@ -1,0 +1,20 @@
+Assign topic tags to each section of a school document.
+
+For each section, assign 1–5 tags in kebab-case describing the policy area or topic.
+
+Tag vocabulary guidance:
+- Use general, reusable tags that will apply consistently across multiple school documents
+- Good examples: dress-code, medication-policy, safeguarding, child-protection, trips-and-outings, behaviour-policy, attendance, health-and-safety, mobile-phones, data-protection, communication, fees-and-payments, admissions
+- Avoid overly specific tags like "handbook-section-3" or overly broad tags like "school-rules"
+- Sections covering the same topic from different angles should share the common tag AND each have a distinguishing tag. For example, student dress code and staff dress code both get "dress-code", and also get "students" and "staff" respectively
+- Prefer existing tag vocabulary over inventing new terms for the same concept
+
+Return one entry per section, in the same order as the input list.
+
+Sections:
+{% for section in sections %}
+---
+Title: {{ section.title }}
+Preview: {{ section.content[:300] }}{% if section.content | length > 300 %}...{% endif %}
+
+{% endfor %}

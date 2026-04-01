@@ -1,0 +1,454 @@
+[
+  {
+    "id": "test_doc_4_dress_code__2_4_student_dress_code_general_guidance__0",
+    "content": "**Headwear:** Hats will only be worn during playground time to protect from the sun.",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "students",
+      "health-and-safety"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.4. Student Dress Code — General Guidance"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_4_student_dress_code_general_guidance__1",
+    "content": "**Headwear:** Religious headwear may always be worn, provided it does not obscure the student's vision; it must be removed for all PE lessons for health and safety reasons.",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "students",
+      "health-and-safety"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.4. Student Dress Code — General Guidance"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_4_student_dress_code_general_guidance__2",
+    "content": "**Headwear:** Hair can be any length and any style. For PE, long hair must be tied back for safety.",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "students",
+      "health-and-safety"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.4. Student Dress Code — General Guidance"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_4_student_dress_code_general_guidance__3",
+    "content": "**Footwear:** Flat, enclosed shoes must be worn outdoors — comfortable, fastened with laces, buckles, zips, or velcro, and students must be able to put them on and take them off independently.",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "students",
+      "health-and-safety"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.4. Student Dress Code — General Guidance"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_4_student_dress_code_general_guidance__4",
+    "content": "**Footwear:** Indoor shoes must be closed-toe to ensure safe walking; no bulky, furry, or flip-flop styles. Anti-slip socks are also recommended.",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "students",
+      "health-and-safety"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.4. Student Dress Code — General Guidance"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_4_student_dress_code_general_guidance__5",
+    "content": "**General Everyday Style:** Jewellery must not dangle; no hoop earrings or large necklaces (health and safety). On PE days, students must be able to remove stud earrings or other items as required.",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "students",
+      "health-and-safety"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.4. Student Dress Code — General Guidance"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_4_student_dress_code_general_guidance__6",
+    "content": "**General Everyday Style:** Subtle make-up may be worn from Year 7 upwards (e.g., mascara, powder, foundation, nail varnish); no lipstick.",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "students"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.4. Student Dress Code — General Guidance"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_4_student_dress_code_general_guidance__7",
+    "content": "**General Everyday Style:** Acrylic nails may not be longer than two millimetres from the fingertip (health and safety).",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "students",
+      "health-and-safety"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.4. Student Dress Code — General Guidance"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_4_student_dress_code_general_guidance__8",
+    "content": "**General Everyday Style:** Shorts and skirts must cover the upper thighs (¾ length or longer). Cycling shorts are permitted on PE days but must also cover the upper thighs.",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "students"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.4. Student Dress Code — General Guidance"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_4_student_dress_code_general_guidance__9",
+    "content": "**General Everyday Style:** All clothes must be without holes or rips. All underwear must be covered by outerwear.",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "students"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.4. Student Dress Code — General Guidance"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_4_student_dress_code_general_guidance__10",
+    "content": "**PE Day:** Students must wear appropriate sports underwear, shorts/leggings/tracksuit bottoms, a t-shirt or sweatshirt, and trainers.",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "students"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.4. Student Dress Code — General Guidance"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_4_student_dress_code_general_guidance__11",
+    "content": "As an inclusive school, we ask that our whole community respects these guidelines.",
+    "type": "information",
+    "topic_tags": [],
+    "render_as": "paragraph",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.4. Student Dress Code — General Guidance"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_5_staff_dress_code__0",
+    "content": "**Acceptable clothing** includes: appropriate-length skirts and dresses (knee-length), blouses, smart t-shirts, polo shirts, trousers, smart jeans, chinos.",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "staff",
+      "health-and-safety"
+    ],
+    "render_as": "paragraph",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.5. Staff Dress Code"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_5_staff_dress_code__1",
+    "content": "**Not acceptable:** Mini-skirts, hot pants, or lycra cycling shorts shorter than mid-thigh.",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "staff",
+      "health-and-safety"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.5. Staff Dress Code"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_5_staff_dress_code__2",
+    "content": "**Not acceptable:** Leisure shorts, tracksuits, or sportswear (except for PE and associated activities).",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "staff",
+      "health-and-safety"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.5. Staff Dress Code"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_5_staff_dress_code__3",
+    "content": "**Not acceptable:** Transparent or see-through blouses, dresses, or shirts; low-cut tops; crop-tops; vest/spaghetti-strap tops.",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "staff",
+      "health-and-safety"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.5. Staff Dress Code"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_5_staff_dress_code__4",
+    "content": "**Not acceptable:** Clothing with tears, holes, or rips; clothes bearing offensive logos, slogans, or graphics.",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "staff",
+      "health-and-safety"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.5. Staff Dress Code"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_5_staff_dress_code__5",
+    "content": "**Not acceptable:** Indoor wearing of baseball caps or hats; high-heeled stiletto shoes or beach flip-flops (indoors).",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "staff",
+      "health-and-safety"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.5. Staff Dress Code"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_5_staff_dress_code__6",
+    "content": "**Not acceptable:** Clothes that restrict movement or can snag on equipment (loose pockets, sequins, large buttons).",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "staff",
+      "health-and-safety"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.5. Staff Dress Code"
+  },
+  {
+    "id": "test_doc_4_dress_code__2_5_staff_dress_code__7",
+    "content": "**Not acceptable:** Underwear worn in a revealing manner.",
+    "type": "rule",
+    "topic_tags": [
+      "dress-code",
+      "staff",
+      "health-and-safety"
+    ],
+    "render_as": "bullet",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_section": "2.5. Staff Dress Code"
+  }
+]

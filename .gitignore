@@ -1,1 +1,21 @@
 .omc/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+.venv/
+**/.venv/
+
+# POC - exclude sensitive files and test data
+poc/test_docs/
+poc/**/*.env
+poc/**/*.key
+poc/**/*.pem
+poc/**/*secret*
+poc/**/*password*
+poc/**/*.log

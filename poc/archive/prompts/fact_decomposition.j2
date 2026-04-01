@@ -1,0 +1,136 @@
+Extract facts from this section of a school document.
+
+Document: {{ document_name }}
+Section: {{ section_title }}
+Inferred topic tags for this section: {{ topic_tags | join(", ") }}
+
+Source content:
+{{ content }}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHAT IS A FACT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+A fact is a coherent unit of information a reader needs to understand one topic.
+It is not one sentence or one bullet. It is as much content as belongs together.
+
+  • A fact may contain a title, multiple paragraphs, a bullet list, a table, or any mix.
+  • A local heading (bold text, ##, etc.) is the title of a fact, not a boundary between
+    facts. Include it as part of the fact's content.
+  • The narrative "why" (rationale, values, context) belongs in the same fact as the
+    "what" (rules, procedures, details) it motivates. Never separate them.
+  • A reader must be able to understand the fact without seeing neighbouring facts.
+    Include enough context — do not rely on the reader inferring it from surrounding text.
+
+Target size: 300–2000 characters (soft guide, not a hard limit).
+  — Below 300 chars usually means related content was split unnecessarily.
+  — Above 2000 chars usually means two distinct topics were merged.
+
+SPLIT only when content clearly shifts to a different concept.
+DO NOT split a heading from the body it introduces.
+DO NOT split narrative context from the rules it explains.
+DO NOT split a list from its introductory sentence or heading.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+EXAMPLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+GOOD — one fact covering a full topic with rationale + practical details:
+
+  # 4. Pedagogical Meetings
+
+  We believe it is essential for the family and the school to be aligned on key
+  educational guidelines. To facilitate this, we will invite families to quarterly
+  meetings between families and educators, where various topics of interest will be
+  discussed. These meetings are important for understanding the school's pedagogical
+  approach, so we recommend that at least one member from each family attends. They
+  offer an opportunity for families to ask questions, share experiences, make
+  suggestions, and become more involved in the development of our students.
+
+  We will provide sufficient advance notice so families can reserve these dates in
+  their personal calendars.
+
+  To better accommodate families' work-life balance, sessions will be offered both
+  in person and online, making this resource accessible to as many families as
+  possible. While the online option is very convenient, in-person sessions are more
+  enriching due to the practical component that allows participation in group
+  dynamics and provides a setting conducive to interaction among families.
+
+  Sessions will be conducted in both languages in separate sessions to ensure the
+  inclusion of all families in this process.
+
+  → ONE fact. Type: principle. render_as: paragraph.
+    The whole section — rationale + logistics + format — belongs together.
+
+BAD — splitting a list from its header:
+
+  fact 1: "Not acceptable clothing:"          ← heading stripped from its list
+  fact 2: "Mini-skirts, hot pants, or lycra…" ← bullet orphaned from context
+  fact 3: "Leisure shorts, tracksuits…"       ← same
+
+GOOD — one fact keeping the header + all bullets together:
+
+  fact: "**Not acceptable:** Mini-skirts, hot pants, or lycra cycling shorts shorter
+  than mid-thigh. / Leisure shorts, tracksuits, or sportswear (except PE). / ..."
+  → ONE fact. Type: rule. render_as: bullet.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TYPE CLASSIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Choose the type that best describes the primary nature of the fact.
+A fact with mixed content (e.g. rationale + rules) takes the type of its dominant message.
+
+  rule           — Binding requirement. Source uses: must, shall, is required, will be,
+                   must not, are not permitted, are prohibited.
+                   Example: "Students must wear enclosed shoes outdoors."
+
+  principle      — Guiding value or goal. Source uses: aims to, is designed to, fosters,
+                   supports, encourages, provides, should.
+                   Example: "Outings are designed to foster independence and teamwork."
+
+  procedure      — Specific action to take in a specific situation (event-triggered).
+                   Often staff-facing. Source describes what to DO when X happens.
+                   Example: "If a child is missing, staff will immediately initiate a search."
+
+  definition     — A term and its meaning. Source format: **Term:** description.
+                   Example: "**Risk Assessment:** A process of identifying and mitigating risks."
+
+  information    — Factual context, rationale, or explanation that binds nobody.
+                   Example: "Punctuality fosters a focused and productive environment."
+
+  fee            — A specific charge with a condition and amount.
+                   Example: "From 4:55 p.m. to 5:15 p.m. — €5 per late pick-up."
+
+  contact-detail — A contact method, email address, named system (e.g. Phidias), or named role.
+                   Example: "Notify absences by sending a Phidias message to administration."
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RENDER FORMAT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Choose the format that best describes the primary structure of the fact's content.
+A fact with mixed content (e.g. intro paragraph + bullets) takes the dominant format.
+
+  paragraph       — fact is primarily prose (one or more paragraphs)
+  bullet          — fact is primarily a bulleted list (with or without an intro line or heading)
+  numbered-step   — fact is primarily a numbered list of steps
+  definition-entry — fact is a **Term:** definition pair
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AUDIENCE HINT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Leave audience_hint empty [] unless this specific fact explicitly targets a narrower
+audience than the document default. Set to ["students"], ["staff"], or ["parents"]
+only when the source text makes the target audience explicit.
+Example: "From Year 9 upwards, students are responsible for their own medication."
+→ audience_hint: ["students"]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SKIP ENTIRELY (return empty list for these)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  • Introductory sentences that only say "this section covers X"
+  • Lists of legislation titles, reference document names, or external links
+  • Pure section-title text with no content

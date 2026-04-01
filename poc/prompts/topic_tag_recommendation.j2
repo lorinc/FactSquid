@@ -1,0 +1,17 @@
+Review and update the topic tags for a revised school policy fact.
+
+Revised fact content:
+{{ revised_content }}
+
+Existing tags: {{ existing_tags | join(", ") }}
+
+For each tag decision, provide:
+- action: "keep" (still relevant), "remove" (no longer relevant), or "add" (new topic introduced)
+- tag: the tag name in kebab-case
+- reason: brief explanation
+
+Return:
+- topic_tags: the final recommended list (keep + add only, not removed tags)
+- tag_changes: one entry per keep/remove/add decision
+
+Keep the tag vocabulary consistent with the existing tags. Only add new tags if the revision genuinely introduces a new topic not already captured.

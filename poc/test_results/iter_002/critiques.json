@@ -1,0 +1,40 @@
+[
+  {
+    "section": "2.4. Student Dress Code — General Guidance",
+    "fact_count": 4,
+    "overall": "The reconstruction is mostly accurate but misses some content and over-segments a specific rule.",
+    "problems": [
+      {
+        "problem_type": "missing-content",
+        "description": "Original text is missing: 'Jewellery must not dangle; no hoop earrings or large necklaces (health and safety). On PE days, student' — this sentence remains incomplete and does not convey the original message."
+      },
+      {
+        "problem_type": "over-atomized",
+        "description": "Original text: 'Jewellery must not dangle; no hoop earrings or large necklaces (health and safety).' This could be simplified into one point, rather than having separate points for 'no hoop earrings' and 'no large necklaces'."
+      }
+    ]
+  },
+  {
+    "section": "2.5. Staff Dress Code",
+    "fact_count": 2,
+    "overall": "The reconstruction has multiple issues regarding content accuracy and formatting.",
+    "problems": [
+      {
+        "problem_type": "missing-content",
+        "description": "The original text includes a bullet point that states: *Underwear worn in a revealing manner.* This is completely missing in the reconstructed version."
+      },
+      {
+        "problem_type": "wrong-render",
+        "description": "The reconstruction incorrectly consolidates the 'Not acceptable' section into a paragraph format instead of keeping the individual bullet format as shown in the original."
+      },
+      {
+        "problem_type": "missing-content",
+        "description": "The original mentions 'Clothes that restrict movement or can snag on equipment (loose pockets, sequins, large buttons).' but does not clarify that it is part of the 'Not acceptable' list in the reconstruction."
+      },
+      {
+        "problem_type": "over-atomized",
+        "description": "The reconstructed version splits 'Indoor wearing of baseball caps or hats; high-heeled stiletto shoes or beach flip-flops (indoors).' into two separate items in a single line instead of maintaining its context as a single bullet point."
+      }
+    ]
+  }
+]

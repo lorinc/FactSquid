@@ -1,0 +1,16 @@
+Extract the heading structure from this school document.
+
+For each H1, H2, and H3 section, return:
+- level: 1, 2, or 3
+- title: the heading text (preserve numbering like "2.4 General Guidance" or "2.5.a Student Dress Code")
+- content: all body text that follows this heading, up to the next heading of equal or higher level
+
+Rules:
+1. Skip any "Index", "Table of Contents", or "Contents" section — these are navigational, not content
+2. If the document text starts with a context prefix like "Document: ..." or "# Parent Section", treat it as metadata — do not emit it as a section
+3. Include all body text in content: paragraphs, bullet points, sub-paragraphs
+4. If a heading has no body content, set content to ""
+5. Return sections in document order
+
+Document text:
+{{ document_text }}

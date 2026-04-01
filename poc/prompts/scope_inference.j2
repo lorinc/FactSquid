@@ -1,0 +1,26 @@
+Determine the audience and channel scope of a school document.
+
+Document:
+- Filename: {{ filename }}
+- Title: {{ title }}
+- Opening content:
+{{ preview }}
+
+Audience scope — who this document is addressed to (select all that apply):
+- parents: parents and guardians of enrolled students
+- staff: school employees (teachers and support staff)
+- students: enrolled pupils
+- visitors: people visiting the school temporarily
+- applicants: prospective families or job applicants
+- governors: school governors or board members
+
+Channel scope — which communication channels this document belongs to (select all that apply):
+- parent-handbook: the parent-facing handbook or information pack
+- staff-handbook: the staff-facing handbook or policy documentation
+- policy-documents: formal policy documents (not handbooks)
+- newsletter: the school newsletter
+- website: the school's public website
+- chatbot: the school's Q&A chatbot knowledge base
+
+Return the correct audience_scope and channel_scope lists for this document.
+A document may have multiple audiences and multiple channels.

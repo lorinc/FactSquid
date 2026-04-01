@@ -52,6 +52,7 @@ FactSquid replaces documents with a **living corpus of facts**. A fact is a scop
 
 - [System Design](docs/design/system-design.md) — full decision log with rationale for every architectural choice
 - [Technical Design](docs/design/technical-design.md) — agent coding spec: project layout, module boundaries, LLM runtime, Temporal workflows, persistence layers, library manifest
+- [Fact Definition](docs/design/fact-definition.md) — what makes a good fact: the Five Tests and extraction principles
 
 ## Build plan
 
