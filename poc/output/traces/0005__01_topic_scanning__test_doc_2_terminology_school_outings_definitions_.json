@@ -1,0 +1,34 @@
+{
+  "seq": 5,
+  "call_number": 1,
+  "call_name": "topic_scanning",
+  "description": "test_doc_2_terminology / School Outings — Definitions and Principles",
+  "validation": "PASS",
+  "tokens_in": 638,
+  "tokens_out": 217,
+  "latency_s": 1.84,
+  "prompt": "You are a structural analyst extracting topic records from a document section.\n\nFor each paragraph or logical block in the content, output one TopicScanRecord.\n\nRules:\n- ONE record per paragraph or distinct logical block — never merge multiple paragraphs into one record\n- `span_text` MUST be verbatim — never summarise, paraphrase, or rewrite any part of the source text\n- `topic_slug` is built from the base slug below:\n  - Use `school-outings-definitions-and-principles` as-is for paragraphs that belong to the main topic of this section\n  - Extend with a suffix ONLY when a paragraph introduces a clearly distinct sub-topic: `school-outings-definitions-and-principles/subtopic`\n  - Never invent a slug unrelated to `school-outings-definitions-and-principles`\n  - The same sub-topic appearing under a different heading in a different document must produce the same slug\n- `scope_qualifier` — omit (null) unless this specific instance is distinctly scoped: 'students', 'staff', '2024-2025'.\n  The heading may already imply a scope (e.g. \"Student Dress Code\" → 'students') — confirm or refine from paragraph content\n- Orphan preamble (pure rationale, goals, aspirational framing with no policy content) → slug `school-outings-definitions-and-principles/principles` or 'skip-candidate'\n\nDocument context:\nSection: School Outings — Definitions and Principles\nSource path: School Outings — Definitions and Principles\nBase slug: school-outings-definitions-and-principles\n\nContent:\n**Source**: Imagine Montessori School Valencia — School Outings Policy §2–4\n**Audience**: Staff",
+  "raw_response": "{\"records\":[{\"topic_slug\":\"school-outings-definitions-and-principles/principles\",\"scope_qualifier\":null,\"span_text\":\"At Imagine Montessori School, we believe that school outings are a vital part of experiential learning, contributing to a rich educational experience that extends beyond the traditional classroom setting.\",\"source_path\":\"School Outings — Definitions and Principles\"},{\"topic_slug\":\"school-outings-definitions-and-principles\",\"scope_qualifier\":\"staff\",\"span_text\":\"School outings are defined as any excursion organized by the school where students leave the premises for educational purposes. This includes museum visits, science trips, and nature excursions.\",\"source_path\":\"School Outings — Definitions and Principles\"},{\"topic_slug\":\"school-outings-definitions-and-principles/safety-guidelines\",\"scope_qualifier\":\"staff\",\"span_text\":\"To ensure the safety of all participants, all school outings must have a dedicated risk assessment conducted prior to departure. This assessment should consider travel logistics, potential hazards during the excursion, and emergency protocols.\",\"source_path\":\"School Outings — Definitions and Principles\"}]}",
+  "parsed_output": {
+    "records": [
+      {
+        "topic_slug": "school-outings-definitions-and-principles/principles",
+        "scope_qualifier": null,
+        "span_text": "At Imagine Montessori School, we believe that school outings are a vital part of experiential learning, contributing to a rich educational experience that extends beyond the traditional classroom setting.",
+        "source_path": "School Outings — Definitions and Principles"
+      },
+      {
+        "topic_slug": "school-outings-definitions-and-principles",
+        "scope_qualifier": "staff",
+        "span_text": "School outings are defined as any excursion organized by the school where students leave the premises for educational purposes. This includes museum visits, science trips, and nature excursions.",
+        "source_path": "School Outings — Definitions and Principles"
+      },
+      {
+        "topic_slug": "school-outings-definitions-and-principles/safety-guidelines",
+        "scope_qualifier": "staff",
+        "span_text": "To ensure the safety of all participants, all school outings must have a dedicated risk assessment conducted prior to departure. This assessment should consider travel logistics, potential hazards during the excursion, and emergency protocols.",
+        "source_path": "School Outings — Definitions and Principles"
+      }
+    ]
+  }
+}

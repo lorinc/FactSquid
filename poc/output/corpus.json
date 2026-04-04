@@ -1,0 +1,2398 @@
+{
+  "facts": [
+    {
+      "id": "dress_code_policy_students_and_staff__staff__0",
+      "title": "Staff dress code",
+      "content": "All staff members at Imagine Montessori School Valencia must maintain a professional appearance, which includes wearing clean, modest, and appropriate attire for an educational setting.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "imagine-montessori-school-valencia"
+      ],
+      "topic_slug": "dress-code-policy-students-and-staff",
+      "scope_qualifier": "staff",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > Imagine Montessori School Valencia \u2014 Code of Conduct \u00a72.4\u20132.5"
+      ]
+    },
+    {
+      "id": "dress_code_policy_students_and_staff__students__0",
+      "title": "Dress Code Policy for Students",
+      "content": "Students must wear uniforms complying with the school's guidelines, ensuring the attire is neat, well-fitting, and includes the school's insignia.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "students"
+      ],
+      "topic_slug": "dress-code-policy-students-and-staff",
+      "scope_qualifier": "students",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > Imagine Montessori School Valencia \u2014 Code of Conduct \u00a72.4\u20132.5"
+      ]
+    },
+    {
+      "id": "dress_code_policy_students_and_staff_principles__all__0",
+      "title": "Dress Code Policy at Imagine Montessori School",
+      "content": "Students and staff at Imagine Montessori School must adhere to a dress code that is respectful and considerate, fostering a positive learning environment.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "montessori-school-valencia",
+        "code-of-conduct"
+      ],
+      "topic_slug": "dress-code-policy-students-and-staff/principles",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > Imagine Montessori School Valencia \u2014 Code of Conduct \u00a72.4\u20132.5"
+      ]
+    },
+    {
+      "id": "dress_code_policy_students_and_staff_principles__all__1",
+      "title": "Encouragement for Maintaining School's Diverse Culture",
+      "content": "Students and staff at Imagine Montessori School are encouraged to dress in a manner that supports the school's diverse culture.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "montessori-school-valencia",
+        "code-of-conduct"
+      ],
+      "topic_slug": "dress-code-policy-students-and-staff/principles",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > Imagine Montessori School Valencia \u2014 Code of Conduct \u00a72.4\u20132.5"
+      ]
+    },
+    {
+      "id": "dress_code_policy_students_and_staff_principles__all__2",
+      "title": "Respect for Personal Dignity",
+      "content": "Dress should respect the personal dignity of each individual within the Imagine Montessori School community.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "montessori-school-valencia",
+        "code-of-conduct"
+      ],
+      "topic_slug": "dress-code-policy-students-and-staff/principles",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > Imagine Montessori School Valencia \u2014 Code of Conduct \u00a72.4\u20132.5"
+      ]
+    },
+    {
+      "id": "dress_code_policy_students_and_staff_subjewelry__all__0",
+      "title": "Jewelry guidelines for students and staff",
+      "content": "Both students and staff at Imagine Montessori School Valencia are required to avoid wearing excessive jewelry to maintain focus and uphold safety standards.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "students",
+        "staff",
+        "jewelry"
+      ],
+      "topic_slug": "dress-code-policy-students-and-staff/subjewelry",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > Imagine Montessori School Valencia \u2014 Code of Conduct \u00a72.4\u20132.5"
+      ]
+    },
+    {
+      "id": "objectives_of_school_outings_cultural_awareness__all__0",
+      "title": "Cultural Awareness",
+      "content": "Visits to cultural, historical, or community-based locations aim to broaden students' understanding of diverse cultures, history, and the arts.",
+      "kind": "principle",
+      "topic_tags": [
+        "school-outings",
+        "objectives"
+      ],
+      "topic_slug": "objectives-of-school-outings/cultural-awareness",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles > 4. Objectives of School Outings"
+      ]
+    },
+    {
+      "id": "objectives_of_school_outings_educational_enrichment__all__0",
+      "title": "Educational enrichment objectives of school outings",
+      "content": "School outings are designed to reinforce classroom learning by offering hands-on, real-world experiences that align with the curriculum.",
+      "kind": "principle",
+      "topic_tags": [
+        "school-outings"
+      ],
+      "topic_slug": "objectives-of-school-outings/educational-enrichment",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles > 4. Objectives of School Outings"
+      ]
+    },
+    {
+      "id": "objectives_of_school_outings_personal_and_social_development__all__0",
+      "title": "Objective of school outings",
+      "content": "School outings promote personal and social development by encouraging teamwork, communication, and the development of life skills such as problem-solving, independence, and responsibility.",
+      "kind": "principle",
+      "topic_tags": [
+        "school-outings",
+        "objectives"
+      ],
+      "topic_slug": "objectives-of-school-outings/personal-and-social-development",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles > 4. Objectives of School Outings"
+      ]
+    },
+    {
+      "id": "objectives_of_school_outings_physical_and_emotional_well_being__all__0",
+      "title": "Objective of School Outings for Physical Well-being",
+      "content": "Outdoor activities during school outings enhance students' physical fitness.",
+      "kind": "rationale",
+      "topic_tags": [
+        "school-outings",
+        "school-objectives",
+        "student-well-being"
+      ],
+      "topic_slug": "objectives-of-school-outings/physical-and-emotional-well-being",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles > 4. Objectives of School Outings"
+      ]
+    },
+    {
+      "id": "objectives_of_school_outings_physical_and_emotional_well_being__all__1",
+      "title": "Objective of School Outings for Emotional Well-being",
+      "content": "Recreational trips on school outings support students' mental health and strengthen social connections.",
+      "kind": "rationale",
+      "topic_tags": [
+        "school-outings",
+        "school-objectives",
+        "student-well-being"
+      ],
+      "topic_slug": "objectives-of-school-outings/physical-and-emotional-well-being",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles > 4. Objectives of School Outings"
+      ]
+    },
+    {
+      "id": "policy_statement_and_principles_principles__all__0",
+      "title": "educational enrichment on school outings",
+      "content": "School outings must complement the classroom curriculum to enhance learning through direct, hands-on experiences.",
+      "kind": "principle",
+      "topic_tags": [
+        "school-outings"
+      ],
+      "topic_slug": "policy-statement-and-principles/principles",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles > 3. Policy Statement and Principles",
+        "School Outings \u2014 Definitions and Principles > 3. Policy Statement and Principles",
+        "School Outings \u2014 Definitions and Principles > 3. Policy Statement and Principles"
+      ]
+    },
+    {
+      "id": "policy_statement_and_principles_principles__all__1",
+      "title": "personal and social development on school outings",
+      "content": "School outings must be designed to foster independence, responsibility, and social skills through interactive and group-based activities.",
+      "kind": "principle",
+      "topic_tags": [
+        "school-outings"
+      ],
+      "topic_slug": "policy-statement-and-principles/principles",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles > 3. Policy Statement and Principles",
+        "School Outings \u2014 Definitions and Principles > 3. Policy Statement and Principles",
+        "School Outings \u2014 Definitions and Principles > 3. Policy Statement and Principles"
+      ]
+    },
+    {
+      "id": "policy_statement_and_principles_principles__all__2",
+      "title": "cultural awareness on school outings",
+      "content": "School outings must provide students with opportunities to be exposed to diverse cultures, histories, and artistic traditions to foster a broader understanding of the world.",
+      "kind": "principle",
+      "topic_tags": [
+        "school-outings"
+      ],
+      "topic_slug": "policy-statement-and-principles/principles",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles > 3. Policy Statement and Principles",
+        "School Outings \u2014 Definitions and Principles > 3. Policy Statement and Principles",
+        "School Outings \u2014 Definitions and Principles > 3. Policy Statement and Principles"
+      ]
+    },
+    {
+      "id": "policy_statement_and_principles_safety_and_well_being__all__0",
+      "title": "Outing Safety Procedures",
+      "content": "Every school outing requires careful planning with a focus on student safety, including ensuring adequate supervision, performing risk assessments, and preparing for emergencies.",
+      "kind": "principle",
+      "topic_tags": [
+        "school-outings",
+        "safety",
+        "risk-assessment"
+      ],
+      "topic_slug": "policy-statement-and-principles/safety-and-well-being",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles > 3. Policy Statement and Principles"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency__staff__0",
+      "title": "staff contact actions during outing accidents",
+      "content": "During an outing at Imagine Montessori School Valencia, staff must immediately contact emergency services and the school administration if an accident or emergency occurs.",
+      "kind": null,
+      "topic_tags": [
+        "outing-emergency-response",
+        "montessori-school-valencia"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency",
+      "scope_qualifier": "staff",
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia \u2014 School Outings Policy \u00a78"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency__staff__1",
+      "title": "emergency contact list requirements",
+      "content": "The emergency contact list at Imagine Montessori School Valencia must be updated and readily accessible during an outing.",
+      "kind": null,
+      "topic_tags": [
+        "outing-emergency-contact-list",
+        "montessori-school-valencia"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency",
+      "scope_qualifier": "staff",
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia \u2014 School Outings Policy \u00a78"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_lost_or_missing_child__all__0",
+      "title": "Procedure when a child is unaccounted for",
+      "content": "When a child is unaccounted for, staff must immediately initiate a search of the area while ensuring the safety of other students.",
+      "kind": null,
+      "topic_tags": [
+        "accident-emergency-procedure"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_lost_or_missing_child__all__1",
+      "title": "Procedure if the child is not found",
+      "content": "If the missing child is not found during the initial search, a member of staff is required to contact the Headteacher and call the police if agreed.",
+      "kind": null,
+      "topic_tags": [
+        "accident-emergency-procedure"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_lost_or_missing_child__all__2",
+      "title": "Notification of parents or guardians",
+      "content": "Parents or guardians of the missing child must be informed as soon as possible, and all necessary measures should be taken to ensure the child's safety and well-being.",
+      "kind": null,
+      "topic_tags": [
+        "accident-emergency-procedure"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_lost_or_missing_child__all__3",
+      "title": "Steps after a missing child is found",
+      "content": "Once a missing child is located, staff must talk to and comfort the child, speak to the other children about the importance of not leaving the group, and submit a detailed report. This report should cover the time and place of the incident, the number of staff and children present, when the child was last seen, how long they were missing, and lessons learned from the incident.",
+      "kind": null,
+      "topic_tags": [
+        "accident-emergency-procedure"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_minor_injuries__all__0",
+      "title": "first aid provision for minor injuries",
+      "content": "A staff member trained in first aid will administer first aid in case of minor injuries such as cuts or bruises.",
+      "kind": null,
+      "topic_tags": [
+        "first-aid",
+        "accident-procedure"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/minor-injuries",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_minor_injuries__all__1",
+      "title": "notification of families about minor injuries",
+      "content": "Families will be notified about the incident at the end of the outing if only minor injuries occurred.",
+      "kind": null,
+      "topic_tags": [
+        "family-notification",
+        "accident-procedure"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/minor-injuries",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_minor_injuries__all__2",
+      "title": "emergency medical attention requirement",
+      "content": "If further medical attention is required for an injury, families will be notified immediately, not waiting until the end of the outing.",
+      "kind": null,
+      "topic_tags": [
+        "emergency-response",
+        "medical-attention",
+        "family-notification"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/minor-injuries",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_principles__all__0",
+      "title": "Student well-being on school outings",
+      "content": "The well-being of students is of utmost importance during school outings at Imagine Montessori School Valencia.",
+      "kind": "principle",
+      "topic_tags": [
+        "student-well-being",
+        "school-outings"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/principles",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia \u2014 School Outings Policy \u00a78"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_principles__all__1",
+      "title": "Safeguarding during school outings",
+      "content": "Imagine Montessori School Valencia is committed to ensuring all necessary measures are in place to safeguard every participant during school outings.",
+      "kind": "principle",
+      "topic_tags": [
+        "safeguarding",
+        "school-outings"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/principles",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia \u2014 School Outings Policy \u00a78"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_reporting__all__0",
+      "title": "Accident and Emergency Reporting Requirement",
+      "content": "After an incident, staff must file a detailed report with the administration outlining the events and any measures taken during an accident or emergency.",
+      "kind": null,
+      "topic_tags": [
+        "accident-emergency-procedure",
+        "reporting",
+        "school-administration"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/reporting",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia \u2014 School Outings Policy \u00a78",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_reporting__all__1",
+      "title": "Incident Report Submission",
+      "content": "Staff are required to submit a full report of any incident to the school administration as part of the accident or emergency procedures.",
+      "kind": null,
+      "topic_tags": [
+        "incident-report",
+        "school-administration"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/reporting",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia \u2014 School Outings Policy \u00a78",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_reporting__all__2",
+      "title": "Review and Improve Procedures",
+      "content": "Reviewing filed incident reports helps in improving future school outing procedures.",
+      "kind": "principle",
+      "topic_tags": [
+        "review-process",
+        "procedural-improvement",
+        "school-outings"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/reporting",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia \u2014 School Outings Policy \u00a78",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_risk_mitigation__all__0",
+      "title": "Student notification requirement",
+      "content": "Students participating in an outing must notify staff when they need to go to a different place, such as the toilet, ensuring adults are always aware of their whereabouts.",
+      "kind": null,
+      "topic_tags": [
+        "procedure-in-case-of-an-accident-or-emergency"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/risk-mitigation",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_risk_mitigation__all__1",
+      "title": "Buddy system for students",
+      "content": "Students must adhere to a buddy system by always moving in groups of at least two for safety during outings.",
+      "kind": null,
+      "topic_tags": [
+        "procedure-in-case-of-an-accident-or-emergency"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/risk-mitigation",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_risk_mitigation__all__2",
+      "title": "Student headcount protocol",
+      "content": "Staff must count all children every time they change activities or move from one place to another, such as before lunch, after lunch, or when moving from a closed space to an open area, to ensure all children are present.",
+      "kind": null,
+      "topic_tags": [
+        "procedure-in-case-of-an-accident-or-emergency"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/risk-mitigation",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_risk_mitigation__students__0",
+      "title": "Dress Code for One-Day Experiences",
+      "content": "Early Years and Primary students must wear the Imagine t-shirt during one-day experiences to enable adults to easily oversee the children.",
+      "kind": null,
+      "topic_tags": [
+        "accident-or-emergency-procedure"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/risk-mitigation",
+      "scope_qualifier": "students",
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_safety_drills__all__0",
+      "title": "Emergency Drills for School Outings",
+      "content": "Imagine Montessori School Valencia requires that regular emergency drills be conducted before each major school outing to ensure that all staff and students are familiar with emergency procedures.",
+      "kind": null,
+      "topic_tags": [
+        "school-outings-policy",
+        "emergency-procedures",
+        "imagine-montessori-school-valencia"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/safety-drills",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia \u2014 School Outings Policy \u00a78"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_serious_injuries_or_medical_emergencies__all__0",
+      "title": "Emergency call for serious injury",
+      "content": "Staff must immediately call emergency services by dialing 112 in the event of a serious injury or medical emergency and adhere to the instructions given by emergency professionals.",
+      "kind": null,
+      "topic_tags": [
+        "procedure-in-case-of-an-accident-or-emergency"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/serious-injuries-or-medical-emergencies",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_serious_injuries_or_medical_emergencies__all__1",
+      "title": "Contacting family or guardians",
+      "content": "A designated staff member must contact the family or guardians as soon as possible after an accident.",
+      "kind": null,
+      "topic_tags": [
+        "procedure-in-case-of-an-accident-or-emergency"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/serious-injuries-or-medical-emergencies",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_serious_injuries_or_medical_emergencies__all__2",
+      "title": "Accompanying child to hospital",
+      "content": "A member of the school staff must accompany the child to the hospital and remain with them until the parent or guardian arrives, even for accidents occurring abroad.",
+      "kind": null,
+      "topic_tags": [
+        "procedure-in-case-of-an-accident-or-emergency"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/serious-injuries-or-medical-emergencies",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_serious_injuries_or_medical_emergencies__all__3",
+      "title": "Pickup for fever or other symptoms",
+      "content": "If a child displays a fever or symptoms hindering their participation, the family must be contacted to collect the child as soon as possible.",
+      "kind": null,
+      "topic_tags": [
+        "procedure-in-case-of-an-accident-or-emergency"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/serious-injuries-or-medical-emergencies",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_serious_injuries_or_medical_emergencies__all__4",
+      "title": "Pickup commitment agreement",
+      "content": "All families must agree to the pickup commitment prior to authorizing a child's participation in an outing.",
+      "kind": null,
+      "topic_tags": [
+        "procedure-in-case-of-an-accident-or-emergency"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/serious-injuries-or-medical-emergencies",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency",
+        "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      ]
+    },
+    {
+      "id": "procedure_in_case_of_an_accident_or_emergency_transport__all__0",
+      "title": "Transport arrangements during school outings",
+      "content": "Transport arrangements must include communication tools like walkie-talkies or mobile phones to ensure effective coordination among staff during emergencies.",
+      "kind": null,
+      "topic_tags": [
+        "school-outings",
+        "emergency-procedures"
+      ],
+      "topic_slug": "procedure-in-case-of-an-accident-or-emergency/transport",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_3_emergency_procedure",
+      "source_spans": [
+        "Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia \u2014 School Outings Policy \u00a78"
+      ]
+    },
+    {
+      "id": "school_hours_and_attendance__all__0",
+      "title": "school hours",
+      "content": "The formal school hours at Imagine Montessori School Valencia are from 8:30 AM to 3:30 PM, Monday through Friday.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours"
+      ],
+      "topic_slug": "school-hours-and-attendance",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "Imagine Montessori School Valencia \u2014 Family Handbook \u00a72.2"
+      ]
+    },
+    {
+      "id": "school_hours_and_attendance__all__1",
+      "title": "punctuality expectation",
+      "content": "Imagine Montessori School Valencia expects all students to arrive on time to start their school day promptly.",
+      "kind": null,
+      "topic_tags": [
+        "student-punctuality"
+      ],
+      "topic_slug": "school-hours-and-attendance",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "Imagine Montessori School Valencia \u2014 Family Handbook \u00a72.2"
+      ]
+    },
+    {
+      "id": "school_hours_and_attendance_absence__all__0",
+      "title": "Absence Notification Requirement",
+      "content": "Parents must notify the Imagine Montessori School Valencia office by 9:00 AM to report their child's absence and provide an explanation for the absence.",
+      "kind": null,
+      "topic_tags": [
+        "absence-notification"
+      ],
+      "topic_slug": "school-hours-and-attendance/absence",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "Imagine Montessori School Valencia \u2014 Family Handbook \u00a72.2"
+      ]
+    },
+    {
+      "id": "school_hours_and_attendance_absence__all__1",
+      "title": "Documentation Requirement for Prolonged Absences",
+      "content": "Documentation may be required from parents for prolonged absences of their child from Imagine Montessori School Valencia.",
+      "kind": null,
+      "topic_tags": [
+        "absence-documentation"
+      ],
+      "topic_slug": "school-hours-and-attendance/absence",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "Imagine Montessori School Valencia \u2014 Family Handbook \u00a72.2"
+      ]
+    },
+    {
+      "id": "school_hours_and_attendance_early_dismissal__all__0",
+      "title": "early dismissals",
+      "content": "Early dismissals are discouraged at Imagine Montessori School Valencia because they disrupt the learning process.",
+      "kind": "rationale",
+      "topic_tags": [
+        "early-dismissals",
+        "imagine-montessori-school-valencia",
+        "family-handbook"
+      ],
+      "topic_slug": "school-hours-and-attendance/early-dismissal",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "Imagine Montessori School Valencia \u2014 Family Handbook \u00a72.2"
+      ]
+    },
+    {
+      "id": "school_hours_and_attendance_early_dismissal__all__1",
+      "title": "notification of early dismissals",
+      "content": "Parents must inform the school's office if a student needs to leave early due to an emergency.",
+      "kind": null,
+      "topic_tags": [
+        "early-dismissals",
+        "emergency-notification",
+        "imagine-montessori-school-valencia",
+        "family-handbook"
+      ],
+      "topic_slug": "school-hours-and-attendance/early-dismissal",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "Imagine Montessori School Valencia \u2014 Family Handbook \u00a72.2"
+      ]
+    },
+    {
+      "id": "school_hours_and_attendance_late_arrival__all__0",
+      "title": "Student tardiness check-in requirement",
+      "content": "Students arriving after 8:30 AM must check in at the school office to receive a tardy slip before proceeding to class.",
+      "kind": null,
+      "topic_tags": [
+        "student-tardiness"
+      ],
+      "topic_slug": "school-hours-and-attendance/late-arrival",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "Imagine Montessori School Valencia \u2014 Family Handbook \u00a72.2"
+      ]
+    },
+    {
+      "id": "school_hours_and_attendance_late_arrival__all__1",
+      "title": "Student persistent lateness consequences",
+      "content": "Persistent lateness may result in meetings with parents to discuss the impact on the student's performance.",
+      "kind": null,
+      "topic_tags": [
+        "student-tardiness"
+      ],
+      "topic_slug": "school-hours-and-attendance/late-arrival",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "Imagine Montessori School Valencia \u2014 Family Handbook \u00a72.2"
+      ]
+    },
+    {
+      "id": "school_hours_and_attendance_principles__all__0",
+      "title": "School attendance",
+      "content": "Students must attend school consistently to enhance their academic success and social-emotional learning.",
+      "kind": "rationale",
+      "topic_tags": [
+        "attendance",
+        "academic-success",
+        "social-emotional-learning"
+      ],
+      "topic_slug": "school-hours-and-attendance/principles",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "Imagine Montessori School Valencia \u2014 Family Handbook \u00a72.2"
+      ]
+    },
+    {
+      "id": "school_hours_and_attendance_principles__all__1",
+      "title": "School environment commitment",
+      "content": "Imagine Montessori School Valencia is dedicated to offering a nurturing environment that supports students' consistent attendance.",
+      "kind": "rationale",
+      "topic_tags": [
+        "nurturing-environment",
+        "school-commitment"
+      ],
+      "topic_slug": "school-hours-and-attendance/principles",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "Imagine Montessori School Valencia \u2014 Family Handbook \u00a72.2"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up__all__0",
+      "title": "School Opening Hours",
+      "content": "The school is open from 8:00 a.m. to 5:30 p.m.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up__all__1",
+      "title": "Reception Opening Hours",
+      "content": "Reception is open from 8:45 a.m. to 1:00 p.m. and from 2:30 p.m. to 4:55 p.m.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up__all__2",
+      "title": "Student Arrival Time",
+      "content": "Students should arrive at the school between 8:45 a.m. and 9:00 a.m.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up__all__3",
+      "title": "Student Departure Time",
+      "content": "Students should depart from the school between 4:40 p.m. and 4:55 p.m.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up_absences__all__0",
+      "title": "student absence notification",
+      "content": "Parents must notify the school of student absences in advance by sending a Phidias message to the administration and the student's Guide or tutor.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours",
+        "attendance",
+        "absences"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up/absences",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up_absences__all__1",
+      "title": "unforeseen student absence notification",
+      "content": "For unforeseen circumstances, parents should call the school from 8:45 a.m.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours",
+        "attendance",
+        "absences"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up/absences",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up_early_pick_ups__all__0",
+      "title": "Pick-Up Timing Requirements",
+      "content": "Families or legal guardians must arrive 5 minutes before the designated pick-up time to avoid disruption to class dynamics.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours",
+        "attendance"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up/early-pick-ups",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up_early_pick_ups__all__1",
+      "title": "Allowed Pick-Up Times",
+      "content": "The only available pick-up times are at 12:00 p.m., 2:30 p.m., and 4:00 p.m.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours",
+        "attendance"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up/early-pick-ups",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up_early_pick_ups__all__2",
+      "title": "Location for Early Pick-Ups",
+      "content": "All early pick-ups take place at Reception.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours",
+        "attendance"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up/early-pick-ups",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up_late_arrivals__all__0",
+      "title": "fee for late school arrival",
+      "content": "A fee of \u20ac5 per late arrival will be charged monthly starting from the fifth late arrival in the school year.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours",
+        "attendance"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up/late-arrivals",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up_late_arrivals__all__1",
+      "title": "impact of late arrivals on classroom",
+      "content": "Students who arrive late disrupt the learning environment and miss essential instructions.",
+      "kind": "context",
+      "topic_tags": [
+        "school-hours",
+        "attendance",
+        "punctuality"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up/late-arrivals",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up_late_arrivals__all__2",
+      "title": "meeting for frequent late arrivals",
+      "content": "If a high frequency of late arrivals is detected, Guides will arrange a meeting with the family.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours",
+        "attendance",
+        "punctuality"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up/late-arrivals",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up_late_pick_ups__all__0",
+      "title": "Late pick-up fee for 4:55 p.m. to 5:15 p.m.",
+      "content": "Families are charged a late pick-up fee of \u20ac5 if they arrive between 4:55 p.m. and 5:15 p.m. to collect their children from school.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours",
+        "late-pick-ups"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up/late-pick-ups",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up_late_pick_ups__all__1",
+      "title": "Late pick-up fee for 5:16 p.m. to 5:30 p.m.",
+      "content": "Families are charged a late pick-up fee of \u20ac10 if they arrive between 5:16 p.m. and 5:30 p.m. to collect their children from school.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours",
+        "late-pick-ups"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up/late-pick-ups",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up_late_pick_ups__all__2",
+      "title": "Late pick-up fee for 5:31 p.m. to 5:45 p.m.",
+      "content": "Families are charged a late pick-up fee of \u20ac20 if they arrive between 5:31 p.m. and 5:45 p.m. to collect their children from school.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours",
+        "late-pick-ups"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up/late-pick-ups",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up_principles__all__0",
+      "title": "Suggested arrival time for students",
+      "content": "Families are encouraged to arrive at school before 9:00 a.m. because guides personally greet students between 8:45 a.m. and 9:00 a.m., fostering a welcoming atmosphere.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours",
+        "attendance",
+        "punctuality"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up/principles",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up_principles__all__1",
+      "title": "Impact of late arrivals on students",
+      "content": "Arrivals after 9:00 a.m. can disrupt the flow of activities, as students who arrived earlier have already begun their work and guides are engaged in presenting materials, potentially causing late-arriving students to feel disoriented or unsettled.",
+      "kind": null,
+      "topic_tags": [
+        "school-hours",
+        "attendance",
+        "punctuality"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up/principles",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_hours_punctuality_and_drop_off_pick_up_principles__all__2",
+      "title": "Benefits of punctuality for students",
+      "content": "Punctuality promotes a focused and productive environment, which supports students in developing autonomy and a sense of responsibility while building positive habits for future growth.",
+      "kind": "principle",
+      "topic_tags": [
+        "school-hours",
+        "attendance",
+        "punctuality"
+      ],
+      "topic_slug": "school-hours-punctuality-and-drop-off-pick-up/principles",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents"
+      ],
+      "channel_scope": [
+        "parent-handbook"
+      ],
+      "source_document": "test_doc_1_school_hours",
+      "source_spans": [
+        "School Hours and Attendance > School Hours, Punctuality and Drop-Off / Pick-Up"
+      ]
+    },
+    {
+      "id": "school_outings_definitions_and_principles__staff__0",
+      "title": "Definition of School Outings",
+      "content": "School outings are any excursions organized by the school where students leave the premises for educational purposes. This includes museum visits, science trips, and nature excursions.",
+      "kind": "context",
+      "topic_tags": [
+        "school-outings",
+        "definitions-principles"
+      ],
+      "topic_slug": "school-outings-definitions-and-principles",
+      "scope_qualifier": "staff",
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles"
+      ]
+    },
+    {
+      "id": "school_outings_definitions_and_principles_principles__all__0",
+      "title": "Importance of school outings",
+      "content": "School outings are a vital part of experiential learning at Imagine Montessori School, contributing to a rich educational experience that extends beyond the traditional classroom setting.",
+      "kind": "principle",
+      "topic_tags": [
+        "school-outings",
+        "experiential-learning"
+      ],
+      "topic_slug": "school-outings-definitions-and-principles/principles",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles"
+      ]
+    },
+    {
+      "id": "school_outings_definitions_and_principles_safety_guidelines__staff__0",
+      "title": "school outings safety",
+      "content": "School outings must have a dedicated risk assessment conducted prior to departure to ensure the safety of all participants.",
+      "kind": null,
+      "topic_tags": [
+        "school-outings"
+      ],
+      "topic_slug": "school-outings-definitions-and-principles/safety-guidelines",
+      "scope_qualifier": "staff",
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles"
+      ]
+    },
+    {
+      "id": "school_outings_definitions_and_principles_safety_guidelines__staff__1",
+      "title": "risk assessment considerations",
+      "content": "Risk assessments for school outings should consider travel logistics, potential hazards during the excursion, and emergency protocols.",
+      "kind": "principle",
+      "topic_tags": [
+        "school-outings"
+      ],
+      "topic_slug": "school-outings-definitions-and-principles/safety-guidelines",
+      "scope_qualifier": "staff",
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles"
+      ]
+    },
+    {
+      "id": "staff_dress_code_acceptable_clothing__staff__0",
+      "title": "Acceptable staff clothing",
+      "content": "Staff must wear clothing that includes knee-length skirts and dresses, blouses, smart t-shirts, polo shirts, trousers, smart jeans, and chinos.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "staff"
+      ],
+      "topic_slug": "staff-dress-code/acceptable-clothing",
+      "scope_qualifier": "staff",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.5. Staff Dress Code"
+      ]
+    },
+    {
+      "id": "staff_dress_code_unacceptable_clothing__staff__0",
+      "title": "Prohibited clothing items for staff",
+      "content": "Staff members are not permitted to wear mini-skirts, hot pants, or lycra cycling shorts that are shorter than mid-thigh.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "staff"
+      ],
+      "topic_slug": "staff-dress-code/unacceptable-clothing",
+      "scope_qualifier": "staff",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.5. Staff Dress Code"
+      ]
+    },
+    {
+      "id": "staff_dress_code_unacceptable_clothing__staff__1",
+      "title": "Prohibited leisure wear for staff",
+      "content": "Leisure shorts, tracksuits, or sportswear are not allowed for staff members, except when engaged in PE and associated activities.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "staff"
+      ],
+      "topic_slug": "staff-dress-code/unacceptable-clothing",
+      "scope_qualifier": "staff",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.5. Staff Dress Code"
+      ]
+    },
+    {
+      "id": "staff_dress_code_unacceptable_clothing__staff__2",
+      "title": "Prohibited revealing clothing for staff",
+      "content": "Staff members must not wear transparent or see-through blouses, dresses, or shirts, as well as low-cut tops, crop-tops, and vest or spaghetti-strap tops.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "staff"
+      ],
+      "topic_slug": "staff-dress-code/unacceptable-clothing",
+      "scope_qualifier": "staff",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.5. Staff Dress Code"
+      ]
+    },
+    {
+      "id": "staff_dress_code_unacceptable_clothing__staff__3",
+      "title": "Clothing condition restrictions for staff",
+      "content": "Staff members are not allowed to wear clothes with tears, holes, rips, or clothes featuring offensive logos, slogans, or graphics.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "staff"
+      ],
+      "topic_slug": "staff-dress-code/unacceptable-clothing",
+      "scope_qualifier": "staff",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.5. Staff Dress Code"
+      ]
+    },
+    {
+      "id": "staff_dress_code_unacceptable_clothing__staff__4",
+      "title": "Prohibited headwear and footwear indoors for staff",
+      "content": "Staff members must not wear baseball caps, hats, high-heeled stiletto shoes, or beach flip-flops indoors.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "staff"
+      ],
+      "topic_slug": "staff-dress-code/unacceptable-clothing",
+      "scope_qualifier": "staff",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.5. Staff Dress Code"
+      ]
+    },
+    {
+      "id": "staff_dress_code_unacceptable_clothing__staff__5",
+      "title": "Clothing safety requirements for staff",
+      "content": "Staff must avoid wearing clothes that restrict movement or can snag on equipment, such as those with loose pockets, sequins, or large buttons.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "staff"
+      ],
+      "topic_slug": "staff-dress-code/unacceptable-clothing",
+      "scope_qualifier": "staff",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.5. Staff Dress Code"
+      ]
+    },
+    {
+      "id": "staff_dress_code_unacceptable_clothing__staff__6",
+      "title": "Underwear visibility restriction for staff",
+      "content": "Staff members should ensure that underwear is not worn in a revealing manner.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "staff"
+      ],
+      "topic_slug": "staff-dress-code/unacceptable-clothing",
+      "scope_qualifier": "staff",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.5. Staff Dress Code"
+      ]
+    },
+    {
+      "id": "student_dress_code_general_guidance_footwear__students__0",
+      "title": "Outdoor footwear for students",
+      "content": "Students must wear flat, enclosed shoes outdoors. The shoes should be comfortable and fastened using laces, buckles, zips, or velcro. Students need to independently put on and take off their shoes.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "student-footwear"
+      ],
+      "topic_slug": "student-dress-code-general-guidance/footwear",
+      "scope_qualifier": "students",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.4. Student Dress Code \u2014 General Guidance"
+      ]
+    },
+    {
+      "id": "student_dress_code_general_guidance_footwear__students__1",
+      "title": "Indoor footwear for students",
+      "content": "Students must wear closed-toe indoor shoes to ensure safe walking. Bulky, furry, and flip-flop styles are not allowed. Students are advised to wear anti-slip socks indoors as well.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "student-footwear"
+      ],
+      "topic_slug": "student-dress-code-general-guidance/footwear",
+      "scope_qualifier": "students",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.4. Student Dress Code \u2014 General Guidance"
+      ]
+    },
+    {
+      "id": "student_dress_code_general_guidance_general_everyday_style__students__0",
+      "title": "Jewellery restrictions",
+      "content": "Students must not wear jewellery that dangles, including hoop earrings and large necklaces, to ensure health and safety.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "jewellery"
+      ],
+      "topic_slug": "student-dress-code-general-guidance/general-everyday-style",
+      "scope_qualifier": "students",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.4. Student Dress Code \u2014 General Guidance"
+      ]
+    },
+    {
+      "id": "student_dress_code_general_guidance_general_everyday_style__students__1",
+      "title": "PE day jewellery requirements",
+      "content": "On PE days, students must have the ability to remove stud earrings or any other jewellery as required.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "pe-day"
+      ],
+      "topic_slug": "student-dress-code-general-guidance/general-everyday-style",
+      "scope_qualifier": "students",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.4. Student Dress Code \u2014 General Guidance"
+      ]
+    },
+    {
+      "id": "student_dress_code_general_guidance_general_everyday_style__students__2",
+      "title": "Make-up guidelines for Year 7 upwards",
+      "content": "Students in Year 7 and above may wear subtle make-up such as mascara, powder, foundation, and nail varnish; however, lipstick is not permitted.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "make-up"
+      ],
+      "topic_slug": "student-dress-code-general-guidance/general-everyday-style",
+      "scope_qualifier": "students",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.4. Student Dress Code \u2014 General Guidance"
+      ]
+    },
+    {
+      "id": "student_dress_code_general_guidance_general_everyday_style__students__3",
+      "title": "Acrylic nails restrictions",
+      "content": "Students are not allowed to have acrylic nails extending more than two millimetres from the fingertip for health and safety reasons.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "acrylic-nails"
+      ],
+      "topic_slug": "student-dress-code-general-guidance/general-everyday-style",
+      "scope_qualifier": "students",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.4. Student Dress Code \u2014 General Guidance"
+      ]
+    },
+    {
+      "id": "student_dress_code_general_guidance_general_everyday_style__students__4",
+      "title": "Clothing length requirements",
+      "content": "Shorts and skirts worn by students must cover the upper thighs and be \u00be length or longer, while cycling shorts must also cover the upper thighs if worn on PE days.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "clothing-length"
+      ],
+      "topic_slug": "student-dress-code-general-guidance/general-everyday-style",
+      "scope_qualifier": "students",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.4. Student Dress Code \u2014 General Guidance"
+      ]
+    },
+    {
+      "id": "student_dress_code_general_guidance_general_everyday_style__students__5",
+      "title": "Clothing condition requirements",
+      "content": "Students are required to wear clothes without holes or rips, ensuring that all underwear is covered by outerwear.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "clothing-condition"
+      ],
+      "topic_slug": "student-dress-code-general-guidance/general-everyday-style",
+      "scope_qualifier": "students",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.4. Student Dress Code \u2014 General Guidance"
+      ]
+    },
+    {
+      "id": "student_dress_code_general_guidance_headwear__students__0",
+      "title": "Hat usage",
+      "content": "Students are allowed to wear hats only during playground time to protect against the sun.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "hat-usage",
+        "students"
+      ],
+      "topic_slug": "student-dress-code-general-guidance/headwear",
+      "scope_qualifier": "students",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.4. Student Dress Code \u2014 General Guidance"
+      ]
+    },
+    {
+      "id": "student_dress_code_general_guidance_headwear__students__1",
+      "title": "Religious headwear",
+      "content": "Students may wear religious headwear at all times except during physical education lessons, where it must be removed for health and safety reasons.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "religious-headwear",
+        "students"
+      ],
+      "topic_slug": "student-dress-code-general-guidance/headwear",
+      "scope_qualifier": "students",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.4. Student Dress Code \u2014 General Guidance"
+      ]
+    },
+    {
+      "id": "student_dress_code_general_guidance_headwear__students__2",
+      "title": "Hair length and style regulation",
+      "content": "Students are allowed to have hair of any length and style; however, for physical education classes, students with long hair must tie it back for safety reasons.",
+      "kind": null,
+      "topic_tags": [
+        "dress-code",
+        "hair-length-and-style",
+        "students"
+      ],
+      "topic_slug": "student-dress-code-general-guidance/headwear",
+      "scope_qualifier": "students",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.4. Student Dress Code \u2014 General Guidance"
+      ]
+    },
+    {
+      "id": "student_dress_code_general_guidance_pe_day__students__0",
+      "title": "student dress code requirements",
+      "content": "Students must wear appropriate sports underwear, shorts, leggings, tracksuit bottoms, a t-shirt or sweatshirt, and trainers.",
+      "kind": null,
+      "topic_tags": [
+        "student-dress-code"
+      ],
+      "topic_slug": "student-dress-code-general-guidance/pe-day",
+      "scope_qualifier": "students",
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.4. Student Dress Code \u2014 General Guidance"
+      ]
+    },
+    {
+      "id": "student_dress_code_general_guidance_principles__all__0",
+      "title": "Student Dress Code \u2014 General Guidelines",
+      "content": "Students must adhere to the school's dress code by wearing appropriate clothing that is respectful and aligns with the school's values of inclusivity.",
+      "kind": null,
+      "topic_tags": [
+        "student-dress-code"
+      ],
+      "topic_slug": "student-dress-code-general-guidance/principles",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.4. Student Dress Code \u2014 General Guidance"
+      ]
+    },
+    {
+      "id": "student_dress_code_general_guidance_principles__all__1",
+      "title": "Community Respect for Dress Code",
+      "content": "The entire school community, including students, staff, and parents, is expected to respect and uphold the dress code guidelines to maintain a supportive and inclusive educational environment.",
+      "kind": null,
+      "topic_tags": [
+        "community-respect"
+      ],
+      "topic_slug": "student-dress-code-general-guidance/principles",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "parents",
+        "staff",
+        "students"
+      ],
+      "channel_scope": [
+        "parent-handbook",
+        "staff-handbook",
+        "policy-documents",
+        "website"
+      ],
+      "source_document": "test_doc_4_dress_code",
+      "source_spans": [
+        "Dress Code Policy \u2014 Students and Staff > 2.4. Student Dress Code \u2014 General Guidance"
+      ]
+    },
+    {
+      "id": "terminology__all__0",
+      "title": "School Outing",
+      "content": "A school outing is any trip that is organized by the school for educational, cultural, or recreational purposes, typically extending beyond the regular school grounds and outside the classroom.",
+      "kind": null,
+      "topic_tags": [
+        "school-outing",
+        "definitions",
+        "terminology"
+      ],
+      "topic_slug": "terminology",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles > 2. Terminology"
+      ]
+    },
+    {
+      "id": "terminology_emergency_contact__all__0",
+      "title": "Emergency Contact Definition",
+      "content": "An Emergency Contact is a designated individual, generally a family member, who can be reached in case of emergencies involving a student.",
+      "kind": null,
+      "topic_tags": [
+        "school-outings",
+        "terminology"
+      ],
+      "topic_slug": "terminology/emergency-contact",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles > 2. Terminology"
+      ]
+    },
+    {
+      "id": "terminology_external_providers__all__0",
+      "title": "External Providers",
+      "content": "External providers are outside individuals or organizations that offer services or expertise during a school outing. They may include guides, instructors, or activity leaders.",
+      "kind": "context",
+      "topic_tags": [
+        "school-outings"
+      ],
+      "topic_slug": "terminology/external-providers",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles > 2. Terminology"
+      ]
+    },
+    {
+      "id": "terminology_pedagogical_coordinator__all__0",
+      "title": "Pedagogical Coordinator Definition",
+      "content": "The Pedagogical Coordinator is a staff member responsible for ensuring that the educational objectives of school outings align with the curriculum and the broader goals of the school.",
+      "kind": "context",
+      "topic_tags": [
+        "school-outings",
+        "terminology"
+      ],
+      "topic_slug": "terminology/pedagogical-coordinator",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles > 2. Terminology"
+      ]
+    },
+    {
+      "id": "terminology_risk_assessment__all__0",
+      "title": "Risk Assessment Process",
+      "content": "The risk assessment process involves identifying potential risks, evaluating their impact, and implementing measures to mitigate these risks to ensure the safety and well-being of all participants in a school outing.",
+      "kind": null,
+      "topic_tags": [
+        "risk-assessment",
+        "school-outings"
+      ],
+      "topic_slug": "terminology/risk-assessment",
+      "scope_qualifier": null,
+      "audience_scope": [
+        "staff"
+      ],
+      "channel_scope": [
+        "staff-handbook",
+        "policy-documents"
+      ],
+      "source_document": "test_doc_2_terminology",
+      "source_spans": [
+        "School Outings \u2014 Definitions and Principles > 2. Terminology"
+      ]
+    }
+  ]
+}

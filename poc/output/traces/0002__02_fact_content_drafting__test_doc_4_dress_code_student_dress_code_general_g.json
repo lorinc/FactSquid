@@ -1,0 +1,16 @@
+{
+  "seq": 2,
+  "call_number": 2,
+  "call_name": "fact_content_drafting",
+  "description": "test_doc_4_dress_code/student-dress-code-general-guidance/pe-day",
+  "validation": "PASS",
+  "tokens_in": 216,
+  "tokens_out": 77,
+  "latency_s": 4.59,
+  "prompt": "Revise a school policy fact to incorporate a specific change request.\n\nChange request:\nUpdate the student dress code: students may now wear trainers on any day, not just PE days.\n\nCurrent fact content:\nStudents must wear appropriate sports underwear, shorts, leggings, tracksuit bottoms, a t-shirt or sweatshirt, and trainers.\n\nWrite a revised version that:\n1. Precisely incorporates the requested change\n2. Preserves all existing content not affected by the change\n3. Does not introduce any changes beyond what was explicitly requested\n4. Maintains the same writing style and tone as the original\n5. Does not hallucinate new policies or rules not implied by the change request\n\nAlso write a one-sentence change_summary describing what changed and why.",
+  "raw_response": "{\"revised_content\":\"Students must wear appropriate sports underwear, shorts, leggings, tracksuit bottoms, a t-shirt or sweatshirt, and trainers. Additionally, students are now permitted to wear trainers every day, not limited to only PE days.\",\"change_summary\":\"The policy now allows students to wear trainers on all days, not just on PE days, to provide greater flexibility and comfort.\"}",
+  "parsed_output": {
+    "revised_content": "Students must wear appropriate sports underwear, shorts, leggings, tracksuit bottoms, a t-shirt or sweatshirt, and trainers. Additionally, students are now permitted to wear trainers every day, not limited to only PE days.",
+    "change_summary": "The policy now allows students to wear trainers on all days, not just on PE days, to provide greater flexibility and comfort."
+  }
+}

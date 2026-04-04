@@ -27,9 +27,38 @@ from collections import defaultdict
 from reconstruct import reconstruct_topic_document
 from run_onboarding import process_documents
 from llm import LLMProvider, call as llm_call, make_provider, render_prompt
-from schemas import CritiqueOutput, ExtractedFact
+from schemas import CritiqueOutput, DiagnosisOutput, ExtractedFact
 
 TEST_DOCS_DIR = pathlib.Path(__file__).parent / "test_docs"
+
+
+def diagnose_topic(
+    provider: LLMProvider,
+    model: str,
+    topic_slug: str,
+    scan_records: list[dict],
+    topic_document: str,
+    topic_facts: list[ExtractedFact],
+    critique_problems: list,
+) -> DiagnosisOutput:
+    return llm_call(
+        provider, model, 98, "root_cause_analysis",
+        f"diagnose: {topic_slug[:50]}",
+        render_prompt(
+            "root_cause_analysis",
+            topic_slug=topic_slug,
+            scan_records=json.dumps(scan_records, indent=2)[:2000],
+            topic_document=topic_document[:1500],
+            extracted_facts=json.dumps(
+                [{"title": f.title, "content": f.content, "kind": f.kind} for f in topic_facts],
+                indent=2,
+            )[:2000],
+            critique_problems=json.dumps(
+                [p.model_dump() for p in critique_problems], indent=2
+            ),
+        ),
+        DiagnosisOutput,
+    )
 
 
 def critique_topic(
@@ -82,7 +111,7 @@ def main() -> None:
     provider = make_provider(args.model)
 
     # ── Chain A: 4-pass extraction ──────────────────────────────────────────
-    facts, topic_docs = process_documents([doc_path], provider, args.model)
+    facts, topic_docs, topic_groups = process_documents([doc_path], provider, args.model)
     print(f"\n  → {len(facts)} facts across {len(topic_docs)} topic groups\n")
 
     # ── Group facts by (topic_slug, scope_qualifier) ────────────────────────
@@ -90,8 +119,9 @@ def main() -> None:
     for f in facts:
         facts_by_topic[(f.topic_slug, f.scope_qualifier)].append(f)
 
-    # ── Per-topic critique ──────────────────────────────────────────────────
+    # ── Per-topic critique + diagnosis ─────────────────────────────────────
     all_critiques: list[dict] = []
+    all_diagnoses: list[dict] = []
     problem_counts: dict[str, int] = defaultdict(int)
 
     for (topic_slug, scope_qualifier), topic_facts in sorted(facts_by_topic.items()):
@@ -127,6 +157,23 @@ def main() -> None:
             "problems": [p.model_dump() for p in critique.problems],
         })
 
+        if critique.problems:
+            scan_records = topic_groups.get((topic_slug, scope_qualifier), [])
+            diagnosis = diagnose_topic(
+                provider, args.model, label, scan_records,
+                topic_document, topic_facts, critique.problems,
+            )
+            print(f"\n  DIAGNOSIS:")
+            for dp in diagnosis.problems:
+                rc = dp.root_cause
+                print(f"    [{rc.pass_attribution.value} / {rc.component}] {dp.problem_type}")
+                print(f"      {rc.explanation}")
+                print(f"      → FIX: {rc.recommended_fix}")
+            all_diagnoses.append({
+                "topic": label,
+                "problems": [dp.model_dump() for dp in diagnosis.problems],
+            })
+
     # ── Summary ─────────────────────────────────────────────────────────────
     print("\n" + divider("═"))
     print("  SUMMARY")
@@ -154,6 +201,9 @@ def main() -> None:
         )
         (out / "problem_summary.json").write_text(
             json.dumps(dict(problem_counts), indent=2)
+        )
+        (out / "diagnosis.json").write_text(
+            json.dumps(all_diagnoses, indent=2, ensure_ascii=False)
         )
         print(f"\n  Results saved to {out}/")
 

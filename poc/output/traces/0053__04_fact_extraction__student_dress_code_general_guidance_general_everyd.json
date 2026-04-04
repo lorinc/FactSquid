@@ -1,0 +1,70 @@
+{
+  "seq": 53,
+  "call_number": 4,
+  "call_name": "fact_extraction",
+  "description": "student-dress-code-general-guidance/general-everyday-style/students",
+  "validation": "PASS",
+  "tokens_in": 797,
+  "tokens_out": 308,
+  "latency_s": 2.25,
+  "prompt": "You are extracting atomic facts from a topic document.\n\nThe topic document below contains all source text for one specific topic, assembled with provenance headings. Your output must pass all Five Tests.\n\n**Test 1 — Stand-Alone**: A reader with no other facts must fully understand the policy. No implied \"who does this apply to?\", \"when does it apply?\", \"except what?\". Include the subject explicitly in every fact.\n\n**Test 2 — One Topic**: A single noun phrase names the subject. If \"and\" is needed to name the subject, split into two facts.\n\n**Test 3 — Reconstruction**: Concatenating all your facts must be informationally equivalent to the topic document: same obligations, permissions, exceptions, numerical values. No information omitted, none added.\n\n**Test 4 — Canonical Form**: Active voice. No document-navigation language (\"as mentioned in\", \"refer to\", \"see above\", \"this section\"). No redundant preamble (\"it is important to note that\", \"this policy states\", \"please be aware\").\n\n**Test 5 — Template-Slot Ready**: No audience-specific framing baked in (\"as a parent, you should…\", \"staff are reminded that…\"). No channel-specific framing (\"as you read this handbook…\").\n\nInstructions:\n- This is the only pass that writes content — rewrite source text into canonical form\n- Eliminate redundancy across provenance spans (same obligation stated in multiple spans → one fact)\n- Split only at true topic boundaries (when the subject noun phrase changes)\n- `title`: short noun phrase naming the subject of this fact\n- `kind`: assign ONLY for clearly non-policy content — 'rationale', 'principle', or 'context'. Leave null for all policy facts (rules, procedures, fees, contact details, definitions)\n- `topic_tags`: kebab-case tags, consistent with the topic_slug used in grouping\n\nAudience scope: parents, staff, students\nChannel scope: parent-handbook, staff-handbook, policy-documents, website\n\nTopic document:\n### Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\n\nJewellery must not dangle; no hoop earrings or large necklaces (health and safety). On PE days, students must be able to remove stud earrings or other items as required.\nSubtle make-up may be worn from Year 7 upwards (e.g., mascara, powder, foundation, nail varnish); no lipstick.\nAcrylic nails may not be longer than two millimetres from the fingertip (health and safety).\nShorts and skirts must cover the upper thighs (¾ length or longer). Cycling shorts are permitted on PE days but must also cover the upper thighs.\nAll clothes must be without holes or rips. All underwear must be covered by outerwear.",
+  "raw_response": "{\"facts\":[{\"title\":\"Jewellery restrictions\",\"content\":\"Students must not wear jewellery that dangles, including hoop earrings and large necklaces, to ensure health and safety.\",\"kind\":null,\"topic_tags\":[\"dress-code\",\"jewellery\"]},{\"title\":\"PE day jewellery requirements\",\"content\":\"On PE days, students must have the ability to remove stud earrings or any other jewellery as required.\",\"kind\":null,\"topic_tags\":[\"dress-code\",\"pe-day\"]},{\"title\":\"Make-up guidelines for Year 7 upwards\",\"content\":\"Students in Year 7 and above may wear subtle make-up such as mascara, powder, foundation, and nail varnish; however, lipstick is not permitted.\",\"kind\":null,\"topic_tags\":[\"dress-code\",\"make-up\"]},{\"title\":\"Acrylic nails restrictions\",\"content\":\"Students are not allowed to have acrylic nails extending more than two millimetres from the fingertip for health and safety reasons.\",\"kind\":null,\"topic_tags\":[\"dress-code\",\"acrylic-nails\"]},{\"title\":\"Clothing length requirements\",\"content\":\"Shorts and skirts worn by students must cover the upper thighs and be ¾ length or longer, while cycling shorts must also cover the upper thighs if worn on PE days.\",\"kind\":null,\"topic_tags\":[\"dress-code\",\"clothing-length\"]},{\"title\":\"Clothing condition requirements\",\"content\":\"Students are required to wear clothes without holes or rips, ensuring that all underwear is covered by outerwear.\",\"kind\":null,\"topic_tags\":[\"dress-code\",\"clothing-condition\"]}]}",
+  "parsed_output": {
+    "facts": [
+      {
+        "title": "Jewellery restrictions",
+        "content": "Students must not wear jewellery that dangles, including hoop earrings and large necklaces, to ensure health and safety.",
+        "kind": null,
+        "topic_tags": [
+          "dress-code",
+          "jewellery"
+        ]
+      },
+      {
+        "title": "PE day jewellery requirements",
+        "content": "On PE days, students must have the ability to remove stud earrings or any other jewellery as required.",
+        "kind": null,
+        "topic_tags": [
+          "dress-code",
+          "pe-day"
+        ]
+      },
+      {
+        "title": "Make-up guidelines for Year 7 upwards",
+        "content": "Students in Year 7 and above may wear subtle make-up such as mascara, powder, foundation, and nail varnish; however, lipstick is not permitted.",
+        "kind": null,
+        "topic_tags": [
+          "dress-code",
+          "make-up"
+        ]
+      },
+      {
+        "title": "Acrylic nails restrictions",
+        "content": "Students are not allowed to have acrylic nails extending more than two millimetres from the fingertip for health and safety reasons.",
+        "kind": null,
+        "topic_tags": [
+          "dress-code",
+          "acrylic-nails"
+        ]
+      },
+      {
+        "title": "Clothing length requirements",
+        "content": "Shorts and skirts worn by students must cover the upper thighs and be ¾ length or longer, while cycling shorts must also cover the upper thighs if worn on PE days.",
+        "kind": null,
+        "topic_tags": [
+          "dress-code",
+          "clothing-length"
+        ]
+      },
+      {
+        "title": "Clothing condition requirements",
+        "content": "Students are required to wear clothes without holes or rips, ensuring that all underwear is covered by outerwear.",
+        "kind": null,
+        "topic_tags": [
+          "dress-code",
+          "clothing-condition"
+        ]
+      }
+    ]
+  }
+}

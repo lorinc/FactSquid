@@ -1,0 +1,94 @@
+{
+  "seq": 11,
+  "call_number": 1,
+  "call_name": "topic_scanning",
+  "description": "test_doc_3_emergency_procedure / Procedure in Case of an Accident or Emergency",
+  "validation": "PASS",
+  "tokens_in": 1166,
+  "tokens_out": 1144,
+  "latency_s": 6.14,
+  "prompt": "You are a structural analyst extracting topic records from a document section.\n\nFor each paragraph or logical block in the content, output one TopicScanRecord.\n\nRules:\n- ONE record per paragraph or distinct logical block — never merge multiple paragraphs into one record\n- `span_text` MUST be verbatim — never summarise, paraphrase, or rewrite any part of the source text\n- `topic_slug` is built from the base slug below:\n  - Use `procedure-in-case-of-an-accident-or-emergency` as-is for paragraphs that belong to the main topic of this section\n  - Extend with a suffix ONLY when a paragraph introduces a clearly distinct sub-topic: `procedure-in-case-of-an-accident-or-emergency/subtopic`\n  - Never invent a slug unrelated to `procedure-in-case-of-an-accident-or-emergency`\n  - The same sub-topic appearing under a different heading in a different document must produce the same slug\n- `scope_qualifier` — omit (null) unless this specific instance is distinctly scoped: 'students', 'staff', '2024-2025'.\n  The heading may already imply a scope (e.g. \"Student Dress Code\" → 'students') — confirm or refine from paragraph content\n- Orphan preamble (pure rationale, goals, aspirational framing with no policy content) → slug `procedure-in-case-of-an-accident-or-emergency/principles` or 'skip-candidate'\n\nDocument context:\nSection: Procedure in Case of an Accident or Emergency\nSource path: Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\nBase slug: procedure-in-case-of-an-accident-or-emergency\n\nContent:\n*   **Minor Injuries:**\n    *   In case of minor injuries (such as cuts or bruises), first aid will be administered by the staff member trained in first aid. Families will be notified about the incident at the end of the outing, unless further medical attention is required.\n\n*   **Serious Injuries or Medical Emergencies:**\n    *   In the event of a serious injury or medical emergency, staff will immediately call emergency services (112) and follow the instructions provided by the professionals.\n    *   Family/guardians will be contacted as soon as possible by the designated staff member. A member of school staff will accompany the child to the hospital if necessary and remain with the child until the parent/guardian arrives. (This applies also in the event of an accident abroad.)\n    *   If the child has a fever or any other symptom that prevents them from enjoying the experience, the family will be contacted to pick them up as soon as possible.\n    *   All families must agree to the pickup commitment before authorizing the outing.\n    *   A full report of the incident must be submitted to the school administration.\n\n*   **Actions to Mitigate the Risk of Losing a Child:**\n    *   For one-day experiences, Early Years and Primary students will wear the Imagine t-shirt, which helps adults oversee the children.\n    *   Before and during the outing, remind students to notify staff when they need to go to a different place (e.g., the toilet), as adults need to know where children are at all times. Students must always go in a minimum of two.\n    *   Count children every time they change activity or move from one place to another (e.g., before lunch, after lunch, when moving from a closed space to an open area) to ensure all children are present.\n\n*   **Lost or Missing Child:**\n    *   If a child is unaccounted for, staff will immediately initiate a search of the area while keeping other students safe.\n    *   If the child is not found, a member of staff must phone the Headteacher and, if agreed, call the police.\n    *   Parents/guardians will be informed as soon as possible, and all necessary steps will be taken to ensure the child's safety and well-being.\n    *   Once a missing child is found, staff must: talk to and comfort the child; speak to the other children about why they must not leave the group; submit a detailed report covering time, place, staff and child numbers, when the child was last seen, how long they were missing, and lessons learned.",
+  "raw_response": "{\"records\":[{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/minor-injuries\",\"scope_qualifier\":null,\"span_text\":\"In case of minor injuries (such as cuts or bruises), first aid will be administered by the staff member trained in first aid. Families will be notified about the incident at the end of the outing, unless further medical attention is required.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\"},{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/serious-injuries-or-medical-emergencies\",\"scope_qualifier\":null,\"span_text\":\"In the event of a serious injury or medical emergency, staff will immediately call emergency services (112) and follow the instructions provided by the professionals.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\"},{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/serious-injuries-or-medical-emergencies\",\"scope_qualifier\":null,\"span_text\":\"Family/guardians will be contacted as soon as possible by the designated staff member. A member of school staff will accompany the child to the hospital if necessary and remain with the child until the parent/guardian arrives. (This applies also in the event of an accident abroad.)\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\"},{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/serious-injuries-or-medical-emergencies\",\"scope_qualifier\":null,\"span_text\":\"If the child has a fever or any other symptom that prevents them from enjoying the experience, the family will be contacted to pick them up as soon as possible.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\"},{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/serious-injuries-or-medical-emergencies\",\"scope_qualifier\":null,\"span_text\":\"All families must agree to the pickup commitment before authorizing the outing.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\"},{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/reporting\",\"scope_qualifier\":null,\"span_text\":\"A full report of the incident must be submitted to the school administration.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\"},{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/risk-mitigation\",\"scope_qualifier\":\"students\",\"span_text\":\"For one-day experiences, Early Years and Primary students will wear the Imagine t-shirt, which helps adults oversee the children.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\"},{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/risk-mitigation\",\"scope_qualifier\":null,\"span_text\":\"Before and during the outing, remind students to notify staff when they need to go to a different place (e.g., the toilet), as adults need to know where children are at all times. Students must always go in a minimum of two.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\"},{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/risk-mitigation\",\"scope_qualifier\":null,\"span_text\":\"Count children every time they change activity or move from one place to another (e.g., before lunch, after lunch, when moving from a closed space to an open area) to ensure all children are present.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\"},{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child\",\"scope_qualifier\":null,\"span_text\":\"If a child is unaccounted for, staff will immediately initiate a search of the area while keeping other students safe.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\"},{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child\",\"scope_qualifier\":null,\"span_text\":\"If the child is not found, a member of staff must phone the Headteacher and, if agreed, call the police.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\"},{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child\",\"scope_qualifier\":null,\"span_text\":\"Parents/guardians will be informed as soon as possible, and all necessary steps will be taken to ensure the child's safety and well-being.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\"},{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child\",\"scope_qualifier\":null,\"span_text\":\"Once a missing child is found, staff must: talk to and comfort the child; speak to the other children about why they must not leave the group; submit a detailed report covering time, place, staff and child numbers, when the child was last seen, how long they were missing, and lessons learned.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\"}]}",
+  "parsed_output": {
+    "records": [
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/minor-injuries",
+        "scope_qualifier": null,
+        "span_text": "In case of minor injuries (such as cuts or bruises), first aid will be administered by the staff member trained in first aid. Families will be notified about the incident at the end of the outing, unless further medical attention is required.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      },
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/serious-injuries-or-medical-emergencies",
+        "scope_qualifier": null,
+        "span_text": "In the event of a serious injury or medical emergency, staff will immediately call emergency services (112) and follow the instructions provided by the professionals.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      },
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/serious-injuries-or-medical-emergencies",
+        "scope_qualifier": null,
+        "span_text": "Family/guardians will be contacted as soon as possible by the designated staff member. A member of school staff will accompany the child to the hospital if necessary and remain with the child until the parent/guardian arrives. (This applies also in the event of an accident abroad.)",
+        "source_path": "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      },
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/serious-injuries-or-medical-emergencies",
+        "scope_qualifier": null,
+        "span_text": "If the child has a fever or any other symptom that prevents them from enjoying the experience, the family will be contacted to pick them up as soon as possible.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      },
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/serious-injuries-or-medical-emergencies",
+        "scope_qualifier": null,
+        "span_text": "All families must agree to the pickup commitment before authorizing the outing.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      },
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/reporting",
+        "scope_qualifier": null,
+        "span_text": "A full report of the incident must be submitted to the school administration.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      },
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/risk-mitigation",
+        "scope_qualifier": "students",
+        "span_text": "For one-day experiences, Early Years and Primary students will wear the Imagine t-shirt, which helps adults oversee the children.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      },
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/risk-mitigation",
+        "scope_qualifier": null,
+        "span_text": "Before and during the outing, remind students to notify staff when they need to go to a different place (e.g., the toilet), as adults need to know where children are at all times. Students must always go in a minimum of two.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      },
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/risk-mitigation",
+        "scope_qualifier": null,
+        "span_text": "Count children every time they change activity or move from one place to another (e.g., before lunch, after lunch, when moving from a closed space to an open area) to ensure all children are present.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      },
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child",
+        "scope_qualifier": null,
+        "span_text": "If a child is unaccounted for, staff will immediately initiate a search of the area while keeping other students safe.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      },
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child",
+        "scope_qualifier": null,
+        "span_text": "If the child is not found, a member of staff must phone the Headteacher and, if agreed, call the police.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      },
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child",
+        "scope_qualifier": null,
+        "span_text": "Parents/guardians will be informed as soon as possible, and all necessary steps will be taken to ensure the child's safety and well-being.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      },
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child",
+        "scope_qualifier": null,
+        "span_text": "Once a missing child is found, staff must: talk to and comfort the child; speak to the other children about why they must not leave the group; submit a detailed report covering time, place, staff and child numbers, when the child was last seen, how long they were missing, and lessons learned.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency"
+      }
+    ]
+  }
+}

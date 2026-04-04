@@ -1,0 +1,201 @@
+[
+  {
+    "change_request": "Update the student dress code: students may now wear trainers on any day, not just PE days.",
+    "k": 10,
+    "affected_count": 2,
+    "proposals": [
+      {
+        "fact_id": "student_dress_code_general_guidance_pe_day__students__0",
+        "source": "test_doc_4_dress_code/student-dress-code-general-guidance/pe-day",
+        "relevance": 5,
+        "reason": "The fact specifically mentions trainers to be worn on PE days, and this guidance now needs to be updated to apply to any day.",
+        "original_content": "Students must wear appropriate sports underwear, shorts, leggings, tracksuit bottoms, a t-shirt or sweatshirt, and trainers.",
+        "revised_content": "Students must wear appropriate sports underwear, shorts, leggings, tracksuit bottoms, a t-shirt or sweatshirt, and trainers. Additionally, students are now permitted to wear trainers every day, not limited to only PE days.",
+        "change_summary": "The policy now allows students to wear trainers on all days, not just on PE days, to provide greater flexibility and comfort.",
+        "original_tags": [
+          "student-dress-code"
+        ],
+        "revised_tags": [
+          "student-dress-code",
+          "footwear-policy"
+        ],
+        "tag_changes": [
+          {
+            "action": "keep",
+            "tag": "student-dress-code",
+            "reason": "The revised policy continues to focus on the guidelines for student attire."
+          },
+          {
+            "action": "add",
+            "tag": "footwear-policy",
+            "reason": "The revision introduces a new rule allowing trainers to be worn every day, extending beyond just PE days."
+          }
+        ]
+      },
+      {
+        "fact_id": "student_dress_code_general_guidance_footwear__students__0",
+        "source": "test_doc_4_dress_code/student-dress-code-general-guidance/footwear",
+        "relevance": 4,
+        "reason": "Although it doesn't explicitly mention PE days, the footwear guidance should be reviewed to ensure it aligns with the new allowance for trainers on any day.",
+        "original_content": "Students must wear flat, enclosed shoes outdoors. The shoes should be comfortable and fastened using laces, buckles, zips, or velcro. Students need to independently put on and take off their shoes.",
+        "revised_content": "Students must wear flat, enclosed shoes outdoors. The shoes should be comfortable and fastened using laces, buckles, zips, or velcro. Students need to independently put on and take off their shoes. In addition, students are now permitted to wear trainers on any day, not just PE days. These shoes should also adhere to the requirement of being comfortable, flat, and enclosed.",
+        "change_summary": "The policy now allows students to wear trainers every day, extending the flexibility beyond just PE days, to provide more comfort and convenience.",
+        "original_tags": [
+          "dress-code",
+          "student-footwear"
+        ],
+        "revised_tags": [
+          "dress-code",
+          "student-footwear",
+          "trainers"
+        ],
+        "tag_changes": [
+          {
+            "action": "keep",
+            "tag": "dress-code",
+            "reason": "The revised policy still addresses aspects of the student dress code, specifically focusing on footwear requirements."
+          },
+          {
+            "action": "keep",
+            "tag": "student-footwear",
+            "reason": "The primary subject of the policy is related to students' footwear guidelines."
+          },
+          {
+            "action": "add",
+            "tag": "trainers",
+            "reason": "The revision introduces a new allowance for wearing trainers any day, meaning this specific type of footwear is now relevant to the policy."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "change_request": "Update the late arrival fee threshold: the \u20ac5 fee now applies from the third late arrival in the year, not the fifth.",
+    "k": 10,
+    "affected_count": 1,
+    "proposals": [
+      {
+        "fact_id": "school_hours_punctuality_and_drop_off_pick_up_late_arrivals__all__0",
+        "source": "test_doc_1_school_hours/school-hours-punctuality-and-drop-off-pick-up/late-arrivals",
+        "relevance": 5,
+        "reason": "This fact explicitly states the threshold for late arrival fees, which directly needs updating from the fifth to the third late arrival per the change request.",
+        "original_content": "A fee of \u20ac5 per late arrival will be charged monthly starting from the fifth late arrival in the school year.",
+        "revised_content": "A fee of \u20ac5 per late arrival will be charged monthly starting from the third late arrival in the school year.",
+        "change_summary": "The threshold for the late arrival fee was changed from the fifth to the third occurrence to reinforce punctuality earlier in the school year.",
+        "original_tags": [
+          "school-hours",
+          "attendance"
+        ],
+        "revised_tags": [
+          "school-hours",
+          "attendance",
+          "late-fees"
+        ],
+        "tag_changes": [
+          {
+            "action": "keep",
+            "tag": "school-hours",
+            "reason": "The policy still pertains to school hours since it deals with arrival times."
+          },
+          {
+            "action": "keep",
+            "tag": "attendance",
+            "reason": "The policy is directly related to attendance, marking late arrivals."
+          },
+          {
+            "action": "add",
+            "tag": "late-fees",
+            "reason": "The introduction of a monetary charge for late arrivals introduces the new topic of fees."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "change_request": "When a child goes missing on a trip abroad, staff must also contact the local consulate in addition to calling the police.",
+    "k": 10,
+    "affected_count": 2,
+    "proposals": [
+      {
+        "fact_id": "procedure_in_case_of_an_accident_or_emergency_lost_or_missing_child__all__1",
+        "source": "test_doc_3_emergency_procedure/procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child",
+        "relevance": 5,
+        "reason": "The fact lacks the updated procedure of contacting the local consulate when a child goes missing abroad, as per the new change request.",
+        "original_content": "If the missing child is not found during the initial search, a member of staff is required to contact the Headteacher and call the police if agreed.",
+        "revised_content": "If the missing child is not found during the initial search, a member of staff is required to contact the Headteacher, call the police if agreed, and also notify the local consulate.",
+        "change_summary": "The policy now requires staff to contact the local consulate if a child goes missing on an overseas trip, in addition to the previous protocol.",
+        "original_tags": [
+          "accident-emergency-procedure"
+        ],
+        "revised_tags": [
+          "accident-emergency-procedure",
+          "child-safety-protocol",
+          "school-communication-policy"
+        ],
+        "tag_changes": [
+          {
+            "action": "keep",
+            "tag": "accident-emergency-procedure",
+            "reason": "The procedure still involves an emergency response in the case of a missing child."
+          },
+          {
+            "action": "add",
+            "tag": "child-safety-protocol",
+            "reason": "The revised fact reinforces safety protocols, highlighting measures to ensure child safety."
+          },
+          {
+            "action": "add",
+            "tag": "school-communication-policy",
+            "reason": "Clear lines of communication are outlined in the revised procedure, involving school staff and external authorities."
+          }
+        ]
+      },
+      {
+        "fact_id": "procedure_in_case_of_an_accident_or_emergency_lost_or_missing_child__all__0",
+        "source": "test_doc_3_emergency_procedure/procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child",
+        "relevance": 3,
+        "reason": "This fact sets the initial response, including searching the area, and may need review to ensure comprehensive updates for procedures abroad as per the change request.",
+        "original_content": "When a child is unaccounted for, staff must immediately initiate a search of the area while ensuring the safety of other students.",
+        "revised_content": "When a child is unaccounted for during a trip abroad, staff must immediately initiate a search of the area while ensuring the safety of other students. In addition to this, they must contact the local police and also notify the local consulate to help in the search efforts.",
+        "change_summary": "Updated the policy to ensure staff also notify the local consulate when a child goes missing on an international trip, enhancing response coordination.",
+        "original_tags": [
+          "accident-emergency-procedure"
+        ],
+        "revised_tags": [
+          "accident-emergency-procedure",
+          "missing-student",
+          "police-notification",
+          "international-consulate",
+          "student-safety"
+        ],
+        "tag_changes": [
+          {
+            "action": "keep",
+            "tag": "accident-emergency-procedure",
+            "reason": "The revision still deals with emergency procedures that arise in an unexpected situation (a missing child)."
+          },
+          {
+            "action": "add",
+            "tag": "missing-student",
+            "reason": "The revision specifically deals with a scenario where a student is unaccounted for, which is a distinct emergency situation."
+          },
+          {
+            "action": "add",
+            "tag": "police-notification",
+            "reason": "The revised fact involves contacting local police, which is a crucial step in the process."
+          },
+          {
+            "action": "add",
+            "tag": "international-consulate",
+            "reason": "Notifying and working with an international entity like a consul is a specific new procedure introduced in the revised fact."
+          },
+          {
+            "action": "add",
+            "tag": "student-safety",
+            "reason": "Ensuring the safety of other students is emphasized in the revised policy, introducing a new safety-related aspect."
+          }
+        ]
+      }
+    ]
+  }
+]

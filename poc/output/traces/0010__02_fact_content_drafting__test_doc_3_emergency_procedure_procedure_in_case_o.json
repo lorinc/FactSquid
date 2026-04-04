@@ -1,0 +1,16 @@
+{
+  "seq": 10,
+  "call_number": 2,
+  "call_name": "fact_content_drafting",
+  "description": "test_doc_3_emergency_procedure/procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child",
+  "validation": "PASS",
+  "tokens_in": 227,
+  "tokens_out": 75,
+  "latency_s": 1.0,
+  "prompt": "Revise a school policy fact to incorporate a specific change request.\n\nChange request:\nWhen a child goes missing on a trip abroad, staff must also contact the local consulate in addition to calling the police.\n\nCurrent fact content:\nIf the missing child is not found during the initial search, a member of staff is required to contact the Headteacher and call the police if agreed.\n\nWrite a revised version that:\n1. Precisely incorporates the requested change\n2. Preserves all existing content not affected by the change\n3. Does not introduce any changes beyond what was explicitly requested\n4. Maintains the same writing style and tone as the original\n5. Does not hallucinate new policies or rules not implied by the change request\n\nAlso write a one-sentence change_summary describing what changed and why.",
+  "raw_response": "{\"revised_content\":\"If the missing child is not found during the initial search, a member of staff is required to contact the Headteacher, call the police if agreed, and also notify the local consulate.\",\"change_summary\":\"The policy now requires staff to contact the local consulate if a child goes missing on an overseas trip, in addition to the previous protocol.\"}",
+  "parsed_output": {
+    "revised_content": "If the missing child is not found during the initial search, a member of staff is required to contact the Headteacher, call the police if agreed, and also notify the local consulate.",
+    "change_summary": "The policy now requires staff to contact the local consulate if a child goes missing on an overseas trip, in addition to the previous protocol."
+  }
+}

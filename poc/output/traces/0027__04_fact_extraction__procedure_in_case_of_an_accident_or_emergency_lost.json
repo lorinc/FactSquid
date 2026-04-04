@@ -1,0 +1,48 @@
+{
+  "seq": 27,
+  "call_number": 4,
+  "call_name": "fact_extraction",
+  "description": "procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child",
+  "validation": "PASS",
+  "tokens_in": 846,
+  "tokens_out": 276,
+  "latency_s": 2.35,
+  "prompt": "You are extracting atomic facts from a topic document.\n\nThe topic document below contains all source text for one specific topic, assembled with provenance headings. Your output must pass all Five Tests.\n\n**Test 1 — Stand-Alone**: A reader with no other facts must fully understand the policy. No implied \"who does this apply to?\", \"when does it apply?\", \"except what?\". Include the subject explicitly in every fact.\n\n**Test 2 — One Topic**: A single noun phrase names the subject. If \"and\" is needed to name the subject, split into two facts.\n\n**Test 3 — Reconstruction**: Concatenating all your facts must be informationally equivalent to the topic document: same obligations, permissions, exceptions, numerical values. No information omitted, none added.\n\n**Test 4 — Canonical Form**: Active voice. No document-navigation language (\"as mentioned in\", \"refer to\", \"see above\", \"this section\"). No redundant preamble (\"it is important to note that\", \"this policy states\", \"please be aware\").\n\n**Test 5 — Template-Slot Ready**: No audience-specific framing baked in (\"as a parent, you should…\", \"staff are reminded that…\"). No channel-specific framing (\"as you read this handbook…\").\n\nInstructions:\n- This is the only pass that writes content — rewrite source text into canonical form\n- Eliminate redundancy across provenance spans (same obligation stated in multiple spans → one fact)\n- Split only at true topic boundaries (when the subject noun phrase changes)\n- `title`: short noun phrase naming the subject of this fact\n- `kind`: assign ONLY for clearly non-policy content — 'rationale', 'principle', or 'context'. Leave null for all policy facts (rules, procedures, fees, contact details, definitions)\n- `topic_tags`: kebab-case tags, consistent with the topic_slug used in grouping\n\nAudience scope: staff\nChannel scope: staff-handbook, policy-documents\n\nTopic document:\n### Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\n\nIf a child is unaccounted for, staff will immediately initiate a search of the area while keeping other students safe.\n\n### Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\n\nIf the child is not found, a member of staff must phone the Headteacher and, if agreed, call the police.\n\n### Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\n\nParents/guardians will be informed as soon as possible, and all necessary steps will be taken to ensure the child's safety and well-being.\n\n### Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\n\nOnce a missing child is found, staff must: talk to and comfort the child; speak to the other children about why they must not leave the group; submit a detailed report covering time, place, staff and child numbers, when the child was last seen, how long they were missing, and lessons learned.",
+  "raw_response": "{\"facts\":[{\"title\":\"Procedure when a child is unaccounted for\",\"content\":\"When a child is unaccounted for, staff must immediately initiate a search of the area while ensuring the safety of other students.\",\"kind\":null,\"topic_tags\":[\"accident-emergency-procedure\"]},{\"title\":\"Procedure if the child is not found\",\"content\":\"If the missing child is not found during the initial search, a member of staff is required to contact the Headteacher and call the police if agreed.\",\"kind\":null,\"topic_tags\":[\"accident-emergency-procedure\"]},{\"title\":\"Notification of parents or guardians\",\"content\":\"Parents or guardians of the missing child must be informed as soon as possible, and all necessary measures should be taken to ensure the child's safety and well-being.\",\"kind\":null,\"topic_tags\":[\"accident-emergency-procedure\"]},{\"title\":\"Steps after a missing child is found\",\"content\":\"Once a missing child is located, staff must talk to and comfort the child, speak to the other children about the importance of not leaving the group, and submit a detailed report. This report should cover the time and place of the incident, the number of staff and children present, when the child was last seen, how long they were missing, and lessons learned from the incident.\",\"kind\":null,\"topic_tags\":[\"accident-emergency-procedure\"]}]}",
+  "parsed_output": {
+    "facts": [
+      {
+        "title": "Procedure when a child is unaccounted for",
+        "content": "When a child is unaccounted for, staff must immediately initiate a search of the area while ensuring the safety of other students.",
+        "kind": null,
+        "topic_tags": [
+          "accident-emergency-procedure"
+        ]
+      },
+      {
+        "title": "Procedure if the child is not found",
+        "content": "If the missing child is not found during the initial search, a member of staff is required to contact the Headteacher and call the police if agreed.",
+        "kind": null,
+        "topic_tags": [
+          "accident-emergency-procedure"
+        ]
+      },
+      {
+        "title": "Notification of parents or guardians",
+        "content": "Parents or guardians of the missing child must be informed as soon as possible, and all necessary measures should be taken to ensure the child's safety and well-being.",
+        "kind": null,
+        "topic_tags": [
+          "accident-emergency-procedure"
+        ]
+      },
+      {
+        "title": "Steps after a missing child is found",
+        "content": "Once a missing child is located, staff must talk to and comfort the child, speak to the other children about the importance of not leaving the group, and submit a detailed report. This report should cover the time and place of the incident, the number of staff and children present, when the child was last seen, how long they were missing, and lessons learned from the incident.",
+        "kind": null,
+        "topic_tags": [
+          "accident-emergency-procedure"
+        ]
+      }
+    ]
+  }
+}

@@ -1,6 +1,7 @@
 """Pydantic v2 output schemas for all POC LLM calls."""
 from __future__ import annotations
 
+from enum import Enum
 from typing import Literal
 
 from pydantic import BaseModel, Field
@@ -115,6 +116,31 @@ class CritiqueOutput(BaseModel):
         description="Up to 4 specific problems. Empty list if reconstruction is good."
     )
     overall: str = Field(description="One-sentence summary of reconstruction quality")
+
+
+# ── Root cause diagnosis (Call #98) ──────────────────────────────────────────
+
+class PassAttribution(str, Enum):
+    pass_1 = "pass-1"   # topic_scanning.j2 or _heading_to_base_slug()
+    pass_3 = "pass-3"   # deterministic grouping/assembly
+    pass_4 = "pass-4"   # fact_extraction.j2
+
+
+class RootCause(BaseModel):
+    pass_attribution: PassAttribution
+    component: str = Field(description="e.g. 'topic_scanning.j2', 'fact_extraction.j2', '_heading_to_base_slug()'")
+    explanation: str = Field(description="What decision went wrong and why")
+    recommended_fix: str = Field(description="Concrete change: quote the prompt instruction to add/change, or name the function and rule")
+
+
+class DiagnosedProblem(BaseModel):
+    problem_type: str = Field(description="Mirrors CritiqueProblem.problem_type")
+    description: str = Field(description="Verbatim problem description from critique")
+    root_cause: RootCause
+
+
+class DiagnosisOutput(BaseModel):
+    problems: list[DiagnosedProblem]
 
 
 # ── Assembled fact (Chain A output) ──────────────────────────────────────────

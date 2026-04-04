@@ -139,21 +139,26 @@ The solution is to concentrate all content about a topic before attempting final
 
 ### Pass 1 — Topic Scanning *(structural inference, per section)*
 
-**Input:** each source section (heading + body text)
+**Input:** each source section (heading path + body text)
 
 **Output:** one record per paragraph or logical block:
 ```
 { topic_slug, scope_qualifier, span_text, source_path }
 ```
 
-**The unit of analysis is the paragraph or logical block, not the section.** The section heading is provenance context, not the topic. A section titled "Communication Between Families and the School" may contain records with slugs like `communication-tools/phidias`, `communication-language/general`, and `communication-channels/newsletter`. The model must ask, for each paragraph: *what is this paragraph actually about?*
+**Slug derivation is two-stage.** The heading path is a reliable signal of author intent and provides the stable base slug. The LLM's role is to find finer-grained topic boundaries *within* the section that the author did not mark with a heading — not to invent topic names from scratch.
 
-- `topic_slug` — normalised, hierarchical identifier: `dress-code/general`, `dress-code/outdoor-events`, `communication-tools/phidias`. The model must produce consistent slugs across sections. This is where merge logic lives — two records with the same slug and qualifier will be grouped mechanically in Pass 2, so the slug must be stable.
-- `scope_qualifier` — what makes this instance distinct from other instances of the same topic: `students`, `staff`, `2024-2025`. If no scope distinction applies, omit.
+1. **Base slug (deterministic):** normalise the heading path to produce the base slug and extract any scope qualifier present in the heading. `"2.4 Student Dress Code"` → base slug `dress-code`, scope qualifier `students`. `"12. Communication Between Families and the School"` → base slug `communication`.
+2. **Sub-topic suffix (LLM):** for each paragraph within the section, the model asks: *does this paragraph introduce a distinct sub-topic that would form a separate fact?* If yes, extend the base slug with a suffix: `dress-code/footwear`, `communication/phidias`. If no, use the base slug as-is.
+
+This makes slugs stable by construction: the prefix is deterministic, and the LLM extends it only when it finds genuine sub-topic boundaries. A section titled "Communication Between Families and the School" may produce records with slugs like `communication/phidias`, `communication/language`, and `communication/newsletter` — all sharing the same deterministic prefix.
+
+- `topic_slug` — normalised, hierarchical identifier. Prefix is derived from the heading path; suffix added by LLM only for within-section sub-topic splits. Must be consistent across documents: the same sub-topic appearing under a different heading in a different document must produce the same slug.
+- `scope_qualifier` — what makes this instance distinct from other instances of the same topic: `students`, `staff`, `2024-2025`. Often inferable directly from the heading (e.g. "Student Dress Code" → `students`). If no scope distinction applies, omit.
 - `span_text` — verbatim paragraph(s). **No summarisation. No rewriting.** The source text is ground truth. Capturing text directly rather than offsets simplifies Pass 3 assembly and eliminates offset-tracking bugs.
-- `source_path` — provenance heading for this span: `Family Manual > 12. Dress Code`. Used as a heading in Pass 3 topic document assembly.
+- `source_path` — full heading path for this span: `Family Manual > 12. Dress Code > 2.4 Student Dress Code`. Used as a heading in Pass 3 topic document assembly.
 
-The model is doing structural inference only: *where* does this topic appear, and *what scope* applies. It does not write or summarise content. Asking for summaries here is wasteful — they are paid for once and discarded, and a bad summary silently corrupts the grouping step.
+The model is doing structural inference only: *where does a new sub-topic begin within this section, and what scope applies?* It does not write or summarise content. Asking for summaries here is wasteful — they are paid for once and discarded, and a bad summary silently corrupts the grouping step.
 
 **Orphan preamble** — introductory paragraphs that are pure rationale or aspirational framing with no policy content ("At Imagine, we believe that smooth communication is crucial...") should be assigned a `**/principles` slug (e.g. `communication/principles`) or flagged as `skip-candidate`. Pass 4 decides whether they become a `principle`-kind fact or are dropped.
 

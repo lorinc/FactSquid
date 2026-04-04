@@ -45,19 +45,23 @@ Before any LLM call per document:
 
 ### Pass 1 — Topic Scanning (LLM, per section)
 
-**Input**: one section (heading + body text, with document context prefix if chunked)
+**Input**: one section (heading path + body text, with document context prefix if chunked)
 
 **Output**: one record per paragraph or logical block:
 ```
 { topic_slug, scope_qualifier, span_text, source_path }
 ```
 
-- `topic_slug` — hierarchical, normalised: `dress-code/general`, `medication/procedures`. Must be stable across documents — two records with the same slug will be merged mechanically in Pass 2.
-- `scope_qualifier` — what makes this instance distinct from others with the same slug: `students`, `staff`, `2024-2025`. Omit if none applies.
-- `span_text` — verbatim paragraph(s). **No summarisation. No rewriting.** The source text is ground truth.
-- `source_path` — provenance heading: `Family Manual > 12. Dress Code`
+Slug derivation is two-stage:
+1. **Base slug (deterministic)**: normalise the heading path to produce the base slug and extract any scope qualifier present in the heading. `"2.4 Student Dress Code"` → base slug `dress-code`, scope qualifier `students`.
+2. **Sub-topic suffix (LLM)**: for each paragraph, the model asks: does this paragraph introduce a distinct sub-topic? If yes, extend the base slug with a suffix (`dress-code/footwear`). If no, use the base slug as-is.
 
-The model does **structural inference only**: where does each topic appear, and what scope applies. It does not write or summarise content. Asking for summaries here is wasteful — they are paid for once and discarded, and a bad summary silently corrupts the grouping step.
+- `topic_slug` — hierarchical, normalised. Prefix derived from heading path; suffix added by LLM only for within-section sub-topic splits. Must be consistent across documents — two records with the same slug will be merged mechanically in Pass 2.
+- `scope_qualifier` — what makes this instance distinct from others with the same slug: `students`, `staff`, `2024-2025`. Often inferable directly from the heading. Omit if none applies.
+- `span_text` — verbatim paragraph(s). **No summarisation. No rewriting.** The source text is ground truth.
+- `source_path` — full heading path: `Family Manual > 12. Dress Code > 2.4 Student Dress Code`
+
+The model does **structural inference only**: where does a new sub-topic begin within this section, and what scope applies. It does not write or summarise content.
 
 Orphan preamble (pure rationale, aspirational framing, no policy content) → slug `<topic>/principles` or mark `skip-candidate`.
 
@@ -190,18 +194,27 @@ Old scripts and prompts replaced by the 4-pass pipeline are preserved in `poc/ar
 
 ## Implementation steps — all complete ✓
 
-Steps 1–10 implemented. Run the POC next session:
+Steps 1–10 implemented and POC validated end-to-end. Use `openai/gpt-4o` (OpenAI key in `poc/.env`). Always source `.env` and use `.venv/bin/python`.
+
+**Note:** `embed.py` uses OpenAI `text-embedding-3-small` — sentence-transformers was removed (too heavy for the miniPC).
 
 ```bash
 # Chain A — run all 4 test docs
-python3 run_onboarding.py --model anthropic/claude-sonnet-4-6 --save output/corpus.json
+source .env && FACTSQUID_TRACE_DIR=output/traces .venv/bin/python run_onboarding.py --model openai/gpt-4o --save output/corpus.json
 
 # Chain A — iteration loop (one doc at a time)
-python3 run_iteration.py --model anthropic/claude-sonnet-4-6 --doc 4 --save iterations/iter_001
+source .env && .venv/bin/python run_iteration.py --model openai/gpt-4o --doc 4 --save iterations/iter_001
 
 # Chain B — change proposals
-python3 run_change.py --model anthropic/claude-sonnet-4-6 --corpus output/corpus.json --save output/proposals.json
+source .env && FACTSQUID_TRACE_DIR=output/traces .venv/bin/python run_change.py --model openai/gpt-4o --corpus output/corpus.json --save output/proposals.json
 ```
+
+**Last run results (2026-04-04):**
+- Chain A: 99 facts from 4 docs, corpus at `output/corpus.json`
+- Chain B: all 3 change requests passed evaluation checks, proposals at `output/proposals.json`
+- Traces at `output/traces/`
+
+**Next session:** Run the iteration loop (`run_iteration.py`) for per-topic critique scores.
 
 ---
 
@@ -223,13 +236,16 @@ Keep unchanged: `ScopeInferenceOutput`, `AffectedFact*`, `FactContentDrafting*`,
 
 ### Step 2 — Write `prompts/topic_scanning.j2`
 
-Pass 1 prompt. Input variables: `section_title`, `source_path`, `content`.
+Pass 1 prompt. Input variables: `source_path`, `base_slug`, `content`.
+
+`base_slug` is derived deterministically from the heading path before the prompt is rendered — the prompt receives it as a given, not something to infer. `source_path` is the full heading path (used verbatim as `source_path` on each output record).
 
 Instructs the model to output one `TopicScanRecord` per paragraph or logical block. Key constraints to state:
 - One record per paragraph, not per section
 - `span_text` is verbatim — never summarise or rewrite
-- `topic_slug` must be stable: same concept → same slug, even across documents
-- Orphan preamble → `<topic>/principles` or `skip-candidate`
+- `topic_slug` = `base_slug` unless this paragraph introduces a distinct sub-topic, in which case extend with a suffix (`base_slug/subtopic`). Same sub-topic in different documents must produce the same slug.
+- `scope_qualifier` is often already present in the heading — confirm or refine from paragraph content, do not invent
+- Orphan preamble → `<base_slug>/principles` or `skip-candidate`
 
 ### Step 3 — Write `prompts/fact_extraction.j2`
 

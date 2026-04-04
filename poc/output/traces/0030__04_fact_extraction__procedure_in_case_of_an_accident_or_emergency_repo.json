@@ -1,0 +1,45 @@
+{
+  "seq": 30,
+  "call_number": 4,
+  "call_name": "fact_extraction",
+  "description": "procedure-in-case-of-an-accident-or-emergency/reporting",
+  "validation": "PASS",
+  "tokens_in": 717,
+  "tokens_out": 154,
+  "latency_s": 1.58,
+  "prompt": "You are extracting atomic facts from a topic document.\n\nThe topic document below contains all source text for one specific topic, assembled with provenance headings. Your output must pass all Five Tests.\n\n**Test 1 — Stand-Alone**: A reader with no other facts must fully understand the policy. No implied \"who does this apply to?\", \"when does it apply?\", \"except what?\". Include the subject explicitly in every fact.\n\n**Test 2 — One Topic**: A single noun phrase names the subject. If \"and\" is needed to name the subject, split into two facts.\n\n**Test 3 — Reconstruction**: Concatenating all your facts must be informationally equivalent to the topic document: same obligations, permissions, exceptions, numerical values. No information omitted, none added.\n\n**Test 4 — Canonical Form**: Active voice. No document-navigation language (\"as mentioned in\", \"refer to\", \"see above\", \"this section\"). No redundant preamble (\"it is important to note that\", \"this policy states\", \"please be aware\").\n\n**Test 5 — Template-Slot Ready**: No audience-specific framing baked in (\"as a parent, you should…\", \"staff are reminded that…\"). No channel-specific framing (\"as you read this handbook…\").\n\nInstructions:\n- This is the only pass that writes content — rewrite source text into canonical form\n- Eliminate redundancy across provenance spans (same obligation stated in multiple spans → one fact)\n- Split only at true topic boundaries (when the subject noun phrase changes)\n- `title`: short noun phrase naming the subject of this fact\n- `kind`: assign ONLY for clearly non-policy content — 'rationale', 'principle', or 'context'. Leave null for all policy facts (rules, procedures, fees, contact details, definitions)\n- `topic_tags`: kebab-case tags, consistent with the topic_slug used in grouping\n\nAudience scope: staff\nChannel scope: staff-handbook, policy-documents\n\nTopic document:\n### Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia — School Outings Policy §8\n\nAfter an incident, a detailed report should be filed with the administration, outlining the events and any measures taken. This helps in reviewing and improving future procedures.\n\n### Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\n\nA full report of the incident must be submitted to the school administration.",
+  "raw_response": "{\"facts\":[{\"title\":\"Accident and Emergency Reporting Requirement\",\"content\":\"After an incident, staff must file a detailed report with the administration outlining the events and any measures taken during an accident or emergency.\",\"kind\":null,\"topic_tags\":[\"accident-emergency-procedure\",\"reporting\",\"school-administration\"]},{\"title\":\"Incident Report Submission\",\"content\":\"Staff are required to submit a full report of any incident to the school administration as part of the accident or emergency procedures.\",\"kind\":null,\"topic_tags\":[\"incident-report\",\"school-administration\"]},{\"title\":\"Review and Improve Procedures\",\"content\":\"Reviewing filed incident reports helps in improving future school outing procedures.\",\"kind\":\"principle\",\"topic_tags\":[\"review-process\",\"procedural-improvement\",\"school-outings\"]}]}",
+  "parsed_output": {
+    "facts": [
+      {
+        "title": "Accident and Emergency Reporting Requirement",
+        "content": "After an incident, staff must file a detailed report with the administration outlining the events and any measures taken during an accident or emergency.",
+        "kind": null,
+        "topic_tags": [
+          "accident-emergency-procedure",
+          "reporting",
+          "school-administration"
+        ]
+      },
+      {
+        "title": "Incident Report Submission",
+        "content": "Staff are required to submit a full report of any incident to the school administration as part of the accident or emergency procedures.",
+        "kind": null,
+        "topic_tags": [
+          "incident-report",
+          "school-administration"
+        ]
+      },
+      {
+        "title": "Review and Improve Procedures",
+        "content": "Reviewing filed incident reports helps in improving future school outing procedures.",
+        "kind": "principle",
+        "topic_tags": [
+          "review-process",
+          "procedural-improvement",
+          "school-outings"
+        ]
+      }
+    ]
+  }
+}

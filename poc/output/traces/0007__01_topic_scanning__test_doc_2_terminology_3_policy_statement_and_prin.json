@@ -1,0 +1,40 @@
+{
+  "seq": 7,
+  "call_number": 1,
+  "call_name": "topic_scanning",
+  "description": "test_doc_2_terminology / 3. Policy Statement and Principles",
+  "validation": "PASS",
+  "tokens_in": 728,
+  "tokens_out": 283,
+  "latency_s": 2.37,
+  "prompt": "You are a structural analyst extracting topic records from a document section.\n\nFor each paragraph or logical block in the content, output one TopicScanRecord.\n\nRules:\n- ONE record per paragraph or distinct logical block — never merge multiple paragraphs into one record\n- `span_text` MUST be verbatim — never summarise, paraphrase, or rewrite any part of the source text\n- `topic_slug` is built from the base slug below:\n  - Use `policy-statement-and-principles` as-is for paragraphs that belong to the main topic of this section\n  - Extend with a suffix ONLY when a paragraph introduces a clearly distinct sub-topic: `policy-statement-and-principles/subtopic`\n  - Never invent a slug unrelated to `policy-statement-and-principles`\n  - The same sub-topic appearing under a different heading in a different document must produce the same slug\n- `scope_qualifier` — omit (null) unless this specific instance is distinctly scoped: 'students', 'staff', '2024-2025'.\n  The heading may already imply a scope (e.g. \"Student Dress Code\" → 'students') — confirm or refine from paragraph content\n- Orphan preamble (pure rationale, goals, aspirational framing with no policy content) → slug `policy-statement-and-principles/principles` or 'skip-candidate'\n\nDocument context:\nSection: 3. Policy Statement and Principles\nSource path: School Outings — Definitions and Principles > 3. Policy Statement and Principles\nBase slug: policy-statement-and-principles\n\nContent:\n*   **Educational Enrichment:** School outings should complement the classroom curriculum, enhancing learning through direct, hands-on experiences.\n*   **Personal and Social Development:** Outings are designed to foster independence, responsibility, and social skills through interactive and group-based activities.\n*   **Cultural Awareness:** Trips are an opportunity to expose students to diverse cultures, histories, and artistic traditions, fostering a broader understanding of the world.\n*   **Safety and Well-being:** Every outing is carefully planned with a focus on student safety, ensuring adequate supervision, risk assessment, and emergency preparedness.",
+  "raw_response": "{\"records\":[{\"topic_slug\":\"policy-statement-and-principles/principles\",\"scope_qualifier\":null,\"span_text\":\"Educational Enrichment: School outings should complement the classroom curriculum, enhancing learning through direct, hands-on experiences.\",\"source_path\":\"School Outings — Definitions and Principles > 3. Policy Statement and Principles\"},{\"topic_slug\":\"policy-statement-and-principles/principles\",\"scope_qualifier\":null,\"span_text\":\"Personal and Social Development: Outings are designed to foster independence, responsibility, and social skills through interactive and group-based activities.\",\"source_path\":\"School Outings — Definitions and Principles > 3. Policy Statement and Principles\"},{\"topic_slug\":\"policy-statement-and-principles/principles\",\"scope_qualifier\":null,\"span_text\":\"Cultural Awareness: Trips are an opportunity to expose students to diverse cultures, histories, and artistic traditions, fostering a broader understanding of the world.\",\"source_path\":\"School Outings — Definitions and Principles > 3. Policy Statement and Principles\"},{\"topic_slug\":\"policy-statement-and-principles/safety-and-well-being\",\"scope_qualifier\":null,\"span_text\":\"Safety and Well-being: Every outing is carefully planned with a focus on student safety, ensuring adequate supervision, risk assessment, and emergency preparedness.\",\"source_path\":\"School Outings — Definitions and Principles > 3. Policy Statement and Principles\"}]}",
+  "parsed_output": {
+    "records": [
+      {
+        "topic_slug": "policy-statement-and-principles/principles",
+        "scope_qualifier": null,
+        "span_text": "Educational Enrichment: School outings should complement the classroom curriculum, enhancing learning through direct, hands-on experiences.",
+        "source_path": "School Outings — Definitions and Principles > 3. Policy Statement and Principles"
+      },
+      {
+        "topic_slug": "policy-statement-and-principles/principles",
+        "scope_qualifier": null,
+        "span_text": "Personal and Social Development: Outings are designed to foster independence, responsibility, and social skills through interactive and group-based activities.",
+        "source_path": "School Outings — Definitions and Principles > 3. Policy Statement and Principles"
+      },
+      {
+        "topic_slug": "policy-statement-and-principles/principles",
+        "scope_qualifier": null,
+        "span_text": "Cultural Awareness: Trips are an opportunity to expose students to diverse cultures, histories, and artistic traditions, fostering a broader understanding of the world.",
+        "source_path": "School Outings — Definitions and Principles > 3. Policy Statement and Principles"
+      },
+      {
+        "topic_slug": "policy-statement-and-principles/safety-and-well-being",
+        "scope_qualifier": null,
+        "span_text": "Safety and Well-being: Every outing is carefully planned with a focus on student safety, ensuring adequate supervision, risk assessment, and emergency preparedness.",
+        "source_path": "School Outings — Definitions and Principles > 3. Policy Statement and Principles"
+      }
+    ]
+  }
+}

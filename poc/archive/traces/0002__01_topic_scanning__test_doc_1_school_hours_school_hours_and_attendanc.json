@@ -1,0 +1,28 @@
+{
+  "seq": 2,
+  "call_number": 1,
+  "call_name": "topic_scanning",
+  "description": "test_doc_1_school_hours / School Hours and Attendance",
+  "validation": "PASS",
+  "tokens_in": 579,
+  "tokens_out": 150,
+  "latency_s": 3.88,
+  "prompt": "You are a structural analyst extracting topic records from a document section.\n\nFor each paragraph or logical block in the content, output one TopicScanRecord.\n\nRules:\n- ONE record per paragraph or distinct logical block — never merge multiple paragraphs into one record\n- `span_text` MUST be verbatim — never summarise, paraphrase, or rewrite any part of the source text\n- `topic_slug` must be hierarchical and stable: the same concept in different documents gets the same slug\n  - Format: lowercase kebab-case with '/' for hierarchy (e.g. 'dress-code/students', 'fees/late-arrival', 'attendance/absence')\n  - Be specific: 'dress-code/students' not just 'dress-code'; 'fees/late-arrival' not just 'fees'\n  - Two records with the same slug will be merged — choose slugs so that records that belong together share a slug\n- `scope_qualifier` — omit (null) unless this specific instance is distinctly scoped: 'students', 'staff', '2024-2025'\n- Orphan preamble (pure rationale, goals, aspirational framing with no policy content) → slug '<topic>/principles' or 'skip-candidate'\n\nDocument context:\nSection: School Hours and Attendance\nSource path: School Hours and Attendance\n\nContent:\n**Source**: Imagine Montessori School Valencia — Family Handbook §2.2\n**Audience**: Parents",
+  "raw_response": "{\"records\":[{\"topic_slug\":\"school-hours-and-attendance/general\",\"scope_qualifier\":null,\"span_text\":\"School hours at Imagine Montessori School Valencia are from 8:30 AM to 3:00 PM, Monday through Friday. Children should arrive no earlier than 8:15 AM and must be picked up by 3:15 PM.\" ,\"source_path\":\"School Hours and Attendance\"},{\"topic_slug\":\"school-hours-and-attendance/attendance\",\"scope_qualifier\":null,\"span_text\":\"It is important that children attend school regularly to benefit fully from the educational program. Attendance will be taken at the start of each school day and noted for record-keeping and communication with parents.\" ,\"source_path\":\"School Hours and Attendance\"}]}",
+  "parsed_output": {
+    "records": [
+      {
+        "topic_slug": "school-hours-and-attendance/general",
+        "scope_qualifier": null,
+        "span_text": "School hours at Imagine Montessori School Valencia are from 8:30 AM to 3:00 PM, Monday through Friday. Children should arrive no earlier than 8:15 AM and must be picked up by 3:15 PM.",
+        "source_path": "School Hours and Attendance"
+      },
+      {
+        "topic_slug": "school-hours-and-attendance/attendance",
+        "scope_qualifier": null,
+        "span_text": "It is important that children attend school regularly to benefit fully from the educational program. Attendance will be taken at the start of each school day and noted for record-keeping and communication with parents.",
+        "source_path": "School Hours and Attendance"
+      }
+    ]
+  }
+}

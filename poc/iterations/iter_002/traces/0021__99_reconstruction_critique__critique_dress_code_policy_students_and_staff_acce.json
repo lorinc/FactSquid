@@ -1,0 +1,33 @@
+{
+  "seq": 21,
+  "call_number": 99,
+  "call_name": "reconstruction_critique",
+  "description": "critique: dress-code-policy-students-and-staff/accessories",
+  "validation": "PASS",
+  "tokens_in": 490,
+  "tokens_out": 231,
+  "latency_s": 2.91,
+  "prompt": "Compare a topic document to its reconstruction from extracted facts.\nIdentify specific extraction problems against the Five Tests.\n\nTOPIC DOCUMENT (source of truth):\n━━━\n### Dress Code Policy — Students and Staff\n\nThe use of excessive or distracting accessories, such as large jewelry or brightly colored headbands, is discouraged in order to maintain focus within the educational setting.\n━━━\n\nRECONSTRUCTION (concatenated extracted facts):\n━━━\n## Excessive accessories use in educational setting\n\nExcessive or distracting accessories, including large jewelry or brightly colored headbands, are discouraged for both students and staff to maintain focus within the educational setting.\n\n━━━\n\nFind up to 4 specific problems. For each, classify as:\n- over-atomized: one logical unit split into too many facts\n- under-atomized: multiple distinct topics merged into one fact\n- missing-content: any obligation, permission, exception, or numerical value absent from reconstruction\n- not-standalone: fails Test 1 — implied \"who\", \"when\", or \"except what\" without stating it explicitly\n- not-canonical: fails Test 4 — navigation language, passive construction, redundant preamble\n- not-template-ready: fails Test 5 — audience-specific or channel-specific framing baked in\n- wrong-tags: topic tags missing or inconsistent with topic_slug\n- other: any other quality issue\n\nQuote exact text from the topic document when describing each problem.\nIf the reconstruction is good, return an empty problems list.",
+  "raw_response": "{\"problems\":[{\"problem_type\":\"not-canonical\",\"description\":\"The reconstructed title '## Excessive accessories use in educational setting' includes redundant preamble as it is implied that the setting is educational throughout the document. The original document title '### Dress Code Policy — Students and Staff' was more direct.\"},{\"problem_type\":\"not-template-ready\",\"description\":\"The original document distinguishes that the policy is specifically for 'Students and Staff.' The reconstructed fact should explicitly include this audience or tag to be ready for template use.\"},{\"problem_type\":\"missing-content\",\"description\":\"The original document contains 'to maintain focus within the educational setting,' clarifying the rationale for the dress code. This justification is not driven enough in the reconstruction, where it could emphasize the reasoning behind the discouragement.\"},{\"problem_type\":\"other\",\"description\":\"The use of 'both students and staff' in the reconstruction implies a strict scope which was not explicitly mentioned in the source document. The original text suggested a more general discouragement of excessive accessories.\"}],\"overall\":\"The reconstruction preserves the core message but is not canonical, audience-specific, and descriptive enough about the targeted policy group.\"}",
+  "parsed_output": {
+    "problems": [
+      {
+        "problem_type": "not-canonical",
+        "description": "The reconstructed title '## Excessive accessories use in educational setting' includes redundant preamble as it is implied that the setting is educational throughout the document. The original document title '### Dress Code Policy — Students and Staff' was more direct."
+      },
+      {
+        "problem_type": "not-template-ready",
+        "description": "The original document distinguishes that the policy is specifically for 'Students and Staff.' The reconstructed fact should explicitly include this audience or tag to be ready for template use."
+      },
+      {
+        "problem_type": "missing-content",
+        "description": "The original document contains 'to maintain focus within the educational setting,' clarifying the rationale for the dress code. This justification is not driven enough in the reconstruction, where it could emphasize the reasoning behind the discouragement."
+      },
+      {
+        "problem_type": "other",
+        "description": "The use of 'both students and staff' in the reconstruction implies a strict scope which was not explicitly mentioned in the source document. The original text suggested a more general discouragement of excessive accessories."
+      }
+    ],
+    "overall": "The reconstruction preserves the core message but is not canonical, audience-specific, and descriptive enough about the targeted policy group."
+  }
+}

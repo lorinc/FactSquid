@@ -1,0 +1,33 @@
+{
+  "seq": 28,
+  "call_number": 99,
+  "call_name": "reconstruction_critique",
+  "description": "critique: staff-dress-code/unacceptable-clothing/staff",
+  "validation": "PASS",
+  "tokens_in": 949,
+  "tokens_out": 249,
+  "latency_s": 2.78,
+  "prompt": "Compare a topic document to its reconstruction from extracted facts.\nIdentify specific extraction problems against the Five Tests.\n\nTOPIC DOCUMENT (source of truth):\n━━━\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n**Not acceptable:**\n\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n* Mini-skirts, hot pants, or lycra cycling shorts shorter than mid-thigh.\n\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n* Leisure shorts, tracksuits, or sportswear (except for PE and associated activities).\n\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n* Transparent or see-through blouses, dresses, or shirts; low-cut tops; crop-tops; vest/spaghetti-strap tops.\n\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n* Clothing with tears, holes, or rips; clothes bearing offensive logos, slogans, or graphics.\n\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n* Indoor wearing of baseball caps or hats; high-heeled stiletto shoes or beach flip-flops (indoors).\n\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n* Clothes that restrict movement or can snag on equipment (loose pockets, sequins, large buttons).\n\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n* Underwear worn in a revealing manner.\n━━━\n\nRECONSTRUCTION (concatenated extracted facts):\n━━━\n## Inappropriate short clothing\n\nStaff members are not permitted to wear mini-skirts, hot pants, or lycra cycling shorts that are shorter than mid-thigh at work.\n\n## Leisure and sportswear\n\nStaff members must not wear leisure shorts, tracksuits, or sportswear unless they are participating in Physical Education or related activities.\n\n## Inappropriate tops\n\nStaff members are prohibited from wearing transparent or see-through blouses, dresses, or shirts. Additionally, low-cut tops, crop-tops, and vest or spaghetti-strap tops are not allowed.\n\n## Damaged clothing and offensive graphics\n\nStaff members must avoid wearing clothing with tears, holes, or rips and should not wear clothes that bear offensive logos, slogans, or graphics.\n\n## Headwear and inappropriate shoes indoors\n\nStaff members are not allowed to wear baseball caps, hats, high-heeled stiletto shoes, or beach flip-flops indoors during work hours.\n\n## Clothing safety\n\nStaff members should avoid wearing clothes that restrict movement or can snag on equipment, such as clothes with loose pockets, sequins, or large buttons.\n\n## Proper wearing of underwear\n\nStaff members must ensure that their underwear is not worn in a manner that is revealing or inappropriate during work hours.\n\n━━━\n\nFind up to 4 specific problems. For each, classify as:\n- over-atomized: one logical unit split into too many facts\n- under-atomized: multiple distinct topics merged into one fact\n- missing-content: any obligation, permission, exception, or numerical value absent from reconstruction\n- not-standalone: fails Test 1 — implied \"who\", \"when\", or \"except what\" without stating it explicitly\n- not-canonical: fails Test 4 — navigation language, passive construction, redundant preamble\n- not-template-ready: fails Test 5 — audience-specific or channel-specific framing baked in\n- wrong-tags: topic tags missing or inconsistent with topic_slug\n- other: any other quality issue\n\nQuote exact text from the topic document when describing each problem.\nIf the reconstruction is good, return an empty problems list.",
+  "raw_response": "{\"problems\":[{\"problem_type\":\"not-canonical\",\"description\":\"The use of passive construction in 'Staff members are not permitted' can be simplified. It follows a repetitive style that mirrors the source verbatim, which isn't necessary for effective fact extraction.\"},{\"problem_type\":\"over-atomized\",\"description\":\"The repeated inclusion of 'Staff members' for each point could be considered over-atomized since the subject is the same for all rules within the section. Example: 'Staff members are prohibited from wearing transparent or see-through blouses, dresses, or shirts.' could be more concise.\"},{\"problem_type\":\"not-standalone\",\"description\":\"The reconstruction for the 'Headwear and inappropriate shoes indoors' section lacks specificity about location and context: 'indoors during work hours' needs to be explicitly clear to whom it applies at all times.\"},{\"problem_type\":\"not-template-ready\",\"description\":\"The fact extraction maintains a structure very similar to the source text, making it appear less adaptable for easy template regeneration or automation deployment. Example: 'Leisure and sportswear' vs 'leisure shorts, tracksuits,' etc.\"}],\"overall\":\"Reconstruction is generally accurate but could benefit from clearer standalone statements and more canonical phrasing.\"}",
+  "parsed_output": {
+    "problems": [
+      {
+        "problem_type": "not-canonical",
+        "description": "The use of passive construction in 'Staff members are not permitted' can be simplified. It follows a repetitive style that mirrors the source verbatim, which isn't necessary for effective fact extraction."
+      },
+      {
+        "problem_type": "over-atomized",
+        "description": "The repeated inclusion of 'Staff members' for each point could be considered over-atomized since the subject is the same for all rules within the section. Example: 'Staff members are prohibited from wearing transparent or see-through blouses, dresses, or shirts.' could be more concise."
+      },
+      {
+        "problem_type": "not-standalone",
+        "description": "The reconstruction for the 'Headwear and inappropriate shoes indoors' section lacks specificity about location and context: 'indoors during work hours' needs to be explicitly clear to whom it applies at all times."
+      },
+      {
+        "problem_type": "not-template-ready",
+        "description": "The fact extraction maintains a structure very similar to the source text, making it appear less adaptable for easy template regeneration or automation deployment. Example: 'Leisure and sportswear' vs 'leisure shorts, tracksuits,' etc."
+      }
+    ],
+    "overall": "Reconstruction is generally accurate but could benefit from clearer standalone statements and more canonical phrasing."
+  }
+}

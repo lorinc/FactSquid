@@ -1,0 +1,46 @@
+{
+  "seq": 2,
+  "call_number": 1,
+  "call_name": "topic_scanning",
+  "description": "test_doc_4_dress_code / Dress Code Policy — Students and Staff",
+  "validation": "PASS",
+  "tokens_in": 640,
+  "tokens_out": 373,
+  "latency_s": 3.16,
+  "prompt": "You are a structural analyst extracting topic records from a document section.\n\nFor each paragraph or logical block in the content, output one TopicScanRecord.\n\nRules:\n- ONE record per paragraph or distinct logical block — never merge multiple paragraphs into one record\n- `span_text` MUST be verbatim — never summarise, paraphrase, or rewrite any part of the source text\n- `topic_slug` is built from the base slug below:\n  - Use `dress-code-policy-students-and-staff` as-is for paragraphs that belong to the main topic of this section\n  - Extend with a suffix ONLY when a paragraph introduces a clearly distinct sub-topic: `dress-code-policy-students-and-staff/subtopic`\n  - Never invent a slug unrelated to `dress-code-policy-students-and-staff`\n  - The same sub-topic appearing under a different heading in a different document must produce the same slug\n- `scope_qualifier` — omit (null) unless this specific instance is distinctly scoped: 'students', 'staff', '2024-2025'.\n  The heading may already imply a scope (e.g. \"Student Dress Code\" → 'students') — confirm or refine from paragraph content\n- Orphan preamble (pure rationale, goals, aspirational framing with no policy content) → slug `dress-code-policy-students-and-staff/principles` or 'skip-candidate'\n\nDocument context:\nSection: Dress Code Policy — Students and Staff\nSource path: Dress Code Policy — Students and Staff\nBase slug: dress-code-policy-students-and-staff\n\nContent:\n**Source**: Imagine Montessori School Valencia — Code of Conduct §2.4–2.5\n**Audience**: Students, Staff, Parents",
+  "raw_response": "{\"records\":[{\"topic_slug\":\"dress-code-policy-students-and-staff/principles\",\"scope_qualifier\":null,\"span_text\":\"At Imagine Montessori School Valencia, we believe in fostering a respectful and professional environment. Our dress code reflects the values of discipline, self-respect, and equality, aiming to create a positive atmosphere conducive to learning and personal growth.\",\"source_path\":\"Dress Code Policy — Students and Staff\"},{\"topic_slug\":\"dress-code-policy-students-and-staff\",\"scope_qualifier\":\"students\",\"span_text\":\"Students are required to wear school uniforms consisting of a white shirt, navy blue trousers or skirts, and black shoes. The uniform should always be neat and tidy, reflecting our commitment to maintaining high standards of appearance.\",\"source_path\":\"Dress Code Policy — Students and Staff\"},{\"topic_slug\":\"dress-code-policy-students-and-staff\",\"scope_qualifier\":\"staff\",\"span_text\":\"Staff members are expected to dress in business casual attire, avoiding overly casual or inappropriate clothing in the professional setting. This includes avoiding items such as jeans, flip flops, and tank tops during school hours.\",\"source_path\":\"Dress Code Policy — Students and Staff\"},{\"topic_slug\":\"dress-code-policy-students-and-staff/accessories\",\"scope_qualifier\":null,\"span_text\":\"The use of excessive or distracting accessories, such as large jewelry or brightly colored headbands, is discouraged in order to maintain focus within the educational setting.\",\"source_path\":\"Dress Code Policy — Students and Staff\"},{\"topic_slug\":\"dress-code-policy-students-and-staff/enforcement-and-consequences\",\"scope_qualifier\":null,\"span_text\":\"Non-compliance with the dress code may result in warnings, parental notification, or other disciplinary actions. Our school believes in corrective measures that emphasize learning and growth over punishment.\",\"source_path\":\"Dress Code Policy — Students and Staff\"}]}",
+  "parsed_output": {
+    "records": [
+      {
+        "topic_slug": "dress-code-policy-students-and-staff/principles",
+        "scope_qualifier": null,
+        "span_text": "At Imagine Montessori School Valencia, we believe in fostering a respectful and professional environment. Our dress code reflects the values of discipline, self-respect, and equality, aiming to create a positive atmosphere conducive to learning and personal growth.",
+        "source_path": "Dress Code Policy — Students and Staff"
+      },
+      {
+        "topic_slug": "dress-code-policy-students-and-staff",
+        "scope_qualifier": "students",
+        "span_text": "Students are required to wear school uniforms consisting of a white shirt, navy blue trousers or skirts, and black shoes. The uniform should always be neat and tidy, reflecting our commitment to maintaining high standards of appearance.",
+        "source_path": "Dress Code Policy — Students and Staff"
+      },
+      {
+        "topic_slug": "dress-code-policy-students-and-staff",
+        "scope_qualifier": "staff",
+        "span_text": "Staff members are expected to dress in business casual attire, avoiding overly casual or inappropriate clothing in the professional setting. This includes avoiding items such as jeans, flip flops, and tank tops during school hours.",
+        "source_path": "Dress Code Policy — Students and Staff"
+      },
+      {
+        "topic_slug": "dress-code-policy-students-and-staff/accessories",
+        "scope_qualifier": null,
+        "span_text": "The use of excessive or distracting accessories, such as large jewelry or brightly colored headbands, is discouraged in order to maintain focus within the educational setting.",
+        "source_path": "Dress Code Policy — Students and Staff"
+      },
+      {
+        "topic_slug": "dress-code-policy-students-and-staff/enforcement-and-consequences",
+        "scope_qualifier": null,
+        "span_text": "Non-compliance with the dress code may result in warnings, parental notification, or other disciplinary actions. Our school believes in corrective measures that emphasize learning and growth over punishment.",
+        "source_path": "Dress Code Policy — Students and Staff"
+      }
+    ]
+  }
+}

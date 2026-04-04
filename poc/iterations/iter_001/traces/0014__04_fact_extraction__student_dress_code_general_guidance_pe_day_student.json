@@ -1,0 +1,27 @@
+{
+  "seq": 14,
+  "call_number": 4,
+  "call_name": "fact_extraction",
+  "description": "student-dress-code-general-guidance/pe-day/students",
+  "validation": "PASS",
+  "tokens_in": 686,
+  "tokens_out": 58,
+  "latency_s": 1.19,
+  "prompt": "You are extracting atomic facts from a topic document.\n\nThe topic document below contains all source text for one specific topic, assembled with provenance headings. Your output must pass all Five Tests.\n\n**Test 1 — Stand-Alone**: A reader with no other facts must fully understand the policy. No implied \"who does this apply to?\", \"when does it apply?\", \"except what?\". Include the subject explicitly in every fact.\n\n**Test 2 — One Topic**: A single noun phrase names the subject. If \"and\" is needed to name the subject, split into two facts.\n\n**Test 3 — Reconstruction**: Concatenating all your facts must be informationally equivalent to the topic document: same obligations, permissions, exceptions, numerical values. No information omitted, none added.\n\n**Test 4 — Canonical Form**: Active voice. No document-navigation language (\"as mentioned in\", \"refer to\", \"see above\", \"this section\"). No redundant preamble (\"it is important to note that\", \"this policy states\", \"please be aware\").\n\n**Test 5 — Template-Slot Ready**: No audience-specific framing baked in (\"as a parent, you should…\", \"staff are reminded that…\"). No channel-specific framing (\"as you read this handbook…\").\n\nInstructions:\n- This is the only pass that writes content — rewrite source text into canonical form\n- Eliminate redundancy across provenance spans (same obligation stated in multiple spans → one fact)\n- Split only at true topic boundaries (when the subject noun phrase changes)\n- `title`: short noun phrase naming the subject of this fact\n- `kind`: assign ONLY for clearly non-policy content — 'rationale', 'principle', or 'context'. Leave null for all policy facts (rules, procedures, fees, contact details, definitions)\n- `topic_tags`: kebab-case tags, consistent with the topic_slug used in grouping\n\nAudience scope: parents, staff, students\nChannel scope: parent-handbook, staff-handbook, policy-documents, website\n\nTopic document:\n### Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\n\nStudents must wear appropriate sports underwear, shorts/leggings/tracksuit bottoms, a t-shirt or sweatshirt, and trainers.",
+  "raw_response": "{\"facts\":[{\"title\":\"student clothing requirement\",\"content\":\"Students must wear appropriate sports underwear, shorts or leggings or tracksuit bottoms, a t-shirt or a sweatshirt, and trainers.\",\"kind\":null,\"topic_tags\":[\"dress-code\",\"student-attire\",\"policy\",\"sportswear\"]}]}",
+  "parsed_output": {
+    "facts": [
+      {
+        "title": "student clothing requirement",
+        "content": "Students must wear appropriate sports underwear, shorts or leggings or tracksuit bottoms, a t-shirt or a sweatshirt, and trainers.",
+        "kind": null,
+        "topic_tags": [
+          "dress-code",
+          "student-attire",
+          "policy",
+          "sportswear"
+        ]
+      }
+    ]
+  }
+}

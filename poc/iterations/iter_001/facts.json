@@ -1,0 +1,839 @@
+[
+  {
+    "id": "dress_code_policy_students_and_staff__staff__0",
+    "title": "Staff dress code",
+    "content": "Staff members must wear smart casual attire. Overly casual clothing, such as ripped jeans or casual t-shirts, is prohibited unless specified for particular events or activities.",
+    "kind": null,
+    "topic_tags": [
+      "dress-code",
+      "staff-requirements"
+    ],
+    "topic_slug": "dress-code-policy-students-and-staff",
+    "scope_qualifier": "staff",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > Staff Requirements"
+    ]
+  },
+  {
+    "id": "dress_code_policy_students_and_staff__staff__1",
+    "title": "Professionalism modeling",
+    "content": "Faculty members are encouraged to model professionalism through their appearance.",
+    "kind": "principle",
+    "topic_tags": [
+      "dress-code",
+      "staff-requirements"
+    ],
+    "topic_slug": "dress-code-policy-students-and-staff",
+    "scope_qualifier": "staff",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > Staff Requirements"
+    ]
+  },
+  {
+    "id": "dress_code_policy_students_and_staff__students__0",
+    "title": "student dress code adherence",
+    "content": "All students are required to adhere to the dress code, which mandates wearing clean and appropriate attire that supports an effective learning atmosphere.",
+    "kind": null,
+    "topic_tags": [
+      "dress-code",
+      "student-requirements"
+    ],
+    "topic_slug": "dress-code-policy-students-and-staff",
+    "scope_qualifier": "students",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > Student Requirements"
+    ]
+  },
+  {
+    "id": "dress_code_policy_students_and_staff__students__1",
+    "title": "length requirement for shorts and skirts",
+    "content": "Shorts and skirts worn by students must be of modest length.",
+    "kind": null,
+    "topic_tags": [
+      "dress-code",
+      "student-requirements"
+    ],
+    "topic_slug": "dress-code-policy-students-and-staff",
+    "scope_qualifier": "students",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > Student Requirements"
+    ]
+  },
+  {
+    "id": "dress_code_policy_students_and_staff__students__2",
+    "title": "prohibition of offensive imagery on clothing",
+    "content": "Student clothing must not display offensive imagery or text.",
+    "kind": null,
+    "topic_tags": [
+      "dress-code",
+      "student-requirements"
+    ],
+    "topic_slug": "dress-code-policy-students-and-staff",
+    "scope_qualifier": "students",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > Student Requirements"
+    ]
+  },
+  {
+    "id": "dress_code_policy_students_and_staff_accessories__all__0",
+    "title": "Accessory guidelines for students and staff",
+    "content": "Students and staff are allowed to wear accessories that align with the dress code, ensuring they do not disrupt the learning environment or pose safety risks.",
+    "kind": null,
+    "topic_tags": [
+      "dress-code",
+      "accessory-guidelines"
+    ],
+    "topic_slug": "dress-code-policy-students-and-staff/accessories",
+    "scope_qualifier": null,
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > Accessory Guidelines"
+    ]
+  },
+  {
+    "id": "dress_code_policy_students_and_staff_accessories__all__1",
+    "title": "Headwear policy",
+    "content": "Headwear is not permitted indoors unless worn for religious or medical reasons.",
+    "kind": null,
+    "topic_tags": [
+      "dress-code",
+      "headwear-policy"
+    ],
+    "topic_slug": "dress-code-policy-students-and-staff/accessories",
+    "scope_qualifier": null,
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > Accessory Guidelines"
+    ]
+  },
+  {
+    "id": "dress_code_policy_students_and_staff_principles__all__0",
+    "title": "Image Montessori School Valencia dress code policy",
+    "content": "The Image Montessori School Valencia implements a dress code policy to foster an environment aligned with values of respect, diversity, and professionalism. The policy is designed to ensure that every individual feels valued and respected, while maintaining the integrity of the school's educational setting.",
+    "kind": "rationale",
+    "topic_tags": [
+      "dress-code",
+      "student-dress-code",
+      "staff-dress-code",
+      "school-culture"
+    ],
+    "topic_slug": "dress-code-policy-students-and-staff/principles",
+    "scope_qualifier": null,
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > Statement of Values"
+    ]
+  },
+  {
+    "id": "staff_dress_code_not_acceptable__all__0",
+    "title": "Prohibited clothing items for staff",
+    "content": "Staff are not permitted to wear mini-skirts, hot pants, or lycra cycling shorts shorter than mid-thigh.",
+    "kind": null,
+    "topic_tags": [
+      "staff-dress-code",
+      "clothing-restrictions"
+    ],
+    "topic_slug": "staff-dress-code/not-acceptable",
+    "scope_qualifier": null,
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+    ]
+  },
+  {
+    "id": "staff_dress_code_not_acceptable__all__1",
+    "title": "Restrictions on casual wear for staff",
+    "content": "Staff must not wear leisure shorts, tracksuits, or sportswear unless it is for physical education or related activities.",
+    "kind": null,
+    "topic_tags": [
+      "staff-dress-code",
+      "clothing-restrictions"
+    ],
+    "topic_slug": "staff-dress-code/not-acceptable",
+    "scope_qualifier": null,
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+    ]
+  },
+  {
+    "id": "staff_dress_code_not_acceptable__all__2",
+    "title": "Prohibited tops for staff",
+    "content": "Staff are prohibited from wearing transparent or see-through blouses, dresses, or shirts. Low-cut tops, crop-tops, and vest or spaghetti-strap tops are also not allowed.",
+    "kind": null,
+    "topic_tags": [
+      "staff-dress-code",
+      "clothing-restrictions"
+    ],
+    "topic_slug": "staff-dress-code/not-acceptable",
+    "scope_qualifier": null,
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+    ]
+  },
+  {
+    "id": "staff_dress_code_not_acceptable__all__3",
+    "title": "Clothing condition requirements for staff",
+    "content": "Staff must avoid wearing clothing with tears, holes, or rips and clothes bearing offensive logos, slogans, or graphics.",
+    "kind": null,
+    "topic_tags": [
+      "staff-dress-code",
+      "clothing-restrictions"
+    ],
+    "topic_slug": "staff-dress-code/not-acceptable",
+    "scope_qualifier": null,
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+    ]
+  },
+  {
+    "id": "staff_dress_code_not_acceptable__all__4",
+    "title": "Headwear restrictions for staff",
+    "content": "Wearing baseball caps or hats indoors is not permitted for staff.",
+    "kind": null,
+    "topic_tags": [
+      "staff-dress-code",
+      "clothing-restrictions"
+    ],
+    "topic_slug": "staff-dress-code/not-acceptable",
+    "scope_qualifier": null,
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+    ]
+  },
+  {
+    "id": "staff_dress_code_not_acceptable__all__5",
+    "title": "Footwear restrictions for staff",
+    "content": "Staff must refrain from wearing high-heeled stiletto shoes or beach flip-flops indoors.",
+    "kind": null,
+    "topic_tags": [
+      "staff-dress-code",
+      "clothing-restrictions"
+    ],
+    "topic_slug": "staff-dress-code/not-acceptable",
+    "scope_qualifier": null,
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+    ]
+  },
+  {
+    "id": "staff_dress_code_not_acceptable__all__6",
+    "title": "Safety and functionality of staff clothing",
+    "content": "Staff must wear clothing that does not restrict movement or present risks of snagging on equipment, which includes avoiding loose pockets, sequins, and large buttons.",
+    "kind": null,
+    "topic_tags": [
+      "staff-dress-code",
+      "clothing-restrictions"
+    ],
+    "topic_slug": "staff-dress-code/not-acceptable",
+    "scope_qualifier": null,
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+    ]
+  },
+  {
+    "id": "staff_dress_code_not_acceptable__all__7",
+    "title": "Underwear visibility restrictions for staff",
+    "content": "Staff must ensure their underwear is not worn in a revealing manner.",
+    "kind": null,
+    "topic_tags": [
+      "staff-dress-code",
+      "clothing-restrictions"
+    ],
+    "topic_slug": "staff-dress-code/not-acceptable",
+    "scope_qualifier": null,
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+    ]
+  },
+  {
+    "id": "staff_dress_code_principles__all__0",
+    "title": "acceptable staff clothing",
+    "content": "Acceptable clothing for staff includes knee-length skirts and dresses, blouses, smart t-shirts, polo shirts, trousers, smart jeans, and chinos.",
+    "kind": null,
+    "topic_tags": [
+      "dress-code-policy",
+      "staff-dress-code"
+    ],
+    "topic_slug": "staff-dress-code/principles",
+    "scope_qualifier": null,
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+    ]
+  },
+  {
+    "id": "student_dress_code_general_guidance_everyday_style__students__0",
+    "title": "jewellery guideline",
+    "content": "Students must not wear jewellery that dangles, including hoop earrings and large necklaces, to ensure health and safety. On physical education (PE) days, students must be able to remove stud earrings or other items if necessary.",
+    "kind": null,
+    "topic_tags": [
+      "student-dress-code"
+    ],
+    "topic_slug": "student-dress-code-general-guidance/everyday-style",
+    "scope_qualifier": "students",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+    ]
+  },
+  {
+    "id": "student_dress_code_general_guidance_everyday_style__students__1",
+    "title": "subtle make-up policy",
+    "content": "Students from Year 7 upwards may wear subtle make-up, including mascara, powder, foundation, and nail varnish, but are not permitted to wear lipstick.",
+    "kind": null,
+    "topic_tags": [
+      "student-dress-code"
+    ],
+    "topic_slug": "student-dress-code-general-guidance/everyday-style",
+    "scope_qualifier": "students",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+    ]
+  },
+  {
+    "id": "student_dress_code_general_guidance_everyday_style__students__2",
+    "title": "acrylic nails restriction",
+    "content": "Students are not allowed to have acrylic nails that extend longer than two millimetres from the fingertip to ensure health and safety.",
+    "kind": null,
+    "topic_tags": [
+      "student-dress-code"
+    ],
+    "topic_slug": "student-dress-code-general-guidance/everyday-style",
+    "scope_qualifier": "students",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+    ]
+  },
+  {
+    "id": "student_dress_code_general_guidance_everyday_style__students__3",
+    "title": "shorts and skirts requirement",
+    "content": "Students must wear shorts and skirts that cover the upper thighs, measuring ¾ length or longer. Cycling shorts are permitted on PE days if they also cover the upper thighs.",
+    "kind": null,
+    "topic_tags": [
+      "student-dress-code"
+    ],
+    "topic_slug": "student-dress-code-general-guidance/everyday-style",
+    "scope_qualifier": "students",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+    ]
+  },
+  {
+    "id": "student_dress_code_general_guidance_everyday_style__students__4",
+    "title": "clothing condition standard",
+    "content": "Students must wear clothes that are free from holes or rips and ensure all underwear is not visible by covering it with outerwear.",
+    "kind": null,
+    "topic_tags": [
+      "student-dress-code"
+    ],
+    "topic_slug": "student-dress-code-general-guidance/everyday-style",
+    "scope_qualifier": "students",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+    ]
+  },
+  {
+    "id": "student_dress_code_general_guidance_footwear__students__0",
+    "title": "Outdoor shoe requirements for students",
+    "content": "Students must wear flat, enclosed shoes outdoors that are comfortable and fastened with laces, buckles, zips, or velcro, ensuring they can independently put them on and take them off.",
+    "kind": null,
+    "topic_tags": [
+      "dress-code",
+      "student-appearance"
+    ],
+    "topic_slug": "student-dress-code-general-guidance/footwear",
+    "scope_qualifier": "students",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+    ]
+  },
+  {
+    "id": "student_dress_code_general_guidance_footwear__students__1",
+    "title": "Indoor shoe requirements for students",
+    "content": "Students are required to wear closed-toe indoor shoes to ensure safe walking. Bulky, furry, or flip-flop styles are not allowed indoors. Additionally, students are recommended to wear anti-slip socks.",
+    "kind": null,
+    "topic_tags": [
+      "dress-code",
+      "student-appearance"
+    ],
+    "topic_slug": "student-dress-code-general-guidance/footwear",
+    "scope_qualifier": "students",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+    ]
+  },
+  {
+    "id": "student_dress_code_general_guidance_headwear__students__0",
+    "title": "Hats during playground time",
+    "content": "Students and staff are allowed to wear hats during playground time to protect from the sun.",
+    "kind": null,
+    "topic_tags": [
+      "dress-code-policy",
+      "playground-attire"
+    ],
+    "topic_slug": "student-dress-code-general-guidance/headwear",
+    "scope_qualifier": "students",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+    ]
+  },
+  {
+    "id": "student_dress_code_general_guidance_headwear__students__1",
+    "title": "Religious headwear regulations",
+    "content": "Students may wear religious headwear at all times, provided it does not obscure their vision, but it must be removed during PE lessons for health and safety reasons.",
+    "kind": null,
+    "topic_tags": [
+      "dress-code-policy",
+      "religious-headwear"
+    ],
+    "topic_slug": "student-dress-code-general-guidance/headwear",
+    "scope_qualifier": "students",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+    ]
+  },
+  {
+    "id": "student_dress_code_general_guidance_headwear__students__2",
+    "title": "Hair length and style",
+    "content": "Students can have hair of any length and any style, but long hair must be tied back during PE classes for safety.",
+    "kind": null,
+    "topic_tags": [
+      "dress-code-policy",
+      "hair-guidelines"
+    ],
+    "topic_slug": "student-dress-code-general-guidance/headwear",
+    "scope_qualifier": "students",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance",
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+    ]
+  },
+  {
+    "id": "student_dress_code_general_guidance_pe_day__students__0",
+    "title": "student clothing requirement",
+    "content": "Students must wear appropriate sports underwear, shorts or leggings or tracksuit bottoms, a t-shirt or a sweatshirt, and trainers.",
+    "kind": null,
+    "topic_tags": [
+      "dress-code",
+      "student-attire",
+      "policy",
+      "sportswear"
+    ],
+    "topic_slug": "student-dress-code-general-guidance/pe-day",
+    "scope_qualifier": "students",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+    ]
+  },
+  {
+    "id": "student_dress_code_general_guidance_principles__students__0",
+    "title": "Student Dress Code Guidelines",
+    "content": "The student dress code guidelines require all students to adhere to the designated dress code as set out by the school. Students are expected to dress in a manner that is appropriate, respectful, and consistent with an environment of learning and inclusivity.",
+    "kind": null,
+    "topic_tags": [
+      "student-dress-code",
+      "dress-code-policy"
+    ],
+    "topic_slug": "student-dress-code-general-guidance/principles",
+    "scope_qualifier": "students",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+    ]
+  },
+  {
+    "id": "student_dress_code_general_guidance_principles__students__1",
+    "title": "Respect for Dress Code",
+    "content": "All members of the school community are asked to respect the student dress code guidelines as part of fostering an inclusive environment.",
+    "kind": "principle",
+    "topic_tags": [
+      "community-respect",
+      "dress-code-policy"
+    ],
+    "topic_slug": "student-dress-code-general-guidance/principles",
+    "scope_qualifier": "students",
+    "audience_scope": [
+      "parents",
+      "staff",
+      "students"
+    ],
+    "channel_scope": [
+      "parent-handbook",
+      "staff-handbook",
+      "policy-documents",
+      "website"
+    ],
+    "source_document": "test_doc_4_dress_code",
+    "source_spans": [
+      "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+    ]
+  }
+]

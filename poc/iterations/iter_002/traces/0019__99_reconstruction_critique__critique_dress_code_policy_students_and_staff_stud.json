@@ -1,0 +1,25 @@
+{
+  "seq": 19,
+  "call_number": 99,
+  "call_name": "reconstruction_critique",
+  "description": "critique: dress-code-policy-students-and-staff/students",
+  "validation": "PASS",
+  "tokens_in": 516,
+  "tokens_out": 128,
+  "latency_s": 1.93,
+  "prompt": "Compare a topic document to its reconstruction from extracted facts.\nIdentify specific extraction problems against the Five Tests.\n\nTOPIC DOCUMENT (source of truth):\n━━━\n### Dress Code Policy — Students and Staff\n\nStudents are required to wear school uniforms consisting of a white shirt, navy blue trousers or skirts, and black shoes. The uniform should always be neat and tidy, reflecting our commitment to maintaining high standards of appearance.\n━━━\n\nRECONSTRUCTION (concatenated extracted facts):\n━━━\n## Student Uniform Requirements\n\nStudents must wear school uniforms, which consist of a white shirt, navy blue trousers or skirts, and black shoes.\n\n## Uniform Neatness Standard\n\nStudent uniforms should always be neat and tidy, reflecting the commitment to maintaining high standards of appearance.\n\n━━━\n\nFind up to 4 specific problems. For each, classify as:\n- over-atomized: one logical unit split into too many facts\n- under-atomized: multiple distinct topics merged into one fact\n- missing-content: any obligation, permission, exception, or numerical value absent from reconstruction\n- not-standalone: fails Test 1 — implied \"who\", \"when\", or \"except what\" without stating it explicitly\n- not-canonical: fails Test 4 — navigation language, passive construction, redundant preamble\n- not-template-ready: fails Test 5 — audience-specific or channel-specific framing baked in\n- wrong-tags: topic tags missing or inconsistent with topic_slug\n- other: any other quality issue\n\nQuote exact text from the topic document when describing each problem.\nIf the reconstruction is good, return an empty problems list.",
+  "raw_response": "{\"problems\":[{\"problem_type\":\"not-template-ready\",\"description\":\"The reconstruction introduces subheadings \\\"## Student Uniform Requirements\\\" and \\\"## Uniform Neatness Standard\\\" which suggest a format or style specific to certain documentation but are not present or implied in the topic document.\"},{\"problem_type\":\"other\",\"description\":\"The reconstruction fails to make clear distinctions between requirements for 'students' and a general dress code policy, which was inclusive of 'Students and Staff' in the original document heading.\"}],\"overall\":\"The reconstruction maintains key points but introduces unnecessary subheadings and fails to account for the document's inclusivity beyond students.\"}",
+  "parsed_output": {
+    "problems": [
+      {
+        "problem_type": "not-template-ready",
+        "description": "The reconstruction introduces subheadings \"## Student Uniform Requirements\" and \"## Uniform Neatness Standard\" which suggest a format or style specific to certain documentation but are not present or implied in the topic document."
+      },
+      {
+        "problem_type": "other",
+        "description": "The reconstruction fails to make clear distinctions between requirements for 'students' and a general dress code policy, which was inclusive of 'Students and Staff' in the original document heading."
+      }
+    ],
+    "overall": "The reconstruction maintains key points but introduces unnecessary subheadings and fails to account for the document's inclusivity beyond students."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "seq": 17,
+  "call_number": 99,
+  "call_name": "reconstruction_critique",
+  "description": "critique: dress-code-policy-students-and-staff/students",
+  "validation": "PASS",
+  "tokens_in": 536,
+  "tokens_out": 196,
+  "latency_s": 1.66,
+  "prompt": "Compare a topic document to its reconstruction from extracted facts.\nIdentify specific extraction problems against the Five Tests.\n\nTOPIC DOCUMENT (source of truth):\n━━━\n### Dress Code Policy — Students and Staff > Student Requirements\n\nAll students are required to adhere to the dress code which mandates clean, appropriate attire that supports an effective learning atmosphere. Shorts and skirts must be of modest length, and clothing with offensive imagery or text is strictly prohibited.\n━━━\n\nRECONSTRUCTION (concatenated extracted facts):\n━━━\n## student dress code adherence\n\nAll students are required to adhere to the dress code, which mandates wearing clean and appropriate attire that supports an effective learning atmosphere.\n\n## length requirement for shorts and skirts\n\nShorts and skirts worn by students must be of modest length.\n\n## prohibition of offensive imagery on clothing\n\nStudent clothing must not display offensive imagery or text.\n\n━━━\n\nFind up to 4 specific problems. For each, classify as:\n- over-atomized: one logical unit split into too many facts\n- under-atomized: multiple distinct topics merged into one fact\n- missing-content: any obligation, permission, exception, or numerical value absent from reconstruction\n- not-standalone: fails Test 1 — implied \"who\", \"when\", or \"except what\" without stating it explicitly\n- not-canonical: fails Test 4 — navigation language, passive construction, redundant preamble\n- not-template-ready: fails Test 5 — audience-specific or channel-specific framing baked in\n- wrong-tags: topic tags missing or inconsistent with topic_slug\n- other: any other quality issue\n\nQuote exact text from the topic document when describing each problem.\nIf the reconstruction is good, return an empty problems list.",
+  "raw_response": "{\"problems\":[{\"problem_type\":\"under-atomized\",\"description\":\"The reconstruction combines the school's dress code requirement of 'clean and appropriate attire' under a single heading but does not separate the two elements of cleanliness and appropriateness individually.\"},{\"problem_type\":\"missing-content\",\"description\":\"The reconstruction fails to mention 'staff' as included in the dress code applicability, as stated in the header of the topic document.\"},{\"problem_type\":\"not-standalone\",\"description\":\"The heading 'student dress code adherence' implies the 'who' (students), but lacks explicit mention of any applicable context, potentially confusing readers unfamiliar with the source.\"},{\"problem_type\":\"not-canonical\",\"description\":\"The phrase 'which mandates wearing' in the reconstruction appears passive and less direct compared to the original document, which uses 'which mandates' straightforwardly.\"}],\"overall\":\"The document's reconstruction captures the essential points but overlooks some elements and clarity, especially regarding audience and structural comprehensiveness.\"}",
+  "parsed_output": {
+    "problems": [
+      {
+        "problem_type": "under-atomized",
+        "description": "The reconstruction combines the school's dress code requirement of 'clean and appropriate attire' under a single heading but does not separate the two elements of cleanliness and appropriateness individually."
+      },
+      {
+        "problem_type": "missing-content",
+        "description": "The reconstruction fails to mention 'staff' as included in the dress code applicability, as stated in the header of the topic document."
+      },
+      {
+        "problem_type": "not-standalone",
+        "description": "The heading 'student dress code adherence' implies the 'who' (students), but lacks explicit mention of any applicable context, potentially confusing readers unfamiliar with the source."
+      },
+      {
+        "problem_type": "not-canonical",
+        "description": "The phrase 'which mandates wearing' in the reconstruction appears passive and less direct compared to the original document, which uses 'which mandates' straightforwardly."
+      }
+    ],
+    "overall": "The document's reconstruction captures the essential points but overlooks some elements and clarity, especially regarding audience and structural comprehensiveness."
+  }
+}

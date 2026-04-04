@@ -1,0 +1,46 @@
+{
+  "seq": 10,
+  "call_number": 1,
+  "call_name": "topic_scanning",
+  "description": "test_doc_3_emergency_procedure / Procedure in Case of an Accident or Emergency",
+  "validation": "PASS",
+  "tokens_in": 648,
+  "tokens_out": 409,
+  "latency_s": 2.86,
+  "prompt": "You are a structural analyst extracting topic records from a document section.\n\nFor each paragraph or logical block in the content, output one TopicScanRecord.\n\nRules:\n- ONE record per paragraph or distinct logical block — never merge multiple paragraphs into one record\n- `span_text` MUST be verbatim — never summarise, paraphrase, or rewrite any part of the source text\n- `topic_slug` is built from the base slug below:\n  - Use `procedure-in-case-of-an-accident-or-emergency` as-is for paragraphs that belong to the main topic of this section\n  - Extend with a suffix ONLY when a paragraph introduces a clearly distinct sub-topic: `procedure-in-case-of-an-accident-or-emergency/subtopic`\n  - Never invent a slug unrelated to `procedure-in-case-of-an-accident-or-emergency`\n  - The same sub-topic appearing under a different heading in a different document must produce the same slug\n- `scope_qualifier` — omit (null) unless this specific instance is distinctly scoped: 'students', 'staff', '2024-2025'.\n  The heading may already imply a scope (e.g. \"Student Dress Code\" → 'students') — confirm or refine from paragraph content\n- Orphan preamble (pure rationale, goals, aspirational framing with no policy content) → slug `procedure-in-case-of-an-accident-or-emergency/principles` or 'skip-candidate'\n\nDocument context:\nSection: Procedure in Case of an Accident or Emergency\nSource path: Procedure in Case of an Accident or Emergency\nBase slug: procedure-in-case-of-an-accident-or-emergency\n\nContent:\n**Source**: Imagine Montessori School Valencia — School Outings Policy §8\n**Audience**: Staff",
+  "raw_response": "{\"records\":[{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/principles\",\"scope_qualifier\":null,\"span_text\":\"The well-being of our students is of utmost importance during school outings. The school is committed to ensuring all necessary measures are in place to safeguard every participant.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia — School Outings Policy §8\"},{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency\",\"scope_qualifier\":\"staff\",\"span_text\":\"In the event of an accident or emergency during an outing, staff must immediately contact emergency services and the school administration. It is imperative that the emergency contact list is updated and readily accessible.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia — School Outings Policy §8\"},{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/transport\",\"scope_qualifier\":null,\"span_text\":\"Transport arrangements should include communication tools such as walkie-talkies or mobile phones to ensure all staff can coordinate effectively during emergencies.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia — School Outings Policy §8\"},{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/safety-drills\",\"scope_qualifier\":null,\"span_text\":\"Regular emergency drills must be conducted before each major school outing to ensure that all staff and students are familiar with emergency procedures.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia — School Outings Policy §8\"},{\"topic_slug\":\"procedure-in-case-of-an-accident-or-emergency/reporting\",\"scope_qualifier\":null,\"span_text\":\"After an incident, a detailed report should be filed with the administration, outlining the events and any measures taken. This helps in reviewing and improving future procedures.\",\"source_path\":\"Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia — School Outings Policy §8\"}]}",
+  "parsed_output": {
+    "records": [
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/principles",
+        "scope_qualifier": null,
+        "span_text": "The well-being of our students is of utmost importance during school outings. The school is committed to ensuring all necessary measures are in place to safeguard every participant.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia — School Outings Policy §8"
+      },
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency",
+        "scope_qualifier": "staff",
+        "span_text": "In the event of an accident or emergency during an outing, staff must immediately contact emergency services and the school administration. It is imperative that the emergency contact list is updated and readily accessible.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia — School Outings Policy §8"
+      },
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/transport",
+        "scope_qualifier": null,
+        "span_text": "Transport arrangements should include communication tools such as walkie-talkies or mobile phones to ensure all staff can coordinate effectively during emergencies.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia — School Outings Policy §8"
+      },
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/safety-drills",
+        "scope_qualifier": null,
+        "span_text": "Regular emergency drills must be conducted before each major school outing to ensure that all staff and students are familiar with emergency procedures.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia — School Outings Policy §8"
+      },
+      {
+        "topic_slug": "procedure-in-case-of-an-accident-or-emergency/reporting",
+        "scope_qualifier": null,
+        "span_text": "After an incident, a detailed report should be filed with the administration, outlining the events and any measures taken. This helps in reviewing and improving future procedures.",
+        "source_path": "Procedure in Case of an Accident or Emergency > Imagine Montessori School Valencia — School Outings Policy §8"
+      }
+    ]
+  }
+}

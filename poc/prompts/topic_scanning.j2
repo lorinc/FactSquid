@@ -5,16 +5,19 @@ For each paragraph or logical block in the content, output one TopicScanRecord.
 Rules:
 - ONE record per paragraph or distinct logical block — never merge multiple paragraphs into one record
 - `span_text` MUST be verbatim — never summarise, paraphrase, or rewrite any part of the source text
-- `topic_slug` must be hierarchical and stable: the same concept in different documents gets the same slug
-  - Format: lowercase kebab-case with '/' for hierarchy (e.g. 'dress-code/students', 'fees/late-arrival', 'attendance/absence')
-  - Be specific: 'dress-code/students' not just 'dress-code'; 'fees/late-arrival' not just 'fees'
-  - Two records with the same slug will be merged — choose slugs so that records that belong together share a slug
-- `scope_qualifier` — omit (null) unless this specific instance is distinctly scoped: 'students', 'staff', '2024-2025'
-- Orphan preamble (pure rationale, goals, aspirational framing with no policy content) → slug '<topic>/principles' or 'skip-candidate'
+- `topic_slug` is built from the base slug below:
+  - Use `{{ base_slug }}` as-is for paragraphs that belong to the main topic of this section
+  - Extend with a suffix ONLY when a paragraph introduces a clearly distinct sub-topic: `{{ base_slug }}/subtopic`
+  - Never invent a slug unrelated to `{{ base_slug }}`
+  - The same sub-topic appearing under a different heading in a different document must produce the same slug
+- `scope_qualifier` — omit (null) unless this specific instance is distinctly scoped: 'students', 'staff', '2024-2025'.
+  The heading may already imply a scope (e.g. "Student Dress Code" → 'students') — confirm or refine from paragraph content
+- Orphan preamble (pure rationale, goals, aspirational framing with no policy content) → slug `{{ base_slug }}/principles` or 'skip-candidate'
 
 Document context:
 Section: {{ section_title }}
 Source path: {{ source_path }}
+Base slug: {{ base_slug }}
 
 Content:
 {{ content }}

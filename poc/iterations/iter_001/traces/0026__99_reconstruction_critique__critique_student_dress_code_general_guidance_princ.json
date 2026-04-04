@@ -1,0 +1,29 @@
+{
+  "seq": 26,
+  "call_number": 99,
+  "call_name": "reconstruction_critique",
+  "description": "critique: student-dress-code-general-guidance/principles/stu",
+  "validation": "PASS",
+  "tokens_in": 529,
+  "tokens_out": 178,
+  "latency_s": 3.11,
+  "prompt": "Compare a topic document to its reconstruction from extracted facts.\nIdentify specific extraction problems against the Five Tests.\n\nTOPIC DOCUMENT (source of truth):\n━━━\n### Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\n\nAs an inclusive school, we ask that our whole community respects these guidelines.\n━━━\n\nRECONSTRUCTION (concatenated extracted facts):\n━━━\n## Student Dress Code Guidelines\n\nThe student dress code guidelines require all students to adhere to the designated dress code as set out by the school. Students are expected to dress in a manner that is appropriate, respectful, and consistent with an environment of learning and inclusivity.\n\n## Respect for Dress Code\n\nAll members of the school community are asked to respect the student dress code guidelines as part of fostering an inclusive environment.\n\n━━━\n\nFind up to 4 specific problems. For each, classify as:\n- over-atomized: one logical unit split into too many facts\n- under-atomized: multiple distinct topics merged into one fact\n- missing-content: any obligation, permission, exception, or numerical value absent from reconstruction\n- not-standalone: fails Test 1 — implied \"who\", \"when\", or \"except what\" without stating it explicitly\n- not-canonical: fails Test 4 — navigation language, passive construction, redundant preamble\n- not-template-ready: fails Test 5 — audience-specific or channel-specific framing baked in\n- wrong-tags: topic tags missing or inconsistent with topic_slug\n- other: any other quality issue\n\nQuote exact text from the topic document when describing each problem.\nIf the reconstruction is good, return an empty problems list.",
+  "raw_response": "{\"problems\":[{\"problem_type\":\"missing-content\",\"description\":\"The phrase \\\"we ask that our whole community respects these guidelines\\\" indicates an inclusive request from the school's side to the community, which is not present in the reconstruction.\"},{\"problem_type\":\"not-standalone\",\"description\":\"The reconstruction mentions 'designated dress code' without elaborating 'who' designates it, 'when' it is designated, or 'where' details can be found, unlike the original which is under a specific policy section.\"},{\"problem_type\":\"not-canonical\",\"description\":\"Original document phrasing 'as an inclusive school' sets context that is turned into a generic 'environment of learning and inclusivity' which misses the direct attribution to the school.\"}],\"overall\":\"The reconstruction captures the essence of the original document but misses specific nuances of inclusion and community-wide respect emphasized in the original text.\"}",
+  "parsed_output": {
+    "problems": [
+      {
+        "problem_type": "missing-content",
+        "description": "The phrase \"we ask that our whole community respects these guidelines\" indicates an inclusive request from the school's side to the community, which is not present in the reconstruction."
+      },
+      {
+        "problem_type": "not-standalone",
+        "description": "The reconstruction mentions 'designated dress code' without elaborating 'who' designates it, 'when' it is designated, or 'where' details can be found, unlike the original which is under a specific policy section."
+      },
+      {
+        "problem_type": "not-canonical",
+        "description": "Original document phrasing 'as an inclusive school' sets context that is turned into a generic 'environment of learning and inclusivity' which misses the direct attribution to the school."
+      }
+    ],
+    "overall": "The reconstruction captures the essence of the original document but misses specific nuances of inclusion and community-wide respect emphasized in the original text."
+  }
+}

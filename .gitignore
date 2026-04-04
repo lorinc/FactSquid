@@ -1,4 +1,6 @@
 .omc/
+.claude/
+data/test_corpus/
 
 # Python
 __pycache__/

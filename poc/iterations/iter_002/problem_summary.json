@@ -1,0 +1,9 @@
+{
+  "not-canonical": 6,
+  "missing-content": 4,
+  "not-template-ready": 7,
+  "other": 3,
+  "wrong-tags": 1,
+  "not-standalone": 3,
+  "over-atomized": 1
+}

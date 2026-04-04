@@ -1,0 +1,25 @@
+{
+  "seq": 26,
+  "call_number": 99,
+  "call_name": "reconstruction_critique",
+  "description": "critique: staff-dress-code/acceptable-clothing/staff",
+  "validation": "PASS",
+  "tokens_in": 500,
+  "tokens_out": 129,
+  "latency_s": 1.87,
+  "prompt": "Compare a topic document to its reconstruction from extracted facts.\nIdentify specific extraction problems against the Five Tests.\n\nTOPIC DOCUMENT (source of truth):\n━━━\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n**Acceptable clothing** includes: appropriate-length skirts and dresses (knee-length), blouses, smart t-shirts, polo shirts, trousers, smart jeans, chinos.\n━━━\n\nRECONSTRUCTION (concatenated extracted facts):\n━━━\n## Acceptable clothing for staff\n\nAcceptable clothing for staff includes knee-length skirts and dresses, blouses, smart t-shirts, polo shirts, trousers, smart jeans, and chinos.\n\n━━━\n\nFind up to 4 specific problems. For each, classify as:\n- over-atomized: one logical unit split into too many facts\n- under-atomized: multiple distinct topics merged into one fact\n- missing-content: any obligation, permission, exception, or numerical value absent from reconstruction\n- not-standalone: fails Test 1 — implied \"who\", \"when\", or \"except what\" without stating it explicitly\n- not-canonical: fails Test 4 — navigation language, passive construction, redundant preamble\n- not-template-ready: fails Test 5 — audience-specific or channel-specific framing baked in\n- wrong-tags: topic tags missing or inconsistent with topic_slug\n- other: any other quality issue\n\nQuote exact text from the topic document when describing each problem.\nIf the reconstruction is good, return an empty problems list.",
+  "raw_response": "{\"problems\":[{\"problem_type\":\"not-template-ready\",\"description\":\"The reconstruction lacks a clear section title or number identifier, making it less direct for template use. Original document has specific section numbering: '2.5. Staff Dress Code'.\"},{\"problem_type\":\"not-standalone\",\"description\":\"The reconstruction mentions only 'staff' but does not clearly specify its relevance solely to the staff, unlike the 'Staff Dress Code' segregated in the topic document.\"}],\"overall\":\"The reconstruction provides a comprehensive list but requires clearer structuration and specific identification, similar to the topic document's formatting, to meet all evaluation tests adequately.\"}",
+  "parsed_output": {
+    "problems": [
+      {
+        "problem_type": "not-template-ready",
+        "description": "The reconstruction lacks a clear section title or number identifier, making it less direct for template use. Original document has specific section numbering: '2.5. Staff Dress Code'."
+      },
+      {
+        "problem_type": "not-standalone",
+        "description": "The reconstruction mentions only 'staff' but does not clearly specify its relevance solely to the staff, unlike the 'Staff Dress Code' segregated in the topic document."
+      }
+    ],
+    "overall": "The reconstruction provides a comprehensive list but requires clearer structuration and specific identification, similar to the topic document's formatting, to meet all evaluation tests adequately."
+  }
+}

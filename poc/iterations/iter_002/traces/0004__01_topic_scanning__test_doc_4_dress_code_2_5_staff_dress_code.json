@@ -1,0 +1,70 @@
+{
+  "seq": 4,
+  "call_number": 1,
+  "call_name": "topic_scanning",
+  "description": "test_doc_4_dress_code / 2.5. Staff Dress Code",
+  "validation": "PASS",
+  "tokens_in": 788,
+  "tokens_out": 567,
+  "latency_s": 3.5,
+  "prompt": "You are a structural analyst extracting topic records from a document section.\n\nFor each paragraph or logical block in the content, output one TopicScanRecord.\n\nRules:\n- ONE record per paragraph or distinct logical block — never merge multiple paragraphs into one record\n- `span_text` MUST be verbatim — never summarise, paraphrase, or rewrite any part of the source text\n- `topic_slug` is built from the base slug below:\n  - Use `staff-dress-code` as-is for paragraphs that belong to the main topic of this section\n  - Extend with a suffix ONLY when a paragraph introduces a clearly distinct sub-topic: `staff-dress-code/subtopic`\n  - Never invent a slug unrelated to `staff-dress-code`\n  - The same sub-topic appearing under a different heading in a different document must produce the same slug\n- `scope_qualifier` — omit (null) unless this specific instance is distinctly scoped: 'students', 'staff', '2024-2025'.\n  The heading may already imply a scope (e.g. \"Student Dress Code\" → 'students') — confirm or refine from paragraph content\n- Orphan preamble (pure rationale, goals, aspirational framing with no policy content) → slug `staff-dress-code/principles` or 'skip-candidate'\n\nDocument context:\nSection: 2.5. Staff Dress Code\nSource path: Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\nBase slug: staff-dress-code\n\nContent:\n**Acceptable clothing** includes: appropriate-length skirts and dresses (knee-length), blouses, smart t-shirts, polo shirts, trousers, smart jeans, chinos.\n\n**Not acceptable:**\n\n*   Mini-skirts, hot pants, or lycra cycling shorts shorter than mid-thigh.\n*   Leisure shorts, tracksuits, or sportswear (except for PE and associated activities).\n*   Transparent or see-through blouses, dresses, or shirts; low-cut tops; crop-tops; vest/spaghetti-strap tops.\n*   Clothing with tears, holes, or rips; clothes bearing offensive logos, slogans, or graphics.\n*   Indoor wearing of baseball caps or hats; high-heeled stiletto shoes or beach flip-flops (indoors).\n*   Clothes that restrict movement or can snag on equipment (loose pockets, sequins, large buttons).\n*   Underwear worn in a revealing manner.",
+  "raw_response": "{\"records\":[{\"topic_slug\":\"staff-dress-code/acceptable-clothing\",\"scope_qualifier\":\"staff\",\"span_text\":\"**Acceptable clothing** includes: appropriate-length skirts and dresses (knee-length), blouses, smart t-shirts, polo shirts, trousers, smart jeans, chinos.\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\"},{\"topic_slug\":\"staff-dress-code/unacceptable-clothing\",\"scope_qualifier\":\"staff\",\"span_text\":\"**Not acceptable:**\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\"},{\"topic_slug\":\"staff-dress-code/unacceptable-clothing\",\"scope_qualifier\":\"staff\",\"span_text\":\"* Mini-skirts, hot pants, or lycra cycling shorts shorter than mid-thigh.\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\"},{\"topic_slug\":\"staff-dress-code/unacceptable-clothing\",\"scope_qualifier\":\"staff\",\"span_text\":\"* Leisure shorts, tracksuits, or sportswear (except for PE and associated activities).\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\"},{\"topic_slug\":\"staff-dress-code/unacceptable-clothing\",\"scope_qualifier\":\"staff\",\"span_text\":\"* Transparent or see-through blouses, dresses, or shirts; low-cut tops; crop-tops; vest/spaghetti-strap tops.\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\"},{\"topic_slug\":\"staff-dress-code/unacceptable-clothing\",\"scope_qualifier\":\"staff\",\"span_text\":\"* Clothing with tears, holes, or rips; clothes bearing offensive logos, slogans, or graphics.\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\"},{\"topic_slug\":\"staff-dress-code/unacceptable-clothing\",\"scope_qualifier\":\"staff\",\"span_text\":\"* Indoor wearing of baseball caps or hats; high-heeled stiletto shoes or beach flip-flops (indoors).\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\"},{\"topic_slug\":\"staff-dress-code/unacceptable-clothing\",\"scope_qualifier\":\"staff\",\"span_text\":\"* Clothes that restrict movement or can snag on equipment (loose pockets, sequins, large buttons).\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\"},{\"topic_slug\":\"staff-dress-code/unacceptable-clothing\",\"scope_qualifier\":\"staff\",\"span_text\":\"* Underwear worn in a revealing manner.\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\"}]}",
+  "parsed_output": {
+    "records": [
+      {
+        "topic_slug": "staff-dress-code/acceptable-clothing",
+        "scope_qualifier": "staff",
+        "span_text": "**Acceptable clothing** includes: appropriate-length skirts and dresses (knee-length), blouses, smart t-shirts, polo shirts, trousers, smart jeans, chinos.",
+        "source_path": "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+      },
+      {
+        "topic_slug": "staff-dress-code/unacceptable-clothing",
+        "scope_qualifier": "staff",
+        "span_text": "**Not acceptable:**",
+        "source_path": "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+      },
+      {
+        "topic_slug": "staff-dress-code/unacceptable-clothing",
+        "scope_qualifier": "staff",
+        "span_text": "* Mini-skirts, hot pants, or lycra cycling shorts shorter than mid-thigh.",
+        "source_path": "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+      },
+      {
+        "topic_slug": "staff-dress-code/unacceptable-clothing",
+        "scope_qualifier": "staff",
+        "span_text": "* Leisure shorts, tracksuits, or sportswear (except for PE and associated activities).",
+        "source_path": "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+      },
+      {
+        "topic_slug": "staff-dress-code/unacceptable-clothing",
+        "scope_qualifier": "staff",
+        "span_text": "* Transparent or see-through blouses, dresses, or shirts; low-cut tops; crop-tops; vest/spaghetti-strap tops.",
+        "source_path": "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+      },
+      {
+        "topic_slug": "staff-dress-code/unacceptable-clothing",
+        "scope_qualifier": "staff",
+        "span_text": "* Clothing with tears, holes, or rips; clothes bearing offensive logos, slogans, or graphics.",
+        "source_path": "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+      },
+      {
+        "topic_slug": "staff-dress-code/unacceptable-clothing",
+        "scope_qualifier": "staff",
+        "span_text": "* Indoor wearing of baseball caps or hats; high-heeled stiletto shoes or beach flip-flops (indoors).",
+        "source_path": "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+      },
+      {
+        "topic_slug": "staff-dress-code/unacceptable-clothing",
+        "scope_qualifier": "staff",
+        "span_text": "* Clothes that restrict movement or can snag on equipment (loose pockets, sequins, large buttons).",
+        "source_path": "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+      },
+      {
+        "topic_slug": "staff-dress-code/unacceptable-clothing",
+        "scope_qualifier": "staff",
+        "span_text": "* Underwear worn in a revealing manner.",
+        "source_path": "Dress Code Policy — Students and Staff > 2.5. Staff Dress Code"
+      }
+    ]
+  }
+}

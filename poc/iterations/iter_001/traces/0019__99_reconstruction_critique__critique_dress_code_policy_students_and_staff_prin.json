@@ -1,0 +1,33 @@
+{
+  "seq": 19,
+  "call_number": 99,
+  "call_name": "reconstruction_critique",
+  "description": "critique: dress-code-policy-students-and-staff/principles",
+  "validation": "PASS",
+  "tokens_in": 531,
+  "tokens_out": 269,
+  "latency_s": 2.43,
+  "prompt": "Compare a topic document to its reconstruction from extracted facts.\nIdentify specific extraction problems against the Five Tests.\n\nTOPIC DOCUMENT (source of truth):\n━━━\n### Dress Code Policy — Students and Staff > Statement of Values\n\nThe Image Montessori School Valencia strives to create an environment that reflects the values of respect, diversity, and professionalism. This objective sets the foundation for our dress code policy, ensuring every individual feels valued and respected while preserving the integrity of our educational setting.\n━━━\n\nRECONSTRUCTION (concatenated extracted facts):\n━━━\n## Image Montessori School Valencia dress code policy\n\nThe Image Montessori School Valencia implements a dress code policy to foster an environment aligned with values of respect, diversity, and professionalism. The policy is designed to ensure that every individual feels valued and respected, while maintaining the integrity of the school's educational setting.\n\n━━━\n\nFind up to 4 specific problems. For each, classify as:\n- over-atomized: one logical unit split into too many facts\n- under-atomized: multiple distinct topics merged into one fact\n- missing-content: any obligation, permission, exception, or numerical value absent from reconstruction\n- not-standalone: fails Test 1 — implied \"who\", \"when\", or \"except what\" without stating it explicitly\n- not-canonical: fails Test 4 — navigation language, passive construction, redundant preamble\n- not-template-ready: fails Test 5 — audience-specific or channel-specific framing baked in\n- wrong-tags: topic tags missing or inconsistent with topic_slug\n- other: any other quality issue\n\nQuote exact text from the topic document when describing each problem.\nIf the reconstruction is good, return an empty problems list.",
+  "raw_response": "{\"problems\":[{\"problem_type\":\"not-canonical\",\"description\":\"The reconstruction begins with 'The Image Montessori School Valencia implements a dress code policy to foster an environment aligned with values of respect, diversity, and professionalism.' The use of 'implements a dress code policy to foster an environment' involves passive construction and could be more straightforwardly stated.\\n\\n\"},{\"problem_type\":\"not-template-ready\",\"description\":\"The reconstruction lacks a focus on a particular audience's needs and uses general phrasing similar to 'aligned with values of respect, diversity, and professionalism.' This could benefit from being more specific to either students or staff.\"},{\"problem_type\":\"missing-content\",\"description\":\"While the reconstruct aligns closely with the source document, the specific phrasing of 'ensuring every individual feels valued and respected while preserving the integrity of our educational setting' suggests an obligation that should be underscored in the reconstruction to underscore the school's commitment.\\n\\n\"},{\"problem_type\":\"other\",\"description\":\"The reconstruction does not mention 'Statement of Values' directly, which is important as it positions the dress code policy within a broader context. Including this title would help relate the policy back to the school's core principles and objectives.\\n\\n\"}],\"overall\":\"The reconstruction captures the essence of the topic document but misses some nuanced context and specificity found in the original statement of values.\"}",
+  "parsed_output": {
+    "problems": [
+      {
+        "problem_type": "not-canonical",
+        "description": "The reconstruction begins with 'The Image Montessori School Valencia implements a dress code policy to foster an environment aligned with values of respect, diversity, and professionalism.' The use of 'implements a dress code policy to foster an environment' involves passive construction and could be more straightforwardly stated.\n\n"
+      },
+      {
+        "problem_type": "not-template-ready",
+        "description": "The reconstruction lacks a focus on a particular audience's needs and uses general phrasing similar to 'aligned with values of respect, diversity, and professionalism.' This could benefit from being more specific to either students or staff."
+      },
+      {
+        "problem_type": "missing-content",
+        "description": "While the reconstruct aligns closely with the source document, the specific phrasing of 'ensuring every individual feels valued and respected while preserving the integrity of our educational setting' suggests an obligation that should be underscored in the reconstruction to underscore the school's commitment.\n\n"
+      },
+      {
+        "problem_type": "other",
+        "description": "The reconstruction does not mention 'Statement of Values' directly, which is important as it positions the dress code policy within a broader context. Including this title would help relate the policy back to the school's core principles and objectives.\n\n"
+      }
+    ],
+    "overall": "The reconstruction captures the essence of the topic document but misses some nuanced context and specificity found in the original statement of values."
+  }
+}

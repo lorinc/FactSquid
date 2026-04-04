@@ -1,0 +1,21 @@
+{
+  "seq": 4,
+  "call_number": 11,
+  "call_name": "scope_inference",
+  "description": "test_doc_2_terminology",
+  "validation": "PASS",
+  "tokens_in": 376,
+  "tokens_out": 20,
+  "latency_s": 0.62,
+  "prompt": "Determine the audience and channel scope of a school document.\n\nDocument:\n- Filename: test_doc_2_terminology.md\n- Title: School Outings — Definitions and Principles\n- Opening content:\n# School Outings — Definitions and Principles\n\n**Source**: Imagine Montessori School Valencia — School Outings Policy §2–4\n**Audience**: Staff\n\n## 2. Terminology\n\n*   **School Outing:** Any trip organized by the school for educational, cultural, or recreational purposes, typically extending beyond the regular school grounds and outside the classroom.\n*   **Pedagogical Coordinator:** The staff memb\n\nAudience scope — who this document is addressed to (select all that apply):\n- parents: parents and guardians of enrolled students\n- staff: school employees (teachers and support staff)\n- students: enrolled pupils\n- visitors: people visiting the school temporarily\n- applicants: prospective families or job applicants\n- governors: school governors or board members\n\nChannel scope — which communication channels this document belongs to (select all that apply):\n- parent-handbook: the parent-facing handbook or information pack\n- staff-handbook: the staff-facing handbook or policy documentation\n- policy-documents: formal policy documents (not handbooks)\n- newsletter: the school newsletter\n- website: the school's public website\n- chatbot: the school's Q&A chatbot knowledge base\n\nReturn the correct audience_scope and channel_scope lists for this document.\nA document may have multiple audiences and multiple channels.",
+  "raw_response": "{\"audience_scope\":[\"staff\"],\"channel_scope\":[\"staff-handbook\",\"policy-documents\"]}",
+  "parsed_output": {
+    "audience_scope": [
+      "staff"
+    ],
+    "channel_scope": [
+      "staff-handbook",
+      "policy-documents"
+    ]
+  }
+}

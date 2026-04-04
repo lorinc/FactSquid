@@ -1,0 +1,40 @@
+{
+  "seq": 8,
+  "call_number": 1,
+  "call_name": "topic_scanning",
+  "description": "test_doc_2_terminology / 4. Objectives of School Outings",
+  "validation": "PASS",
+  "tokens_in": 729,
+  "tokens_out": 294,
+  "latency_s": 2.05,
+  "prompt": "You are a structural analyst extracting topic records from a document section.\n\nFor each paragraph or logical block in the content, output one TopicScanRecord.\n\nRules:\n- ONE record per paragraph or distinct logical block — never merge multiple paragraphs into one record\n- `span_text` MUST be verbatim — never summarise, paraphrase, or rewrite any part of the source text\n- `topic_slug` is built from the base slug below:\n  - Use `objectives-of-school-outings` as-is for paragraphs that belong to the main topic of this section\n  - Extend with a suffix ONLY when a paragraph introduces a clearly distinct sub-topic: `objectives-of-school-outings/subtopic`\n  - Never invent a slug unrelated to `objectives-of-school-outings`\n  - The same sub-topic appearing under a different heading in a different document must produce the same slug\n- `scope_qualifier` — omit (null) unless this specific instance is distinctly scoped: 'students', 'staff', '2024-2025'.\n  The heading may already imply a scope (e.g. \"Student Dress Code\" → 'students') — confirm or refine from paragraph content\n- Orphan preamble (pure rationale, goals, aspirational framing with no policy content) → slug `objectives-of-school-outings/principles` or 'skip-candidate'\n\nDocument context:\nSection: 4. Objectives of School Outings\nSource path: School Outings — Definitions and Principles > 4. Objectives of School Outings\nBase slug: objectives-of-school-outings\n\nContent:\n*   **Educational Enrichment:** Outings are designed to reinforce classroom learning by providing hands-on, real-world experiences that align with the curriculum.\n*   **Personal and Social Development:** Outings encourage teamwork, communication, and the development of life skills such as problem-solving, independence, and responsibility.\n*   **Cultural Awareness:** Visits to cultural, historical, or community-based locations help broaden students' understanding of diverse cultures, history, and the arts.\n*   **Physical and Emotional Well-being:** Outdoor activities and recreational trips contribute to students' physical fitness, mental health, and social connections.",
+  "raw_response": "{\"records\":[{\"topic_slug\":\"objectives-of-school-outings/educational-enrichment\",\"scope_qualifier\":null,\"span_text\":\"Educational Enrichment: Outings are designed to reinforce classroom learning by providing hands-on, real-world experiences that align with the curriculum.\",\"source_path\":\"School Outings — Definitions and Principles > 4. Objectives of School Outings\"},{\"topic_slug\":\"objectives-of-school-outings/personal-and-social-development\",\"scope_qualifier\":null,\"span_text\":\"Personal and Social Development: Outings encourage teamwork, communication, and the development of life skills such as problem-solving, independence, and responsibility.\",\"source_path\":\"School Outings — Definitions and Principles > 4. Objectives of School Outings\"},{\"topic_slug\":\"objectives-of-school-outings/cultural-awareness\",\"scope_qualifier\":null,\"span_text\":\"Cultural Awareness: Visits to cultural, historical, or community-based locations help broaden students' understanding of diverse cultures, history, and the arts.\",\"source_path\":\"School Outings — Definitions and Principles > 4. Objectives of School Outings\"},{\"topic_slug\":\"objectives-of-school-outings/physical-and-emotional-well-being\",\"scope_qualifier\":null,\"span_text\":\"Physical and Emotional Well-being: Outdoor activities and recreational trips contribute to students' physical fitness, mental health, and social connections.\",\"source_path\":\"School Outings — Definitions and Principles > 4. Objectives of School Outings\"}]}",
+  "parsed_output": {
+    "records": [
+      {
+        "topic_slug": "objectives-of-school-outings/educational-enrichment",
+        "scope_qualifier": null,
+        "span_text": "Educational Enrichment: Outings are designed to reinforce classroom learning by providing hands-on, real-world experiences that align with the curriculum.",
+        "source_path": "School Outings — Definitions and Principles > 4. Objectives of School Outings"
+      },
+      {
+        "topic_slug": "objectives-of-school-outings/personal-and-social-development",
+        "scope_qualifier": null,
+        "span_text": "Personal and Social Development: Outings encourage teamwork, communication, and the development of life skills such as problem-solving, independence, and responsibility.",
+        "source_path": "School Outings — Definitions and Principles > 4. Objectives of School Outings"
+      },
+      {
+        "topic_slug": "objectives-of-school-outings/cultural-awareness",
+        "scope_qualifier": null,
+        "span_text": "Cultural Awareness: Visits to cultural, historical, or community-based locations help broaden students' understanding of diverse cultures, history, and the arts.",
+        "source_path": "School Outings — Definitions and Principles > 4. Objectives of School Outings"
+      },
+      {
+        "topic_slug": "objectives-of-school-outings/physical-and-emotional-well-being",
+        "scope_qualifier": null,
+        "span_text": "Physical and Emotional Well-being: Outdoor activities and recreational trips contribute to students' physical fitness, mental health, and social connections.",
+        "source_path": "School Outings — Definitions and Principles > 4. Objectives of School Outings"
+      }
+    ]
+  }
+}

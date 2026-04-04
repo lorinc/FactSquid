@@ -72,6 +72,17 @@ def extract_sections(text: str) -> list[dict]:
     return sections
 
 
+def _heading_to_base_slug(section_title: str) -> str:
+    """Derive a deterministic base slug from a section heading.
+
+    Strips leading number prefixes (e.g. '2.4 ', '12. ') then converts to
+    lowercase kebab-case.  The result is passed to the topic_scanning prompt
+    so the LLM extends it with a suffix rather than inventing slugs wholesale.
+    """
+    title = re.sub(r'^[\d.]+\s+', '', section_title).strip()
+    return re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')
+
+
 def _make_fact_id(topic_slug: str, scope_qualifier: str | None, index: int) -> str:
     slug = re.sub(r'[^a-z0-9]+', '_', topic_slug.lower()).strip('_')
     scope = re.sub(r'[^a-z0-9]+', '_', (scope_qualifier or 'all').lower()).strip('_')
@@ -82,12 +93,13 @@ def process_documents(
     paths: list[pathlib.Path],
     provider: LLMProvider,
     model: str,
-) -> tuple[list[ExtractedFact], dict[tuple[str, str | None], str]]:
+) -> tuple[list[ExtractedFact], dict[tuple[str, str | None], str], dict[tuple[str, str | None], list[dict]]]:
     """Run the 4-pass extraction pipeline across all documents.
 
     Returns:
         facts: all extracted facts
         topic_docs: assembled topic documents keyed by (topic_slug, scope_qualifier)
+        topic_groups: Pass 1 scan records grouped by (topic_slug, scope_qualifier)
     """
 
     # ── Per-document: scope inference + Pass 1 ───────────────────────────────
@@ -131,6 +143,7 @@ def process_documents(
                 render_prompt("topic_scanning",
                     section_title=section["section_title"],
                     source_path=section["source_path"],
+                    base_slug=_heading_to_base_slug(section["section_title"]),
                     content=section["content"],
                 ),
                 TopicScanOutput,
@@ -160,7 +173,7 @@ def process_documents(
     all_facts: list[ExtractedFact] = []
     topic_docs: dict[tuple[str, str | None], str] = {}
 
-    for (topic_slug, scope_qualifier), records in sorted(groups.items()):
+    for (topic_slug, scope_qualifier), records in sorted(groups.items(), key=lambda x: (x[0][0], x[0][1] or "")):
         # Pass 3: assemble topic document
         topic_doc_lines: list[str] = []
         for r in records:
@@ -220,7 +233,7 @@ def process_documents(
 
         print(f"    → {len(extraction_output.facts)} facts")
 
-    return all_facts, topic_docs
+    return all_facts, topic_docs, dict(groups)
 
 
 def main() -> None:
@@ -242,7 +255,7 @@ def main() -> None:
             print(f"Document not found: {args.doc}", file=sys.stderr)
             sys.exit(1)
 
-    all_facts, _ = process_documents(docs, provider, args.model)
+    all_facts, _, _ = process_documents(docs, provider, args.model)
 
     print(f"\n{'='*60}")
     print(f"Total: {len(all_facts)} facts from {len(docs)} document(s)")

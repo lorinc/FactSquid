@@ -1,0 +1,16 @@
+{
+  "seq": 21,
+  "call_number": 99,
+  "call_name": "reconstruction_critique",
+  "description": "critique: staff-dress-code/principles",
+  "validation": "PASS",
+  "tokens_in": 496,
+  "tokens_out": 30,
+  "latency_s": 0.61,
+  "prompt": "Compare a topic document to its reconstruction from extracted facts.\nIdentify specific extraction problems against the Five Tests.\n\nTOPIC DOCUMENT (source of truth):\n━━━\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\nAcceptable clothing includes: appropriate-length skirts and dresses (knee-length), blouses, smart t-shirts, polo shirts, trousers, smart jeans, chinos.\n━━━\n\nRECONSTRUCTION (concatenated extracted facts):\n━━━\n## acceptable staff clothing\n\nAcceptable clothing for staff includes knee-length skirts and dresses, blouses, smart t-shirts, polo shirts, trousers, smart jeans, and chinos.\n\n━━━\n\nFind up to 4 specific problems. For each, classify as:\n- over-atomized: one logical unit split into too many facts\n- under-atomized: multiple distinct topics merged into one fact\n- missing-content: any obligation, permission, exception, or numerical value absent from reconstruction\n- not-standalone: fails Test 1 — implied \"who\", \"when\", or \"except what\" without stating it explicitly\n- not-canonical: fails Test 4 — navigation language, passive construction, redundant preamble\n- not-template-ready: fails Test 5 — audience-specific or channel-specific framing baked in\n- wrong-tags: topic tags missing or inconsistent with topic_slug\n- other: any other quality issue\n\nQuote exact text from the topic document when describing each problem.\nIf the reconstruction is good, return an empty problems list.",
+  "raw_response": "{\"problems\":[],\"overall\":\"The reconstruction adequately represents the source document, accurately conveying the specific dress code requirements for staff without any extraction problems.\"}",
+  "parsed_output": {
+    "problems": [],
+    "overall": "The reconstruction adequately represents the source document, accurately conveying the specific dress code requirements for staff without any extraction problems."
+  }
+}

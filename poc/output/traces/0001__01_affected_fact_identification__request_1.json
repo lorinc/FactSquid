@@ -1,0 +1,26 @@
+{
+  "seq": 1,
+  "call_number": 1,
+  "call_name": "affected_fact_identification",
+  "description": "Request #1",
+  "validation": "PASS",
+  "tokens_in": 907,
+  "tokens_out": 112,
+  "latency_s": 1.84,
+  "prompt": "Identify which facts in a school knowledge corpus need to be updated in response to a change request.\n\nChange request:\nUpdate the student dress code: students may now wear trainers on any day, not just PE days.\n\nCandidate facts (fact_id | source | content | tags):\nstudent_dress_code_general_guidance_pe_day__students__0 | student-dress-code-general-guidance/pe-day/students | Students must wear appropriate sports underwear, shorts, leggings, tracksuit bottoms, a t-shirt or sweatshirt, and trainers. | [student-dress-code]\nstudent_dress_code_general_guidance_general_everyday_style__students__1 | student-dress-code-general-guidance/general-everyday-style/students | On PE days, students must have the ability to remove stud earrings or any other jewellery as required. | [dress-code, pe-day]\nstaff_dress_code_unacceptable_clothing__staff__1 | staff-dress-code/unacceptable-clothing/staff | Leisure shorts, tracksuits, or sportswear are not allowed for staff members, except when engaged in PE and associated activities. | [dress-code, staff]\nstudent_dress_code_general_guidance_general_everyday_style__students__4 | student-dress-code-general-guidance/general-everyday-style/students | Shorts and skirts worn by students must cover the upper thighs and be ¾ length or longer, while cycling shorts must also cover the upper thighs if worn on PE days. | [dress-code, clothing-length]\nstudent_dress_code_general_guidance_headwear__students__1 | student-dress-code-general-guidance/headwear/students | Students may wear religious headwear at all times except during physical education lessons, where it must be removed for health and safety reasons. | [dress-code, religious-headwear, students]\nstudent_dress_code_general_guidance_principles__all__0 | student-dress-code-general-guidance/principles | Students must adhere to the school's dress code by wearing appropriate clothing that is respectful and aligns with the school's values of inclusivity. | [student-dress-code]\nstudent_dress_code_general_guidance_principles__all__1 | student-dress-code-general-guidance/principles | The entire school community, including students, staff, and parents, is expected to respect and uphold the dress code guidelines to maintain a supportive and inclusive educational environment. | [community-respect]\nstudent_dress_code_general_guidance_footwear__students__0 | student-dress-code-general-guidance/footwear/students | Students must wear flat, enclosed shoes outdoors. The shoes should be comfortable and fastened using laces, buckles, zips, or velcro. Students need to independently put on and take off their shoes. | [dress-code, student-footwear]\nstudent_dress_code_general_guidance_general_everyday_style__students__5 | student-dress-code-general-guidance/general-everyday-style/students | Students are required to wear clothes without holes or rips, ensuring that all underwear is covered by outerwear. | [dress-code, clothing-condition]\nstaff_dress_code_acceptable_clothing__staff__0 | staff-dress-code/acceptable-clothing/staff | Staff must wear clothing that includes knee-length skirts and dresses, blouses, smart t-shirts, polo shirts, trousers, smart jeans, and chinos. | [dress-code, staff]\n\nFor each fact that is directly affected by this change request, provide:\n- fact_id: the exact ID from the list above\n- relevance: 1–5 (5 = primary fact to update, 4 = clearly affected, 3 = indirectly affected and should be reviewed)\n- reason: one sentence explaining specifically why this fact needs to change\n\nOnly include facts with relevance ≥ 3.\nDo not include facts that are merely on the same general topic but not actually changed by this specific request.",
+  "raw_response": "{\"affected_facts\":[{\"fact_id\":\"student_dress_code_general_guidance_pe_day__students__0\",\"relevance\":5,\"reason\":\"The fact specifically mentions trainers to be worn on PE days, and this guidance now needs to be updated to apply to any day.\"},{\"fact_id\":\"student_dress_code_general_guidance_footwear__students__0\",\"relevance\":4,\"reason\":\"Although it doesn't explicitly mention PE days, the footwear guidance should be reviewed to ensure it aligns with the new allowance for trainers on any day.\"}]}",
+  "parsed_output": {
+    "affected_facts": [
+      {
+        "fact_id": "student_dress_code_general_guidance_pe_day__students__0",
+        "relevance": 5,
+        "reason": "The fact specifically mentions trainers to be worn on PE days, and this guidance now needs to be updated to apply to any day."
+      },
+      {
+        "fact_id": "student_dress_code_general_guidance_footwear__students__0",
+        "relevance": 4,
+        "reason": "Although it doesn't explicitly mention PE days, the footwear guidance should be reviewed to ensure it aligns with the new allowance for trainers on any day."
+      }
+    ]
+  }
+}

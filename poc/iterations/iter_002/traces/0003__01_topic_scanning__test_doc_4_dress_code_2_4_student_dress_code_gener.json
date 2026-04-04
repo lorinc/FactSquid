@@ -1,0 +1,88 @@
+{
+  "seq": 3,
+  "call_number": 1,
+  "call_name": "topic_scanning",
+  "description": "test_doc_4_dress_code / 2.4. Student Dress Code — General Guidance",
+  "validation": "PASS",
+  "tokens_in": 969,
+  "tokens_out": 871,
+  "latency_s": 5.19,
+  "prompt": "You are a structural analyst extracting topic records from a document section.\n\nFor each paragraph or logical block in the content, output one TopicScanRecord.\n\nRules:\n- ONE record per paragraph or distinct logical block — never merge multiple paragraphs into one record\n- `span_text` MUST be verbatim — never summarise, paraphrase, or rewrite any part of the source text\n- `topic_slug` is built from the base slug below:\n  - Use `student-dress-code-general-guidance` as-is for paragraphs that belong to the main topic of this section\n  - Extend with a suffix ONLY when a paragraph introduces a clearly distinct sub-topic: `student-dress-code-general-guidance/subtopic`\n  - Never invent a slug unrelated to `student-dress-code-general-guidance`\n  - The same sub-topic appearing under a different heading in a different document must produce the same slug\n- `scope_qualifier` — omit (null) unless this specific instance is distinctly scoped: 'students', 'staff', '2024-2025'.\n  The heading may already imply a scope (e.g. \"Student Dress Code\" → 'students') — confirm or refine from paragraph content\n- Orphan preamble (pure rationale, goals, aspirational framing with no policy content) → slug `student-dress-code-general-guidance/principles` or 'skip-candidate'\n\nDocument context:\nSection: 2.4. Student Dress Code — General Guidance\nSource path: Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\nBase slug: student-dress-code-general-guidance\n\nContent:\n**Headwear**\n\n*   Hats will only be worn during playground time to protect from the sun.\n*   Religious headwear may always be worn, provided it does not obscure the student's vision; it must be removed for all PE lessons for health and safety reasons.\n*   Hair can be any length and any style. For PE, long hair must be tied back for safety.\n\n**Footwear**\n\n*   Flat, enclosed shoes must be worn outdoors — comfortable, fastened with laces, buckles, zips, or velcro, and students must be able to put them on and take them off independently.\n*   Indoor shoes must be closed-toe to ensure safe walking; no bulky, furry, or flip-flop styles. Anti-slip socks are also recommended.\n\n**General Everyday Style**\n\n*   Jewellery must not dangle; no hoop earrings or large necklaces (health and safety). On PE days, students must be able to remove stud earrings or other items as required.\n*   Subtle make-up may be worn from Year 7 upwards (e.g., mascara, powder, foundation, nail varnish); no lipstick.\n*   Acrylic nails may not be longer than two millimetres from the fingertip (health and safety).\n*   Shorts and skirts must cover the upper thighs (¾ length or longer). Cycling shorts are permitted on PE days but must also cover the upper thighs.\n*   All clothes must be without holes or rips. All underwear must be covered by outerwear.\n\n**PE Day**\n\n*   Students must wear appropriate sports underwear, shorts/leggings/tracksuit bottoms, a t-shirt or sweatshirt, and trainers.\n\nAs an inclusive school, we ask that our whole community respects these guidelines.",
+  "raw_response": "{\"records\":[{\"topic_slug\":\"student-dress-code-general-guidance/headwear\",\"scope_qualifier\":\"students\",\"span_text\":\"Hats will only be worn during playground time to protect from the sun.\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\"},{\"topic_slug\":\"student-dress-code-general-guidance/headwear\",\"scope_qualifier\":\"students\",\"span_text\":\"Religious headwear may always be worn, provided it does not obscure the student's vision; it must be removed for all PE lessons for health and safety reasons.\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\"},{\"topic_slug\":\"student-dress-code-general-guidance/headwear\",\"scope_qualifier\":\"students\",\"span_text\":\"Hair can be any length and any style. For PE, long hair must be tied back for safety.\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\"},{\"topic_slug\":\"student-dress-code-general-guidance/footwear\",\"scope_qualifier\":\"students\",\"span_text\":\"Flat, enclosed shoes must be worn outdoors — comfortable, fastened with laces, buckles, zips, or velcro, and students must be able to put them on and take them off independently.\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\"},{\"topic_slug\":\"student-dress-code-general-guidance/footwear\",\"scope_qualifier\":\"students\",\"span_text\":\"Indoor shoes must be closed-toe to ensure safe walking; no bulky, furry, or flip-flop styles. Anti-slip socks are also recommended.\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\"},{\"topic_slug\":\"student-dress-code-general-guidance/style\",\"scope_qualifier\":\"students\",\"span_text\":\"Jewellery must not dangle; no hoop earrings or large necklaces (health and safety). On PE days, students must be able to remove stud earrings or other items as required.\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\"},{\"topic_slug\":\"student-dress-code-general-guidance/style\",\"scope_qualifier\":\"students\",\"span_text\":\"Subtle make-up may be worn from Year 7 upwards (e.g., mascara, powder, foundation, nail varnish); no lipstick.\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\"},{\"topic_slug\":\"student-dress-code-general-guidance/style\",\"scope_qualifier\":\"students\",\"span_text\":\"Acrylic nails may not be longer than two millimetres from the fingertip (health and safety).\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\"},{\"topic_slug\":\"student-dress-code-general-guidance/style\",\"scope_qualifier\":\"students\",\"span_text\":\"Shorts and skirts must cover the upper thighs (¾ length or longer). Cycling shorts are permitted on PE days but must also cover the upper thighs.\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\"},{\"topic_slug\":\"student-dress-code-general-guidance/style\",\"scope_qualifier\":\"students\",\"span_text\":\"All clothes must be without holes or rips. All underwear must be covered by outerwear.\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\"},{\"topic_slug\":\"student-dress-code-general-guidance/pe-day\",\"scope_qualifier\":\"students\",\"span_text\":\"Students must wear appropriate sports underwear, shorts/leggings/tracksuit bottoms, a t-shirt or sweatshirt, and trainers.\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\"},{\"topic_slug\":\"student-dress-code-general-guidance/principles\",\"scope_qualifier\":null,\"span_text\":\"As an inclusive school, we ask that our whole community respects these guidelines.\",\"source_path\":\"Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\"}]}",
+  "parsed_output": {
+    "records": [
+      {
+        "topic_slug": "student-dress-code-general-guidance/headwear",
+        "scope_qualifier": "students",
+        "span_text": "Hats will only be worn during playground time to protect from the sun.",
+        "source_path": "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+      },
+      {
+        "topic_slug": "student-dress-code-general-guidance/headwear",
+        "scope_qualifier": "students",
+        "span_text": "Religious headwear may always be worn, provided it does not obscure the student's vision; it must be removed for all PE lessons for health and safety reasons.",
+        "source_path": "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+      },
+      {
+        "topic_slug": "student-dress-code-general-guidance/headwear",
+        "scope_qualifier": "students",
+        "span_text": "Hair can be any length and any style. For PE, long hair must be tied back for safety.",
+        "source_path": "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+      },
+      {
+        "topic_slug": "student-dress-code-general-guidance/footwear",
+        "scope_qualifier": "students",
+        "span_text": "Flat, enclosed shoes must be worn outdoors — comfortable, fastened with laces, buckles, zips, or velcro, and students must be able to put them on and take them off independently.",
+        "source_path": "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+      },
+      {
+        "topic_slug": "student-dress-code-general-guidance/footwear",
+        "scope_qualifier": "students",
+        "span_text": "Indoor shoes must be closed-toe to ensure safe walking; no bulky, furry, or flip-flop styles. Anti-slip socks are also recommended.",
+        "source_path": "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+      },
+      {
+        "topic_slug": "student-dress-code-general-guidance/style",
+        "scope_qualifier": "students",
+        "span_text": "Jewellery must not dangle; no hoop earrings or large necklaces (health and safety). On PE days, students must be able to remove stud earrings or other items as required.",
+        "source_path": "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+      },
+      {
+        "topic_slug": "student-dress-code-general-guidance/style",
+        "scope_qualifier": "students",
+        "span_text": "Subtle make-up may be worn from Year 7 upwards (e.g., mascara, powder, foundation, nail varnish); no lipstick.",
+        "source_path": "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+      },
+      {
+        "topic_slug": "student-dress-code-general-guidance/style",
+        "scope_qualifier": "students",
+        "span_text": "Acrylic nails may not be longer than two millimetres from the fingertip (health and safety).",
+        "source_path": "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+      },
+      {
+        "topic_slug": "student-dress-code-general-guidance/style",
+        "scope_qualifier": "students",
+        "span_text": "Shorts and skirts must cover the upper thighs (¾ length or longer). Cycling shorts are permitted on PE days but must also cover the upper thighs.",
+        "source_path": "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+      },
+      {
+        "topic_slug": "student-dress-code-general-guidance/style",
+        "scope_qualifier": "students",
+        "span_text": "All clothes must be without holes or rips. All underwear must be covered by outerwear.",
+        "source_path": "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+      },
+      {
+        "topic_slug": "student-dress-code-general-guidance/pe-day",
+        "scope_qualifier": "students",
+        "span_text": "Students must wear appropriate sports underwear, shorts/leggings/tracksuit bottoms, a t-shirt or sweatshirt, and trainers.",
+        "source_path": "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+      },
+      {
+        "topic_slug": "student-dress-code-general-guidance/principles",
+        "scope_qualifier": null,
+        "span_text": "As an inclusive school, we ask that our whole community respects these guidelines.",
+        "source_path": "Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance"
+      }
+    ]
+  }
+}

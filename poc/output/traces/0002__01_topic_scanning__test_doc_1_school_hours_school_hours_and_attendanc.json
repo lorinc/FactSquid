@@ -1,0 +1,46 @@
+{
+  "seq": 2,
+  "call_number": 1,
+  "call_name": "topic_scanning",
+  "description": "test_doc_1_school_hours / School Hours and Attendance",
+  "validation": "PASS",
+  "tokens_in": 610,
+  "tokens_out": 372,
+  "latency_s": 2.87,
+  "prompt": "You are a structural analyst extracting topic records from a document section.\n\nFor each paragraph or logical block in the content, output one TopicScanRecord.\n\nRules:\n- ONE record per paragraph or distinct logical block — never merge multiple paragraphs into one record\n- `span_text` MUST be verbatim — never summarise, paraphrase, or rewrite any part of the source text\n- `topic_slug` is built from the base slug below:\n  - Use `school-hours-and-attendance` as-is for paragraphs that belong to the main topic of this section\n  - Extend with a suffix ONLY when a paragraph introduces a clearly distinct sub-topic: `school-hours-and-attendance/subtopic`\n  - Never invent a slug unrelated to `school-hours-and-attendance`\n  - The same sub-topic appearing under a different heading in a different document must produce the same slug\n- `scope_qualifier` — omit (null) unless this specific instance is distinctly scoped: 'students', 'staff', '2024-2025'.\n  The heading may already imply a scope (e.g. \"Student Dress Code\" → 'students') — confirm or refine from paragraph content\n- Orphan preamble (pure rationale, goals, aspirational framing with no policy content) → slug `school-hours-and-attendance/principles` or 'skip-candidate'\n\nDocument context:\nSection: School Hours and Attendance\nSource path: School Hours and Attendance\nBase slug: school-hours-and-attendance\n\nContent:\n**Source**: Imagine Montessori School Valencia — Family Handbook §2.2\n**Audience**: Parents",
+  "raw_response": "{\"records\":[{\"topic_slug\":\"school-hours-and-attendance/principles\",\"scope_qualifier\":null,\"span_text\":\"School attendance is critical for students' academic success and social-emotional learning. Our school is committed to providing a nurturing environment where students can thrive through consistent attendance.\",\"source_path\":\"Imagine Montessori School Valencia — Family Handbook §2.2\"},{\"topic_slug\":\"school-hours-and-attendance\",\"scope_qualifier\":null,\"span_text\":\"Our formal school hours are from 8:30 AM to 3:30 PM, Monday through Friday. We expect all students to arrive on time to start their school day promptly.\",\"source_path\":\"Imagine Montessori School Valencia — Family Handbook §2.2\"},{\"topic_slug\":\"school-hours-and-attendance/early-dismissal\",\"scope_qualifier\":null,\"span_text\":\"Early dismissals are discouraged due to the potential disruption of the learning process. However, we understand that emergencies may occur, and parents should inform the school office in these instances.\",\"source_path\":\"Imagine Montessori School Valencia — Family Handbook §2.2\"},{\"topic_slug\":\"school-hours-and-attendance/late-arrival\",\"scope_qualifier\":null,\"span_text\":\"Students arriving after 8:30 AM must check in at the school office to receive a tardy slip before proceeding to class. Persistent lateness may result in meetings with parents to discuss the impact on the student's performance.\",\"source_path\":\"Imagine Montessori School Valencia — Family Handbook §2.2\"},{\"topic_slug\":\"school-hours-and-attendance/absence\",\"scope_qualifier\":null,\"span_text\":\"In case of absence, parents should call the school office by 9:00 AM to inform us of their child's absence and reason. Documentation may be required for prolonged absences.\",\"source_path\":\"Imagine Montessori School Valencia — Family Handbook §2.2\"}]}",
+  "parsed_output": {
+    "records": [
+      {
+        "topic_slug": "school-hours-and-attendance/principles",
+        "scope_qualifier": null,
+        "span_text": "School attendance is critical for students' academic success and social-emotional learning. Our school is committed to providing a nurturing environment where students can thrive through consistent attendance.",
+        "source_path": "Imagine Montessori School Valencia — Family Handbook §2.2"
+      },
+      {
+        "topic_slug": "school-hours-and-attendance",
+        "scope_qualifier": null,
+        "span_text": "Our formal school hours are from 8:30 AM to 3:30 PM, Monday through Friday. We expect all students to arrive on time to start their school day promptly.",
+        "source_path": "Imagine Montessori School Valencia — Family Handbook §2.2"
+      },
+      {
+        "topic_slug": "school-hours-and-attendance/early-dismissal",
+        "scope_qualifier": null,
+        "span_text": "Early dismissals are discouraged due to the potential disruption of the learning process. However, we understand that emergencies may occur, and parents should inform the school office in these instances.",
+        "source_path": "Imagine Montessori School Valencia — Family Handbook §2.2"
+      },
+      {
+        "topic_slug": "school-hours-and-attendance/late-arrival",
+        "scope_qualifier": null,
+        "span_text": "Students arriving after 8:30 AM must check in at the school office to receive a tardy slip before proceeding to class. Persistent lateness may result in meetings with parents to discuss the impact on the student's performance.",
+        "source_path": "Imagine Montessori School Valencia — Family Handbook §2.2"
+      },
+      {
+        "topic_slug": "school-hours-and-attendance/absence",
+        "scope_qualifier": null,
+        "span_text": "In case of absence, parents should call the school office by 9:00 AM to inform us of their child's absence and reason. Documentation may be required for prolonged absences.",
+        "source_path": "Imagine Montessori School Valencia — Family Handbook §2.2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "seq": 13,
+  "call_number": 1,
+  "call_name": "topic_scanning",
+  "description": "test_doc_4_dress_code / Dress Code Policy — Students and Staff",
+  "validation": "PASS",
+  "tokens_in": 640,
+  "tokens_out": 332,
+  "latency_s": 3.79,
+  "prompt": "You are a structural analyst extracting topic records from a document section.\n\nFor each paragraph or logical block in the content, output one TopicScanRecord.\n\nRules:\n- ONE record per paragraph or distinct logical block — never merge multiple paragraphs into one record\n- `span_text` MUST be verbatim — never summarise, paraphrase, or rewrite any part of the source text\n- `topic_slug` is built from the base slug below:\n  - Use `dress-code-policy-students-and-staff` as-is for paragraphs that belong to the main topic of this section\n  - Extend with a suffix ONLY when a paragraph introduces a clearly distinct sub-topic: `dress-code-policy-students-and-staff/subtopic`\n  - Never invent a slug unrelated to `dress-code-policy-students-and-staff`\n  - The same sub-topic appearing under a different heading in a different document must produce the same slug\n- `scope_qualifier` — omit (null) unless this specific instance is distinctly scoped: 'students', 'staff', '2024-2025'.\n  The heading may already imply a scope (e.g. \"Student Dress Code\" → 'students') — confirm or refine from paragraph content\n- Orphan preamble (pure rationale, goals, aspirational framing with no policy content) → slug `dress-code-policy-students-and-staff/principles` or 'skip-candidate'\n\nDocument context:\nSection: Dress Code Policy — Students and Staff\nSource path: Dress Code Policy — Students and Staff\nBase slug: dress-code-policy-students-and-staff\n\nContent:\n**Source**: Imagine Montessori School Valencia — Code of Conduct §2.4–2.5\n**Audience**: Students, Staff, Parents",
+  "raw_response": "{\"records\":[{\"topic_slug\":\"dress-code-policy-students-and-staff/principles\",\"scope_qualifier\":null,\"span_text\":\"At Imagine Montessori School, a respectful and considerate dress code serves as the foundation for a positive learning environment. Students and staff are encouraged to dress in a manner that supports the school's diverse culture and respects the personal dignity of each individual.\",\"source_path\":\"Dress Code Policy — Students and Staff > Imagine Montessori School Valencia — Code of Conduct §2.4–2.5\"},{\"topic_slug\":\"dress-code-policy-students-and-staff\",\"scope_qualifier\":\"students\",\"span_text\":\"Students should wear uniforms that adhere to the school's guidelines. The uniform should be neat, well-fitting, and include the school's insignia.\",\"source_path\":\"Dress Code Policy — Students and Staff > Imagine Montessori School Valencia — Code of Conduct §2.4–2.5\"},{\"topic_slug\":\"dress-code-policy-students-and-staff\",\"scope_qualifier\":\"staff\",\"span_text\":\"All staff members are expected to maintain a professional appearance. This includes attire that is clean, modest, and appropriate for the educational setting.\",\"source_path\":\"Dress Code Policy — Students and Staff > Imagine Montessori School Valencia — Code of Conduct §2.4–2.5\"},{\"topic_slug\":\"dress-code-policy-students-and-staff/subjewelry\",\"scope_qualifier\":null,\"span_text\":\"Excessive jewelry should be avoided by both students and staff to maintain focus and uphold safety standards.\",\"source_path\":\"Dress Code Policy — Students and Staff > Imagine Montessori School Valencia — Code of Conduct §2.4–2.5\"}]}",
+  "parsed_output": {
+    "records": [
+      {
+        "topic_slug": "dress-code-policy-students-and-staff/principles",
+        "scope_qualifier": null,
+        "span_text": "At Imagine Montessori School, a respectful and considerate dress code serves as the foundation for a positive learning environment. Students and staff are encouraged to dress in a manner that supports the school's diverse culture and respects the personal dignity of each individual.",
+        "source_path": "Dress Code Policy — Students and Staff > Imagine Montessori School Valencia — Code of Conduct §2.4–2.5"
+      },
+      {
+        "topic_slug": "dress-code-policy-students-and-staff",
+        "scope_qualifier": "students",
+        "span_text": "Students should wear uniforms that adhere to the school's guidelines. The uniform should be neat, well-fitting, and include the school's insignia.",
+        "source_path": "Dress Code Policy — Students and Staff > Imagine Montessori School Valencia — Code of Conduct §2.4–2.5"
+      },
+      {
+        "topic_slug": "dress-code-policy-students-and-staff",
+        "scope_qualifier": "staff",
+        "span_text": "All staff members are expected to maintain a professional appearance. This includes attire that is clean, modest, and appropriate for the educational setting.",
+        "source_path": "Dress Code Policy — Students and Staff > Imagine Montessori School Valencia — Code of Conduct §2.4–2.5"
+      },
+      {
+        "topic_slug": "dress-code-policy-students-and-staff/subjewelry",
+        "scope_qualifier": null,
+        "span_text": "Excessive jewelry should be avoided by both students and staff to maintain focus and uphold safety standards.",
+        "source_path": "Dress Code Policy — Students and Staff > Imagine Montessori School Valencia — Code of Conduct §2.4–2.5"
+      }
+    ]
+  }
+}

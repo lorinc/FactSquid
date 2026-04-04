@@ -1,0 +1,29 @@
+{
+  "seq": 24,
+  "call_number": 99,
+  "call_name": "reconstruction_critique",
+  "description": "critique: dress-code-policy-students-and-staff/principles",
+  "validation": "PASS",
+  "tokens_in": 518,
+  "tokens_out": 152,
+  "latency_s": 2.13,
+  "prompt": "Compare a topic document to its reconstruction from extracted facts.\nIdentify specific extraction problems against the Five Tests.\n\nTOPIC DOCUMENT (source of truth):\n━━━\n### Dress Code Policy — Students and Staff\n\nAt Imagine Montessori School Valencia, we believe in fostering a respectful and professional environment. Our dress code reflects the values of discipline, self-respect, and equality, aiming to create a positive atmosphere conducive to learning and personal growth.\n━━━\n\nRECONSTRUCTION (concatenated extracted facts):\n━━━\n## Dress Code Policy Rationale\n\nAt Imagine Montessori School Valencia, fostering a respectful and professional environment is a core value. The dress code reflects the values of discipline, self-respect, and equality, aiming to create a positive atmosphere conducive to learning and personal growth.\n\n━━━\n\nFind up to 4 specific problems. For each, classify as:\n- over-atomized: one logical unit split into too many facts\n- under-atomized: multiple distinct topics merged into one fact\n- missing-content: any obligation, permission, exception, or numerical value absent from reconstruction\n- not-standalone: fails Test 1 — implied \"who\", \"when\", or \"except what\" without stating it explicitly\n- not-canonical: fails Test 4 — navigation language, passive construction, redundant preamble\n- not-template-ready: fails Test 5 — audience-specific or channel-specific framing baked in\n- wrong-tags: topic tags missing or inconsistent with topic_slug\n- other: any other quality issue\n\nQuote exact text from the topic document when describing each problem.\nIf the reconstruction is good, return an empty problems list.",
+  "raw_response": "{\"problems\":[{\"problem_type\":\"wrong-tags\",\"description\":\"The reconstruction is missing the explicit mention that this applies to both 'Students and Staff' as stated at the beginning of the topic document.\"},{\"problem_type\":\"missing-content\",\"description\":\"The reconstruction does not include the explicit mention of 'professional environment' and the specific elements it entails as found at the beginning of the topic document.\"},{\"problem_type\":\"not-canonical\",\"description\":\"The phrase 'fostering a respectful and professional environment is a core value' is less directly reflective of the topic document, which states 'we believe in fostering...' indicating an active commitment.\"}],\"overall\":\"The reconstruction captures the general intention but omits mention of the specific applicability and framing language from the original.\"}",
+  "parsed_output": {
+    "problems": [
+      {
+        "problem_type": "wrong-tags",
+        "description": "The reconstruction is missing the explicit mention that this applies to both 'Students and Staff' as stated at the beginning of the topic document."
+      },
+      {
+        "problem_type": "missing-content",
+        "description": "The reconstruction does not include the explicit mention of 'professional environment' and the specific elements it entails as found at the beginning of the topic document."
+      },
+      {
+        "problem_type": "not-canonical",
+        "description": "The phrase 'fostering a respectful and professional environment is a core value' is less directly reflective of the topic document, which states 'we believe in fostering...' indicating an active commitment."
+      }
+    ],
+    "overall": "The reconstruction captures the general intention but omits mention of the specific applicability and framing language from the original."
+  }
+}

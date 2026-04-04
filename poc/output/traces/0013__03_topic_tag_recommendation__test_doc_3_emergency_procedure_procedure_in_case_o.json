@@ -1,0 +1,48 @@
+{
+  "seq": 13,
+  "call_number": 3,
+  "call_name": "topic_tag_recommendation",
+  "description": "test_doc_3_emergency_procedure/procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child",
+  "validation": "PASS",
+  "tokens_in": 334,
+  "tokens_out": 204,
+  "latency_s": 1.94,
+  "prompt": "Review and update the topic tags for a revised school policy fact.\n\nRevised fact content:\nWhen a child is unaccounted for during a trip abroad, staff must immediately initiate a search of the area while ensuring the safety of other students. In addition to this, they must contact the local police and also notify the local consulate to help in the search efforts.\n\nExisting tags: accident-emergency-procedure\n\nFor each tag decision, provide:\n- action: \"keep\" (still relevant), \"remove\" (no longer relevant), or \"add\" (new topic introduced)\n- tag: the tag name in kebab-case\n- reason: brief explanation\n\nReturn:\n- topic_tags: the final recommended list (keep + add only, not removed tags)\n- tag_changes: one entry per keep/remove/add decision\n\nKeep the tag vocabulary consistent with the existing tags. Only add new tags if the revision genuinely introduces a new topic not already captured.",
+  "raw_response": "{\"topic_tags\":[\"accident-emergency-procedure\",\"missing-student\",\"police-notification\",\"international-consulate\",\"student-safety\"],\"tag_changes\":[{\"action\":\"keep\",\"tag\":\"accident-emergency-procedure\",\"reason\":\"The revision still deals with emergency procedures that arise in an unexpected situation (a missing child).\"},{\"action\":\"add\",\"tag\":\"missing-student\",\"reason\":\"The revision specifically deals with a scenario where a student is unaccounted for, which is a distinct emergency situation.\"},{\"action\":\"add\",\"tag\":\"police-notification\",\"reason\":\"The revised fact involves contacting local police, which is a crucial step in the process.\"},{\"action\":\"add\",\"tag\":\"international-consulate\",\"reason\":\"Notifying and working with an international entity like a consul is a specific new procedure introduced in the revised fact.\"},{\"action\":\"add\",\"tag\":\"student-safety\",\"reason\":\"Ensuring the safety of other students is emphasized in the revised policy, introducing a new safety-related aspect.\"}]}",
+  "parsed_output": {
+    "topic_tags": [
+      "accident-emergency-procedure",
+      "missing-student",
+      "police-notification",
+      "international-consulate",
+      "student-safety"
+    ],
+    "tag_changes": [
+      {
+        "action": "keep",
+        "tag": "accident-emergency-procedure",
+        "reason": "The revision still deals with emergency procedures that arise in an unexpected situation (a missing child)."
+      },
+      {
+        "action": "add",
+        "tag": "missing-student",
+        "reason": "The revision specifically deals with a scenario where a student is unaccounted for, which is a distinct emergency situation."
+      },
+      {
+        "action": "add",
+        "tag": "police-notification",
+        "reason": "The revised fact involves contacting local police, which is a crucial step in the process."
+      },
+      {
+        "action": "add",
+        "tag": "international-consulate",
+        "reason": "Notifying and working with an international entity like a consul is a specific new procedure introduced in the revised fact."
+      },
+      {
+        "action": "add",
+        "tag": "student-safety",
+        "reason": "Ensuring the safety of other students is emphasized in the revised policy, introducing a new safety-related aspect."
+      }
+    ]
+  }
+}

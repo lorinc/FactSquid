@@ -1,0 +1,79 @@
+{
+  "seq": 11,
+  "call_number": 4,
+  "call_name": "fact_extraction",
+  "description": "staff-dress-code/unacceptable-clothing/staff",
+  "validation": "PASS",
+  "tokens_in": 930,
+  "tokens_out": 387,
+  "latency_s": 2.76,
+  "prompt": "You are extracting atomic facts from a topic document.\n\nThe topic document below contains all source text for one specific topic, assembled with provenance headings. Your output must pass all Five Tests.\n\n**Test 1 — Stand-Alone**: A reader with no other facts must fully understand the policy. No implied \"who does this apply to?\", \"when does it apply?\", \"except what?\". Include the subject explicitly in every fact.\n\n**Test 2 — One Topic**: A single noun phrase names the subject. If \"and\" is needed to name the subject, split into two facts.\n\n**Test 3 — Reconstruction**: Concatenating all your facts must be informationally equivalent to the topic document: same obligations, permissions, exceptions, numerical values. No information omitted, none added.\n\n**Test 4 — Canonical Form**: Active voice. No document-navigation language (\"as mentioned in\", \"refer to\", \"see above\", \"this section\"). No redundant preamble (\"it is important to note that\", \"this policy states\", \"please be aware\").\n\n**Test 5 — Template-Slot Ready**: No audience-specific framing baked in (\"as a parent, you should…\", \"staff are reminded that…\"). No channel-specific framing (\"as you read this handbook…\").\n\nInstructions:\n- This is the only pass that writes content — rewrite source text into canonical form\n- Eliminate redundancy across provenance spans (same obligation stated in multiple spans → one fact)\n- Split only at true topic boundaries (when the subject noun phrase changes)\n- `title`: short noun phrase naming the subject of this fact\n- `kind`: assign ONLY for clearly non-policy content — 'rationale', 'principle', or 'context'. Leave null for all policy facts (rules, procedures, fees, contact details, definitions)\n- `topic_tags`: kebab-case tags, consistent with the topic_slug used in grouping\n\nAudience scope: parents, staff, students\nChannel scope: policy-documents, staff-handbook, parent-handbook\n\nTopic document:\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n**Not acceptable:**\n\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n* Mini-skirts, hot pants, or lycra cycling shorts shorter than mid-thigh.\n\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n* Leisure shorts, tracksuits, or sportswear (except for PE and associated activities).\n\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n* Transparent or see-through blouses, dresses, or shirts; low-cut tops; crop-tops; vest/spaghetti-strap tops.\n\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n* Clothing with tears, holes, or rips; clothes bearing offensive logos, slogans, or graphics.\n\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n* Indoor wearing of baseball caps or hats; high-heeled stiletto shoes or beach flip-flops (indoors).\n\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n* Clothes that restrict movement or can snag on equipment (loose pockets, sequins, large buttons).\n\n### Dress Code Policy — Students and Staff > 2.5. Staff Dress Code\n\n* Underwear worn in a revealing manner.",
+  "raw_response": "{\"facts\":[{\"title\":\"Inappropriate short clothing\",\"content\":\"Staff members are not permitted to wear mini-skirts, hot pants, or lycra cycling shorts that are shorter than mid-thigh at work.\",\"kind\":null,\"topic_tags\":[\"dress-code\",\"staff-dress-code\"]},{\"title\":\"Leisure and sportswear\",\"content\":\"Staff members must not wear leisure shorts, tracksuits, or sportswear unless they are participating in Physical Education or related activities.\",\"kind\":null,\"topic_tags\":[\"dress-code\",\"staff-dress-code\"]},{\"title\":\"Inappropriate tops\",\"content\":\"Staff members are prohibited from wearing transparent or see-through blouses, dresses, or shirts. Additionally, low-cut tops, crop-tops, and vest or spaghetti-strap tops are not allowed.\",\"kind\":null,\"topic_tags\":[\"dress-code\",\"staff-dress-code\"]},{\"title\":\"Damaged clothing and offensive graphics\",\"content\":\"Staff members must avoid wearing clothing with tears, holes, or rips and should not wear clothes that bear offensive logos, slogans, or graphics.\",\"kind\":null,\"topic_tags\":[\"dress-code\",\"staff-dress-code\"]},{\"title\":\"Headwear and inappropriate shoes indoors\",\"content\":\"Staff members are not allowed to wear baseball caps, hats, high-heeled stiletto shoes, or beach flip-flops indoors during work hours.\",\"kind\":null,\"topic_tags\":[\"dress-code\",\"staff-dress-code\"]},{\"title\":\"Clothing safety\",\"content\":\"Staff members should avoid wearing clothes that restrict movement or can snag on equipment, such as clothes with loose pockets, sequins, or large buttons.\",\"kind\":null,\"topic_tags\":[\"dress-code\",\"staff-dress-code\"]},{\"title\":\"Proper wearing of underwear\",\"content\":\"Staff members must ensure that their underwear is not worn in a manner that is revealing or inappropriate during work hours.\",\"kind\":null,\"topic_tags\":[\"dress-code\",\"staff-dress-code\"]}]}",
+  "parsed_output": {
+    "facts": [
+      {
+        "title": "Inappropriate short clothing",
+        "content": "Staff members are not permitted to wear mini-skirts, hot pants, or lycra cycling shorts that are shorter than mid-thigh at work.",
+        "kind": null,
+        "topic_tags": [
+          "dress-code",
+          "staff-dress-code"
+        ]
+      },
+      {
+        "title": "Leisure and sportswear",
+        "content": "Staff members must not wear leisure shorts, tracksuits, or sportswear unless they are participating in Physical Education or related activities.",
+        "kind": null,
+        "topic_tags": [
+          "dress-code",
+          "staff-dress-code"
+        ]
+      },
+      {
+        "title": "Inappropriate tops",
+        "content": "Staff members are prohibited from wearing transparent or see-through blouses, dresses, or shirts. Additionally, low-cut tops, crop-tops, and vest or spaghetti-strap tops are not allowed.",
+        "kind": null,
+        "topic_tags": [
+          "dress-code",
+          "staff-dress-code"
+        ]
+      },
+      {
+        "title": "Damaged clothing and offensive graphics",
+        "content": "Staff members must avoid wearing clothing with tears, holes, or rips and should not wear clothes that bear offensive logos, slogans, or graphics.",
+        "kind": null,
+        "topic_tags": [
+          "dress-code",
+          "staff-dress-code"
+        ]
+      },
+      {
+        "title": "Headwear and inappropriate shoes indoors",
+        "content": "Staff members are not allowed to wear baseball caps, hats, high-heeled stiletto shoes, or beach flip-flops indoors during work hours.",
+        "kind": null,
+        "topic_tags": [
+          "dress-code",
+          "staff-dress-code"
+        ]
+      },
+      {
+        "title": "Clothing safety",
+        "content": "Staff members should avoid wearing clothes that restrict movement or can snag on equipment, such as clothes with loose pockets, sequins, or large buttons.",
+        "kind": null,
+        "topic_tags": [
+          "dress-code",
+          "staff-dress-code"
+        ]
+      },
+      {
+        "title": "Proper wearing of underwear",
+        "content": "Staff members must ensure that their underwear is not worn in a manner that is revealing or inappropriate during work hours.",
+        "kind": null,
+        "topic_tags": [
+          "dress-code",
+          "staff-dress-code"
+        ]
+      }
+    ]
+  }
+}

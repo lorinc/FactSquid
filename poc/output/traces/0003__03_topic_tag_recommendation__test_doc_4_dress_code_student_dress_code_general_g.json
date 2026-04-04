@@ -1,0 +1,30 @@
+{
+  "seq": 3,
+  "call_number": 3,
+  "call_name": "topic_tag_recommendation",
+  "description": "test_doc_4_dress_code/student-dress-code-general-guidance/pe-day",
+  "validation": "PASS",
+  "tokens_in": 321,
+  "tokens_out": 79,
+  "latency_s": 1.23,
+  "prompt": "Review and update the topic tags for a revised school policy fact.\n\nRevised fact content:\nStudents must wear appropriate sports underwear, shorts, leggings, tracksuit bottoms, a t-shirt or sweatshirt, and trainers. Additionally, students are now permitted to wear trainers every day, not limited to only PE days.\n\nExisting tags: student-dress-code\n\nFor each tag decision, provide:\n- action: \"keep\" (still relevant), \"remove\" (no longer relevant), or \"add\" (new topic introduced)\n- tag: the tag name in kebab-case\n- reason: brief explanation\n\nReturn:\n- topic_tags: the final recommended list (keep + add only, not removed tags)\n- tag_changes: one entry per keep/remove/add decision\n\nKeep the tag vocabulary consistent with the existing tags. Only add new tags if the revision genuinely introduces a new topic not already captured.",
+  "raw_response": "{\"topic_tags\":[\"student-dress-code\",\"footwear-policy\"],\"tag_changes\":[{\"action\":\"keep\",\"tag\":\"student-dress-code\",\"reason\":\"The revised policy continues to focus on the guidelines for student attire.\"},{\"action\":\"add\",\"tag\":\"footwear-policy\",\"reason\":\"The revision introduces a new rule allowing trainers to be worn every day, extending beyond just PE days.\"}]}",
+  "parsed_output": {
+    "topic_tags": [
+      "student-dress-code",
+      "footwear-policy"
+    ],
+    "tag_changes": [
+      {
+        "action": "keep",
+        "tag": "student-dress-code",
+        "reason": "The revised policy continues to focus on the guidelines for student attire."
+      },
+      {
+        "action": "add",
+        "tag": "footwear-policy",
+        "reason": "The revision introduces a new rule allowing trainers to be worn every day, extending beyond just PE days."
+      }
+    ]
+  }
+}

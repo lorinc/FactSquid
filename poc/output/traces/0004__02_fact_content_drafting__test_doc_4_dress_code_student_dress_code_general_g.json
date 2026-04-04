@@ -1,0 +1,16 @@
+{
+  "seq": 4,
+  "call_number": 2,
+  "call_name": "fact_content_drafting",
+  "description": "test_doc_4_dress_code/student-dress-code-general-guidance/footwear",
+  "validation": "PASS",
+  "tokens_in": 235,
+  "tokens_out": 114,
+  "latency_s": 1.1,
+  "prompt": "Revise a school policy fact to incorporate a specific change request.\n\nChange request:\nUpdate the student dress code: students may now wear trainers on any day, not just PE days.\n\nCurrent fact content:\nStudents must wear flat, enclosed shoes outdoors. The shoes should be comfortable and fastened using laces, buckles, zips, or velcro. Students need to independently put on and take off their shoes.\n\nWrite a revised version that:\n1. Precisely incorporates the requested change\n2. Preserves all existing content not affected by the change\n3. Does not introduce any changes beyond what was explicitly requested\n4. Maintains the same writing style and tone as the original\n5. Does not hallucinate new policies or rules not implied by the change request\n\nAlso write a one-sentence change_summary describing what changed and why.",
+  "raw_response": "{\"revised_content\":\"Students must wear flat, enclosed shoes outdoors. The shoes should be comfortable and fastened using laces, buckles, zips, or velcro. Students need to independently put on and take off their shoes. In addition, students are now permitted to wear trainers on any day, not just PE days. These shoes should also adhere to the requirement of being comfortable, flat, and enclosed.\",\"change_summary\":\"The policy now allows students to wear trainers every day, extending the flexibility beyond just PE days, to provide more comfort and convenience.\"}",
+  "parsed_output": {
+    "revised_content": "Students must wear flat, enclosed shoes outdoors. The shoes should be comfortable and fastened using laces, buckles, zips, or velcro. Students need to independently put on and take off their shoes. In addition, students are now permitted to wear trainers on any day, not just PE days. These shoes should also adhere to the requirement of being comfortable, flat, and enclosed.",
+    "change_summary": "The policy now allows students to wear trainers every day, extending the flexibility beyond just PE days, to provide more comfort and convenience."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "seq": 16,
+  "call_number": 99,
+  "call_name": "reconstruction_critique",
+  "description": "critique: dress-code-policy-students-and-staff/staff",
+  "validation": "PASS",
+  "tokens_in": 519,
+  "tokens_out": 188,
+  "latency_s": 3.86,
+  "prompt": "Compare a topic document to its reconstruction from extracted facts.\nIdentify specific extraction problems against the Five Tests.\n\nTOPIC DOCUMENT (source of truth):\n━━━\n### Dress Code Policy — Students and Staff > Staff Requirements\n\nStaff members are expected to dress in smart casual attire, avoiding overly casual clothing such as ripped jeans or casual t-shirts unless specified for particular events or activities. The school encourages its faculty to model professionalism through their appearance.\n━━━\n\nRECONSTRUCTION (concatenated extracted facts):\n━━━\n## Staff dress code\n\nStaff members must wear smart casual attire. Overly casual clothing, such as ripped jeans or casual t-shirts, is prohibited unless specified for particular events or activities.\n\n## Professionalism modeling\n\nFaculty members are encouraged to model professionalism through their appearance.\n\n━━━\n\nFind up to 4 specific problems. For each, classify as:\n- over-atomized: one logical unit split into too many facts\n- under-atomized: multiple distinct topics merged into one fact\n- missing-content: any obligation, permission, exception, or numerical value absent from reconstruction\n- not-standalone: fails Test 1 — implied \"who\", \"when\", or \"except what\" without stating it explicitly\n- not-canonical: fails Test 4 — navigation language, passive construction, redundant preamble\n- not-template-ready: fails Test 5 — audience-specific or channel-specific framing baked in\n- wrong-tags: topic tags missing or inconsistent with topic_slug\n- other: any other quality issue\n\nQuote exact text from the topic document when describing each problem.\nIf the reconstruction is good, return an empty problems list.",
+  "raw_response": "{\"problems\":[{\"problem_type\":\"missing-content\",\"description\":\"The reconstruction doesn't clearly specify that the dress code is for 'Students and Staff' as stated in 'Dress Code Policy — Students and Staff > Staff Requirements'.\"},{\"problem_type\":\"missing-content\",\"description\":\"The reconstruction omits the encouragement for 'modeling professionalism through their appearance' for all staff specifically, which is highlighted in 'The school encourages its faculty to model professionalism through their appearance.' This implies a broader encouragement but not distinctly for all staff.\"},{\"problem_type\":\"wrong-tags\",\"description\":\"The topic document header 'Dress Code Policy — Students and Staff > Staff Requirements' implies tags for both 'students' and 'staff,' but the reconstruction only addresses 'staff.' Missing 'students' tag indicates a deviation from source alignment.\"}],\"overall\":\"The reconstruction is mostly accurate but lacks certain framing and specification present in the original document, leading to missing context and clarity.\"}",
+  "parsed_output": {
+    "problems": [
+      {
+        "problem_type": "missing-content",
+        "description": "The reconstruction doesn't clearly specify that the dress code is for 'Students and Staff' as stated in 'Dress Code Policy — Students and Staff > Staff Requirements'."
+      },
+      {
+        "problem_type": "missing-content",
+        "description": "The reconstruction omits the encouragement for 'modeling professionalism through their appearance' for all staff specifically, which is highlighted in 'The school encourages its faculty to model professionalism through their appearance.' This implies a broader encouragement but not distinctly for all staff."
+      },
+      {
+        "problem_type": "wrong-tags",
+        "description": "The topic document header 'Dress Code Policy — Students and Staff > Staff Requirements' implies tags for both 'students' and 'staff,' but the reconstruction only addresses 'staff.' Missing 'students' tag indicates a deviation from source alignment."
+      }
+    ],
+    "overall": "The reconstruction is mostly accurate but lacks certain framing and specification present in the original document, leading to missing context and clarity."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "seq": 30,
+  "call_number": 99,
+  "call_name": "reconstruction_critique",
+  "description": "critique: student-dress-code-general-guidance/footwear/stude",
+  "validation": "PASS",
+  "tokens_in": 618,
+  "tokens_out": 32,
+  "latency_s": 1.23,
+  "prompt": "Compare a topic document to its reconstruction from extracted facts.\nIdentify specific extraction problems against the Five Tests.\n\nTOPIC DOCUMENT (source of truth):\n━━━\n### Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\n\nFlat, enclosed shoes must be worn outdoors — comfortable, fastened with laces, buckles, zips, or velcro, and students must be able to put them on and take them off independently.\n\n### Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\n\nIndoor shoes must be closed-toe to ensure safe walking; no bulky, furry, or flip-flop styles. Anti-slip socks are also recommended.\n━━━\n\nRECONSTRUCTION (concatenated extracted facts):\n━━━\n## Outdoor shoe requirement for students\n\nStudents must wear flat, enclosed shoes outdoors. These shoes should be comfortable and fastened with laces, buckles, zips, or velcro. Students must be able to put them on and take them off independently.\n\n## Indoor shoe requirement for students\n\nStudents must wear closed-toe shoes indoors to ensure safe walking. Bulky, furry, or flip-flop styles are not allowed. Anti-slip socks are also recommended.\n\n━━━\n\nFind up to 4 specific problems. For each, classify as:\n- over-atomized: one logical unit split into too many facts\n- under-atomized: multiple distinct topics merged into one fact\n- missing-content: any obligation, permission, exception, or numerical value absent from reconstruction\n- not-standalone: fails Test 1 — implied \"who\", \"when\", or \"except what\" without stating it explicitly\n- not-canonical: fails Test 4 — navigation language, passive construction, redundant preamble\n- not-template-ready: fails Test 5 — audience-specific or channel-specific framing baked in\n- wrong-tags: topic tags missing or inconsistent with topic_slug\n- other: any other quality issue\n\nQuote exact text from the topic document when describing each problem.\nIf the reconstruction is good, return an empty problems list.",
+  "raw_response": "{\"problems\":[],\"overall\":\"The reconstruction accurately captures the dress code requirements for indoor and outdoor shoes, with no significant issues observed across the Five Tests.\"}",
+  "parsed_output": {
+    "problems": [],
+    "overall": "The reconstruction accurately captures the dress code requirements for indoor and outdoor shoes, with no significant issues observed across the Five Tests."
+  }
+}

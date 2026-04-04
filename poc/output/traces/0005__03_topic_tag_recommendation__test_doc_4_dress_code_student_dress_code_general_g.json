@@ -1,0 +1,36 @@
+{
+  "seq": 5,
+  "call_number": 3,
+  "call_name": "topic_tag_recommendation",
+  "description": "test_doc_4_dress_code/student-dress-code-general-guidance/footwear",
+  "validation": "PASS",
+  "tokens_in": 359,
+  "tokens_out": 114,
+  "latency_s": 1.3,
+  "prompt": "Review and update the topic tags for a revised school policy fact.\n\nRevised fact content:\nStudents must wear flat, enclosed shoes outdoors. The shoes should be comfortable and fastened using laces, buckles, zips, or velcro. Students need to independently put on and take off their shoes. In addition, students are now permitted to wear trainers on any day, not just PE days. These shoes should also adhere to the requirement of being comfortable, flat, and enclosed.\n\nExisting tags: dress-code, student-footwear\n\nFor each tag decision, provide:\n- action: \"keep\" (still relevant), \"remove\" (no longer relevant), or \"add\" (new topic introduced)\n- tag: the tag name in kebab-case\n- reason: brief explanation\n\nReturn:\n- topic_tags: the final recommended list (keep + add only, not removed tags)\n- tag_changes: one entry per keep/remove/add decision\n\nKeep the tag vocabulary consistent with the existing tags. Only add new tags if the revision genuinely introduces a new topic not already captured.",
+  "raw_response": "{\"topic_tags\":[\"dress-code\",\"student-footwear\",\"trainers\"],\"tag_changes\":[{\"action\":\"keep\",\"tag\":\"dress-code\",\"reason\":\"The revised policy still addresses aspects of the student dress code, specifically focusing on footwear requirements.\"},{\"action\":\"keep\",\"tag\":\"student-footwear\",\"reason\":\"The primary subject of the policy is related to students' footwear guidelines.\"},{\"action\":\"add\",\"tag\":\"trainers\",\"reason\":\"The revision introduces a new allowance for wearing trainers any day, meaning this specific type of footwear is now relevant to the policy.\"}]}",
+  "parsed_output": {
+    "topic_tags": [
+      "dress-code",
+      "student-footwear",
+      "trainers"
+    ],
+    "tag_changes": [
+      {
+        "action": "keep",
+        "tag": "dress-code",
+        "reason": "The revised policy still addresses aspects of the student dress code, specifically focusing on footwear requirements."
+      },
+      {
+        "action": "keep",
+        "tag": "student-footwear",
+        "reason": "The primary subject of the policy is related to students' footwear guidelines."
+      },
+      {
+        "action": "add",
+        "tag": "trainers",
+        "reason": "The revision introduces a new allowance for wearing trainers any day, meaning this specific type of footwear is now relevant to the policy."
+      }
+    ]
+  }
+}

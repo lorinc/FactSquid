@@ -1,0 +1,29 @@
+{
+  "seq": 35,
+  "call_number": 99,
+  "call_name": "reconstruction_critique",
+  "description": "critique: student-dress-code-general-guidance/principles",
+  "validation": "PASS",
+  "tokens_in": 509,
+  "tokens_out": 162,
+  "latency_s": 2.23,
+  "prompt": "Compare a topic document to its reconstruction from extracted facts.\nIdentify specific extraction problems against the Five Tests.\n\nTOPIC DOCUMENT (source of truth):\n━━━\n### Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\n\nAs an inclusive school, we ask that our whole community respects these guidelines.\n━━━\n\nRECONSTRUCTION (concatenated extracted facts):\n━━━\n## Student Dress Code Policy\n\nThe Student Dress Code Policy requires all students to follow the specified dress code guidelines to promote an inclusive school culture.\n\n## Respect for Dress Code Guidelines\n\nThe Student Dress Code Policy mandates that all members of the school community respect the established dress code guidelines to support a welcoming and inclusive environment.\n\n━━━\n\nFind up to 4 specific problems. For each, classify as:\n- over-atomized: one logical unit split into too many facts\n- under-atomized: multiple distinct topics merged into one fact\n- missing-content: any obligation, permission, exception, or numerical value absent from reconstruction\n- not-standalone: fails Test 1 — implied \"who\", \"when\", or \"except what\" without stating it explicitly\n- not-canonical: fails Test 4 — navigation language, passive construction, redundant preamble\n- not-template-ready: fails Test 5 — audience-specific or channel-specific framing baked in\n- wrong-tags: topic tags missing or inconsistent with topic_slug\n- other: any other quality issue\n\nQuote exact text from the topic document when describing each problem.\nIf the reconstruction is good, return an empty problems list.",
+  "raw_response": "{\"problems\":[{\"problem_type\":\"missing-content\",\"description\":\"The phrase \\\"we ask that our whole community respects these guidelines\\\" is missing from the reconstruction, changing the tone from a request to a mandate.\"},{\"problem_type\":\"not-template-ready\",\"description\":\"The reconstructed sentence \\\"all members of the school community respect the established dress code\\\" could be interpreted as more authoritative than the original intent due to the lack of context from \\\"As an inclusive school, we ask\\\".\"},{\"problem_type\":\"not-canonical\",\"description\":\"The original document opens with the phrase \\\"As an inclusive school,\\\" which sets an important tone that is omitted in the reconstruction, which is more formal and less contextual.\"}],\"overall\":\"The reconstruction misses the original tone and phrasing nuances, implying a more rigid mandate than intended.\"}",
+  "parsed_output": {
+    "problems": [
+      {
+        "problem_type": "missing-content",
+        "description": "The phrase \"we ask that our whole community respects these guidelines\" is missing from the reconstruction, changing the tone from a request to a mandate."
+      },
+      {
+        "problem_type": "not-template-ready",
+        "description": "The reconstructed sentence \"all members of the school community respect the established dress code\" could be interpreted as more authoritative than the original intent due to the lack of context from \"As an inclusive school, we ask\"."
+      },
+      {
+        "problem_type": "not-canonical",
+        "description": "The original document opens with the phrase \"As an inclusive school,\" which sets an important tone that is omitted in the reconstruction, which is more formal and less contextual."
+      }
+    ],
+    "overall": "The reconstruction misses the original tone and phrasing nuances, implying a more rigid mandate than intended."
+  }
+}

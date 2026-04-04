@@ -170,6 +170,7 @@ def make_provider(model_string: str) -> LLMProvider:
 def _result_summary(result: BaseModel) -> str:
     from schemas import (
         AffectedFactIdentificationOutput,
+        DiagnosisOutput,
         FactContentDraftingOutput,
         FactExtractionOutput,
         ScopeInferenceOutput,
@@ -191,6 +192,8 @@ def _result_summary(result: BaseModel) -> str:
         adds = sum(1 for t in result.tag_changes if t.action == "add")
         removes = sum(1 for t in result.tag_changes if t.action == "remove")
         return f"{len(result.topic_tags)} tags ({adds} added, {removes} removed)"
+    if isinstance(result, DiagnosisOutput):
+        return f"{len(result.problems)} problems attributed"
     return "done"
 
 

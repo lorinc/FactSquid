@@ -51,7 +51,7 @@ def process_change_request(
 
     print(f"\nStage 1 — Embedding retrieval (K={K}):")
     for fact, score in candidates:
-        print(f"  {score:.3f} | {fact.source_document}/{fact.source_section}: {fact.content[:80]}...")
+        print(f"  {score:.3f} | {fact.source_document}/{fact.topic_slug}: {fact.content[:80]}...")
 
     candidate_facts = [f for f, _ in candidates]
     candidate_by_id = {f.id: f for f in candidate_facts}
@@ -82,14 +82,14 @@ def process_change_request(
             print(f"  Warning: fact_id {af.fact_id!r} not found in candidates — skipping")
             continue
 
-        print(f"\n  [{af.relevance}/5] {fact.source_document}/{fact.source_section}")
+        print(f"\n  [{af.relevance}/5] {fact.source_document}/{fact.topic_slug}")
         print(f"    Reason: {af.reason}")
         print(f"    Current: {fact.content[:100]}...")
 
         # Call #2 — fact content drafting
         draft_output: FactContentDraftingOutput = llm_call(
             provider, model, 2, "fact_content_drafting",
-            f"{fact.source_document}/{fact.source_section}",
+            f"{fact.source_document}/{fact.topic_slug}",
             render_prompt("fact_content_drafting",
                 change_request=change_request,
                 current_content=fact.content,
@@ -102,7 +102,7 @@ def process_change_request(
         # Call #3 — topic tag recommendation
         tag_output: TopicTagRecommendationOutput = llm_call(
             provider, model, 3, "topic_tag_recommendation",
-            f"{fact.source_document}/{fact.source_section}",
+            f"{fact.source_document}/{fact.topic_slug}",
             render_prompt("topic_tag_recommendation",
                 revised_content=draft_output.revised_content,
                 existing_tags=fact.topic_tags,
@@ -112,7 +112,7 @@ def process_change_request(
 
         proposals.append({
             "fact_id": af.fact_id,
-            "source": f"{fact.source_document}/{fact.source_section}",
+            "source": f"{fact.source_document}/{fact.topic_slug}",
             "relevance": af.relevance,
             "reason": af.reason,
             "original_content": fact.content,

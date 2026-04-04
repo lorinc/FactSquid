@@ -1,0 +1,36 @@
+{
+  "seq": 11,
+  "call_number": 3,
+  "call_name": "topic_tag_recommendation",
+  "description": "test_doc_3_emergency_procedure/procedure-in-case-of-an-accident-or-emergency/lost-or-missing-child",
+  "validation": "PASS",
+  "tokens_in": 317,
+  "tokens_out": 120,
+  "latency_s": 1.95,
+  "prompt": "Review and update the topic tags for a revised school policy fact.\n\nRevised fact content:\nIf the missing child is not found during the initial search, a member of staff is required to contact the Headteacher, call the police if agreed, and also notify the local consulate.\n\nExisting tags: accident-emergency-procedure\n\nFor each tag decision, provide:\n- action: \"keep\" (still relevant), \"remove\" (no longer relevant), or \"add\" (new topic introduced)\n- tag: the tag name in kebab-case\n- reason: brief explanation\n\nReturn:\n- topic_tags: the final recommended list (keep + add only, not removed tags)\n- tag_changes: one entry per keep/remove/add decision\n\nKeep the tag vocabulary consistent with the existing tags. Only add new tags if the revision genuinely introduces a new topic not already captured.",
+  "raw_response": "{\"topic_tags\":[\"accident-emergency-procedure\",\"child-safety-protocol\",\"school-communication-policy\"],\"tag_changes\":[{\"action\":\"keep\",\"tag\":\"accident-emergency-procedure\",\"reason\":\"The procedure still involves an emergency response in the case of a missing child.\"},{\"action\":\"add\",\"tag\":\"child-safety-protocol\",\"reason\":\"The revised fact reinforces safety protocols, highlighting measures to ensure child safety.\"},{\"action\":\"add\",\"tag\":\"school-communication-policy\",\"reason\":\"Clear lines of communication are outlined in the revised procedure, involving school staff and external authorities.\"}]}",
+  "parsed_output": {
+    "topic_tags": [
+      "accident-emergency-procedure",
+      "child-safety-protocol",
+      "school-communication-policy"
+    ],
+    "tag_changes": [
+      {
+        "action": "keep",
+        "tag": "accident-emergency-procedure",
+        "reason": "The procedure still involves an emergency response in the case of a missing child."
+      },
+      {
+        "action": "add",
+        "tag": "child-safety-protocol",
+        "reason": "The revised fact reinforces safety protocols, highlighting measures to ensure child safety."
+      },
+      {
+        "action": "add",
+        "tag": "school-communication-policy",
+        "reason": "Clear lines of communication are outlined in the revised procedure, involving school staff and external authorities."
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "seq": 1,
+  "call_number": 11,
+  "call_name": "scope_inference",
+  "description": "test_doc_1_school_hours",
+  "validation": "PASS",
+  "tokens_in": 428,
+  "tokens_out": 16,
+  "latency_s": 1.94,
+  "prompt": "Determine the audience and channel scope of a school document.\n\nDocument:\n- Filename: test_doc_1_school_hours.md\n- Title: School Hours and Attendance\n- Opening content:\n# School Hours and Attendance\n\n**Source**: Imagine Montessori School Valencia — Family Handbook §2.2\n**Audience**: Parents\n\n## School Hours, Punctuality and Drop-Off / Pick-Up\n\n**School Opening Hours:** 8:00 a.m. - 5:30 p.m.\n**Reception Hours:** 8:45 a.m. - 1:00 p.m. and 2:30 p.m. - 4:55 p.m.\n**Arrival Time:** 8:45 a.m. - 9:00 a.m.\n**Departure Time:** 4:40 p.m. - 4:55 p.m.\n\n**The Importance of Pun\n\nAudience scope — who this document is addressed to (select all that apply):\n- parents: parents and guardians of enrolled students\n- staff: school employees (teachers and support staff)\n- students: enrolled pupils\n- visitors: people visiting the school temporarily\n- applicants: prospective families or job applicants\n- governors: school governors or board members\n\nChannel scope — which communication channels this document belongs to (select all that apply):\n- parent-handbook: the parent-facing handbook or information pack\n- staff-handbook: the staff-facing handbook or policy documentation\n- policy-documents: formal policy documents (not handbooks)\n- newsletter: the school newsletter\n- website: the school's public website\n- chatbot: the school's Q&A chatbot knowledge base\n\nReturn the correct audience_scope and channel_scope lists for this document.\nA document may have multiple audiences and multiple channels.",
+  "raw_response": "{\"audience_scope\":[\"parents\"],\"channel_scope\":[\"parent-handbook\"]}",
+  "parsed_output": {
+    "audience_scope": [
+      "parents"
+    ],
+    "channel_scope": [
+      "parent-handbook"
+    ]
+  }
+}

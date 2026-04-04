@@ -1,0 +1,56 @@
+{
+  "seq": 34,
+  "call_number": 4,
+  "call_name": "fact_extraction",
+  "description": "procedure-in-case-of-an-accident-or-emergency/serious-injuries-or-medical-emergencies",
+  "validation": "PASS",
+  "tokens_in": 837,
+  "tokens_out": 279,
+  "latency_s": 4.1,
+  "prompt": "You are extracting atomic facts from a topic document.\n\nThe topic document below contains all source text for one specific topic, assembled with provenance headings. Your output must pass all Five Tests.\n\n**Test 1 — Stand-Alone**: A reader with no other facts must fully understand the policy. No implied \"who does this apply to?\", \"when does it apply?\", \"except what?\". Include the subject explicitly in every fact.\n\n**Test 2 — One Topic**: A single noun phrase names the subject. If \"and\" is needed to name the subject, split into two facts.\n\n**Test 3 — Reconstruction**: Concatenating all your facts must be informationally equivalent to the topic document: same obligations, permissions, exceptions, numerical values. No information omitted, none added.\n\n**Test 4 — Canonical Form**: Active voice. No document-navigation language (\"as mentioned in\", \"refer to\", \"see above\", \"this section\"). No redundant preamble (\"it is important to note that\", \"this policy states\", \"please be aware\").\n\n**Test 5 — Template-Slot Ready**: No audience-specific framing baked in (\"as a parent, you should…\", \"staff are reminded that…\"). No channel-specific framing (\"as you read this handbook…\").\n\nInstructions:\n- This is the only pass that writes content — rewrite source text into canonical form\n- Eliminate redundancy across provenance spans (same obligation stated in multiple spans → one fact)\n- Split only at true topic boundaries (when the subject noun phrase changes)\n- `title`: short noun phrase naming the subject of this fact\n- `kind`: assign ONLY for clearly non-policy content — 'rationale', 'principle', or 'context'. Leave null for all policy facts (rules, procedures, fees, contact details, definitions)\n- `topic_tags`: kebab-case tags, consistent with the topic_slug used in grouping\n\nAudience scope: staff\nChannel scope: staff-handbook, policy-documents\n\nTopic document:\n### Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\n\nIn the event of a serious injury or medical emergency, staff will immediately call emergency services (112) and follow the instructions provided by the professionals.\n\n### Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\n\nFamily/guardians will be contacted as soon as possible by the designated staff member. A member of school staff will accompany the child to the hospital if necessary and remain with the child until the parent/guardian arrives. (This applies also in the event of an accident abroad.)\n\n### Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\n\nIf the child has a fever or any other symptom that prevents them from enjoying the experience, the family will be contacted to pick them up as soon as possible.\n\n### Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\n\nAll families must agree to the pickup commitment before authorizing the outing.",
+  "raw_response": "{\"facts\":[{\"title\":\"Emergency call for serious injury\",\"content\":\"Staff must immediately call emergency services by dialing 112 in the event of a serious injury or medical emergency and adhere to the instructions given by emergency professionals.\",\"kind\":null,\"topic_tags\":[\"procedure-in-case-of-an-accident-or-emergency\"]},{\"title\":\"Contacting family or guardians\",\"content\":\"A designated staff member must contact the family or guardians as soon as possible after an accident.\",\"kind\":null,\"topic_tags\":[\"procedure-in-case-of-an-accident-or-emergency\"]},{\"title\":\"Accompanying child to hospital\",\"content\":\"A member of the school staff must accompany the child to the hospital and remain with them until the parent or guardian arrives, even for accidents occurring abroad.\",\"kind\":null,\"topic_tags\":[\"procedure-in-case-of-an-accident-or-emergency\"]},{\"title\":\"Pickup for fever or other symptoms\",\"content\":\"If a child displays a fever or symptoms hindering their participation, the family must be contacted to collect the child as soon as possible.\",\"kind\":null,\"topic_tags\":[\"procedure-in-case-of-an-accident-or-emergency\"]},{\"title\":\"Pickup commitment agreement\",\"content\":\"All families must agree to the pickup commitment prior to authorizing a child's participation in an outing.\",\"kind\":null,\"topic_tags\":[\"procedure-in-case-of-an-accident-or-emergency\"]}]}",
+  "parsed_output": {
+    "facts": [
+      {
+        "title": "Emergency call for serious injury",
+        "content": "Staff must immediately call emergency services by dialing 112 in the event of a serious injury or medical emergency and adhere to the instructions given by emergency professionals.",
+        "kind": null,
+        "topic_tags": [
+          "procedure-in-case-of-an-accident-or-emergency"
+        ]
+      },
+      {
+        "title": "Contacting family or guardians",
+        "content": "A designated staff member must contact the family or guardians as soon as possible after an accident.",
+        "kind": null,
+        "topic_tags": [
+          "procedure-in-case-of-an-accident-or-emergency"
+        ]
+      },
+      {
+        "title": "Accompanying child to hospital",
+        "content": "A member of the school staff must accompany the child to the hospital and remain with them until the parent or guardian arrives, even for accidents occurring abroad.",
+        "kind": null,
+        "topic_tags": [
+          "procedure-in-case-of-an-accident-or-emergency"
+        ]
+      },
+      {
+        "title": "Pickup for fever or other symptoms",
+        "content": "If a child displays a fever or symptoms hindering their participation, the family must be contacted to collect the child as soon as possible.",
+        "kind": null,
+        "topic_tags": [
+          "procedure-in-case-of-an-accident-or-emergency"
+        ]
+      },
+      {
+        "title": "Pickup commitment agreement",
+        "content": "All families must agree to the pickup commitment prior to authorizing a child's participation in an outing.",
+        "kind": null,
+        "topic_tags": [
+          "procedure-in-case-of-an-accident-or-emergency"
+        ]
+      }
+    ]
+  }
+}

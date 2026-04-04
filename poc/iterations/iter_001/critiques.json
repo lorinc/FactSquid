@@ -1,0 +1,170 @@
+[
+  {
+    "topic": "dress-code-policy-students-and-staff/staff",
+    "span_count": 1,
+    "fact_count": 2,
+    "overall": "The reconstruction is mostly accurate but lacks certain framing and specification present in the original document, leading to missing context and clarity.",
+    "problems": [
+      {
+        "problem_type": "missing-content",
+        "description": "The reconstruction doesn't clearly specify that the dress code is for 'Students and Staff' as stated in 'Dress Code Policy — Students and Staff > Staff Requirements'."
+      },
+      {
+        "problem_type": "missing-content",
+        "description": "The reconstruction omits the encouragement for 'modeling professionalism through their appearance' for all staff specifically, which is highlighted in 'The school encourages its faculty to model professionalism through their appearance.' This implies a broader encouragement but not distinctly for all staff."
+      },
+      {
+        "problem_type": "wrong-tags",
+        "description": "The topic document header 'Dress Code Policy — Students and Staff > Staff Requirements' implies tags for both 'students' and 'staff,' but the reconstruction only addresses 'staff.' Missing 'students' tag indicates a deviation from source alignment."
+      }
+    ]
+  },
+  {
+    "topic": "dress-code-policy-students-and-staff/students",
+    "span_count": 1,
+    "fact_count": 3,
+    "overall": "The document's reconstruction captures the essential points but overlooks some elements and clarity, especially regarding audience and structural comprehensiveness.",
+    "problems": [
+      {
+        "problem_type": "under-atomized",
+        "description": "The reconstruction combines the school's dress code requirement of 'clean and appropriate attire' under a single heading but does not separate the two elements of cleanliness and appropriateness individually."
+      },
+      {
+        "problem_type": "missing-content",
+        "description": "The reconstruction fails to mention 'staff' as included in the dress code applicability, as stated in the header of the topic document."
+      },
+      {
+        "problem_type": "not-standalone",
+        "description": "The heading 'student dress code adherence' implies the 'who' (students), but lacks explicit mention of any applicable context, potentially confusing readers unfamiliar with the source."
+      },
+      {
+        "problem_type": "not-canonical",
+        "description": "The phrase 'which mandates wearing' in the reconstruction appears passive and less direct compared to the original document, which uses 'which mandates' straightforwardly."
+      }
+    ]
+  },
+  {
+    "topic": "dress-code-policy-students-and-staff/accessories",
+    "span_count": 1,
+    "fact_count": 2,
+    "overall": "The reconstruction effectively captures the essence of the original document but introduces slight alterations and structural deviations.",
+    "problems": [
+      {
+        "problem_type": "missing-content",
+        "description": "The reconstruction contains the main points but misses this exact clause: \"provided they do not disrupt the learning environment or pose safety hazards.\" This is quoted in source document but slightly altered, changing 'pose safety hazards' to 'pose safety risks'."
+      },
+      {
+        "problem_type": "other",
+        "description": "The separation of accessory guidelines and headwear policy creates a logical division that did not exist in the original document, although no direct misinterpretation occurs."
+      }
+    ]
+  },
+  {
+    "topic": "dress-code-policy-students-and-staff/principles",
+    "span_count": 1,
+    "fact_count": 1,
+    "overall": "The reconstruction captures the essence of the topic document but misses some nuanced context and specificity found in the original statement of values.",
+    "problems": [
+      {
+        "problem_type": "not-canonical",
+        "description": "The reconstruction begins with 'The Image Montessori School Valencia implements a dress code policy to foster an environment aligned with values of respect, diversity, and professionalism.' The use of 'implements a dress code policy to foster an environment' involves passive construction and could be more straightforwardly stated.\n\n"
+      },
+      {
+        "problem_type": "not-template-ready",
+        "description": "The reconstruction lacks a focus on a particular audience's needs and uses general phrasing similar to 'aligned with values of respect, diversity, and professionalism.' This could benefit from being more specific to either students or staff."
+      },
+      {
+        "problem_type": "missing-content",
+        "description": "While the reconstruct aligns closely with the source document, the specific phrasing of 'ensuring every individual feels valued and respected while preserving the integrity of our educational setting' suggests an obligation that should be underscored in the reconstruction to underscore the school's commitment.\n\n"
+      },
+      {
+        "problem_type": "other",
+        "description": "The reconstruction does not mention 'Statement of Values' directly, which is important as it positions the dress code policy within a broader context. Including this title would help relate the policy back to the school's core principles and objectives.\n\n"
+      }
+    ]
+  },
+  {
+    "topic": "staff-dress-code/not-acceptable",
+    "span_count": 1,
+    "fact_count": 8,
+    "overall": "The reconstruction captures the main prohibitions but unnecessarily splits them and occasionally omits specific examples.",
+    "problems": [
+      {
+        "problem_type": "over-atomized",
+        "description": "The original document lists 'indoor wearing of baseball caps or hats; high-heeled stiletto shoes or beach flip-flops (indoors)' together under one point, indicating they are related issues. The reconstruction splits these into separate categories: 'Headwear restrictions for staff' and 'Footwear restrictions for staff.' These could have been kept together as they relate to the same context of indoor dress code."
+      },
+      {
+        "problem_type": "missing-content",
+        "description": "The original document specifically mentions 'clothes that restrict movement or can snag on equipment (loose pockets, sequins, large buttons).' The reconstruction generalizes this concern under 'Safety and functionality of staff clothing' without listing the specific examples of 'loose pockets, sequins, and large buttons.' This is a critical safety concern that was outlined in the topic document."
+      },
+      {
+        "problem_type": "not-canonical",
+        "description": "The reconstruction introduces each section with a header like 'Prohibited clothing items for staff' or 'Restrictions on casual wear for staff.' These headers take a narrative approach rather than simple fact declaration, which is more canonical. The topic document only uses bullet points without such introductory text."
+      }
+    ]
+  },
+  {
+    "topic": "staff-dress-code/principles",
+    "span_count": 1,
+    "fact_count": 1,
+    "overall": "The reconstruction adequately represents the source document, accurately conveying the specific dress code requirements for staff without any extraction problems.",
+    "problems": []
+  },
+  {
+    "topic": "student-dress-code-general-guidance/everyday-style/students",
+    "span_count": 5,
+    "fact_count": 5,
+    "overall": "The reconstruction accurately extracts and conveys each significant fact from the original document, maintaining clarity and specificity.",
+    "problems": []
+  },
+  {
+    "topic": "student-dress-code-general-guidance/footwear/students",
+    "span_count": 2,
+    "fact_count": 2,
+    "overall": "The reconstruction accurately captures and reorganizes the key points from the topic document, maintaining clarity and covering all the original content.",
+    "problems": []
+  },
+  {
+    "topic": "student-dress-code-general-guidance/headwear/students",
+    "span_count": 3,
+    "fact_count": 3,
+    "overall": "The reconstruction is mostly accurate but introduces minor audience-specific framing and misalignment in tagging that deviate from the original document's breadth and focus.",
+    "problems": [
+      {
+        "problem_type": "not-template-ready",
+        "description": "### Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\n\nThe reconstruction uses the phrases \"Students and staff\" which were not present in the original topic document text, potentially baking in audience-specific framing not required by the original document. The exact text from the topic document is:\n\n\"Hats will only be worn during playground time to protect from the sun.\""
+      },
+      {
+        "problem_type": "wrong-tags",
+        "description": "The tags \"Students and Staff\" are used in the reconstruction, but the reconstruction primarily focuses on the \"Student Dress Code.\" The specifics of staff regulations are not addressed in the \"Student Dress Code\" passages quoted from the original."
+      }
+    ]
+  },
+  {
+    "topic": "student-dress-code-general-guidance/pe-day/students",
+    "span_count": 1,
+    "fact_count": 1,
+    "overall": "The reconstruction accurately reflects the student clothing requirements from the topic document.",
+    "problems": []
+  },
+  {
+    "topic": "student-dress-code-general-guidance/principles/students",
+    "span_count": 1,
+    "fact_count": 2,
+    "overall": "The reconstruction captures the essence of the original document but misses specific nuances of inclusion and community-wide respect emphasized in the original text.",
+    "problems": [
+      {
+        "problem_type": "missing-content",
+        "description": "The phrase \"we ask that our whole community respects these guidelines\" indicates an inclusive request from the school's side to the community, which is not present in the reconstruction."
+      },
+      {
+        "problem_type": "not-standalone",
+        "description": "The reconstruction mentions 'designated dress code' without elaborating 'who' designates it, 'when' it is designated, or 'where' details can be found, unlike the original which is under a specific policy section."
+      },
+      {
+        "problem_type": "not-canonical",
+        "description": "Original document phrasing 'as an inclusive school' sets context that is turned into a generic 'environment of learning and inclusivity' which misses the direct attribution to the school."
+      }
+    ]
+  }
+]

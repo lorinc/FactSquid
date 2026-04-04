@@ -1,0 +1,36 @@
+{
+  "seq": 8,
+  "call_number": 3,
+  "call_name": "topic_tag_recommendation",
+  "description": "test_doc_1_school_hours/school-hours-punctuality-and-drop-off-pick-up/late-arrivals",
+  "validation": "PASS",
+  "tokens_in": 301,
+  "tokens_out": 97,
+  "latency_s": 1.13,
+  "prompt": "Review and update the topic tags for a revised school policy fact.\n\nRevised fact content:\nA fee of €5 per late arrival will be charged monthly starting from the third late arrival in the school year.\n\nExisting tags: school-hours, attendance\n\nFor each tag decision, provide:\n- action: \"keep\" (still relevant), \"remove\" (no longer relevant), or \"add\" (new topic introduced)\n- tag: the tag name in kebab-case\n- reason: brief explanation\n\nReturn:\n- topic_tags: the final recommended list (keep + add only, not removed tags)\n- tag_changes: one entry per keep/remove/add decision\n\nKeep the tag vocabulary consistent with the existing tags. Only add new tags if the revision genuinely introduces a new topic not already captured.",
+  "raw_response": "{\"topic_tags\":[\"school-hours\",\"attendance\",\"late-fees\"],\"tag_changes\":[{\"action\":\"keep\",\"tag\":\"school-hours\",\"reason\":\"The policy still pertains to school hours since it deals with arrival times.\"},{\"action\":\"keep\",\"tag\":\"attendance\",\"reason\":\"The policy is directly related to attendance, marking late arrivals.\"},{\"action\":\"add\",\"tag\":\"late-fees\",\"reason\":\"The introduction of a monetary charge for late arrivals introduces the new topic of fees.\"}]}",
+  "parsed_output": {
+    "topic_tags": [
+      "school-hours",
+      "attendance",
+      "late-fees"
+    ],
+    "tag_changes": [
+      {
+        "action": "keep",
+        "tag": "school-hours",
+        "reason": "The policy still pertains to school hours since it deals with arrival times."
+      },
+      {
+        "action": "keep",
+        "tag": "attendance",
+        "reason": "The policy is directly related to attendance, marking late arrivals."
+      },
+      {
+        "action": "add",
+        "tag": "late-fees",
+        "reason": "The introduction of a monetary charge for late arrivals introduces the new topic of fees."
+      }
+    ]
+  }
+}

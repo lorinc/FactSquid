@@ -1,0 +1,16 @@
+{
+  "seq": 7,
+  "call_number": 2,
+  "call_name": "fact_content_drafting",
+  "description": "test_doc_1_school_hours/school-hours-punctuality-and-drop-off-pick-up/late-arrivals",
+  "validation": "PASS",
+  "tokens_in": 221,
+  "tokens_out": 58,
+  "latency_s": 0.92,
+  "prompt": "Revise a school policy fact to incorporate a specific change request.\n\nChange request:\nUpdate the late arrival fee threshold: the €5 fee now applies from the third late arrival in the year, not the fifth.\n\nCurrent fact content:\nA fee of €5 per late arrival will be charged monthly starting from the fifth late arrival in the school year.\n\nWrite a revised version that:\n1. Precisely incorporates the requested change\n2. Preserves all existing content not affected by the change\n3. Does not introduce any changes beyond what was explicitly requested\n4. Maintains the same writing style and tone as the original\n5. Does not hallucinate new policies or rules not implied by the change request\n\nAlso write a one-sentence change_summary describing what changed and why.",
+  "raw_response": "{\"revised_content\":\"A fee of €5 per late arrival will be charged monthly starting from the third late arrival in the school year.\",\"change_summary\":\"The threshold for the late arrival fee was changed from the fifth to the third occurrence to reinforce punctuality earlier in the school year.\"}",
+  "parsed_output": {
+    "revised_content": "A fee of €5 per late arrival will be charged monthly starting from the third late arrival in the school year.",
+    "change_summary": "The threshold for the late arrival fee was changed from the fifth to the third occurrence to reinforce punctuality earlier in the school year."
+  }
+}

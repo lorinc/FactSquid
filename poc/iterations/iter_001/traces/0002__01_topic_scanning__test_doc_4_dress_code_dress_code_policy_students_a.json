@@ -1,0 +1,40 @@
+{
+  "seq": 2,
+  "call_number": 1,
+  "call_name": "topic_scanning",
+  "description": "test_doc_4_dress_code / Dress Code Policy — Students and Staff",
+  "validation": "PASS",
+  "tokens_in": 640,
+  "tokens_out": 331,
+  "latency_s": 3.27,
+  "prompt": "You are a structural analyst extracting topic records from a document section.\n\nFor each paragraph or logical block in the content, output one TopicScanRecord.\n\nRules:\n- ONE record per paragraph or distinct logical block — never merge multiple paragraphs into one record\n- `span_text` MUST be verbatim — never summarise, paraphrase, or rewrite any part of the source text\n- `topic_slug` is built from the base slug below:\n  - Use `dress-code-policy-students-and-staff` as-is for paragraphs that belong to the main topic of this section\n  - Extend with a suffix ONLY when a paragraph introduces a clearly distinct sub-topic: `dress-code-policy-students-and-staff/subtopic`\n  - Never invent a slug unrelated to `dress-code-policy-students-and-staff`\n  - The same sub-topic appearing under a different heading in a different document must produce the same slug\n- `scope_qualifier` — omit (null) unless this specific instance is distinctly scoped: 'students', 'staff', '2024-2025'.\n  The heading may already imply a scope (e.g. \"Student Dress Code\" → 'students') — confirm or refine from paragraph content\n- Orphan preamble (pure rationale, goals, aspirational framing with no policy content) → slug `dress-code-policy-students-and-staff/principles` or 'skip-candidate'\n\nDocument context:\nSection: Dress Code Policy — Students and Staff\nSource path: Dress Code Policy — Students and Staff\nBase slug: dress-code-policy-students-and-staff\n\nContent:\n**Source**: Imagine Montessori School Valencia — Code of Conduct §2.4–2.5\n**Audience**: Students, Staff, Parents",
+  "raw_response": "{\"records\":[{\"topic_slug\":\"dress-code-policy-students-and-staff/principles\",\"scope_qualifier\":null,\"span_text\":\"The Image Montessori School Valencia strives to create an environment that reflects the values of respect, diversity, and professionalism. This objective sets the foundation for our dress code policy, ensuring every individual feels valued and respected while preserving the integrity of our educational setting.\",\"source_path\":\"Dress Code Policy — Students and Staff > Statement of Values\"},{\"topic_slug\":\"dress-code-policy-students-and-staff\",\"scope_qualifier\":\"students\",\"span_text\":\"All students are required to adhere to the dress code which mandates clean, appropriate attire that supports an effective learning atmosphere. Shorts and skirts must be of modest length, and clothing with offensive imagery or text is strictly prohibited.\",\"source_path\":\"Dress Code Policy — Students and Staff > Student Requirements\"},{\"topic_slug\":\"dress-code-policy-students-and-staff\",\"scope_qualifier\":\"staff\",\"span_text\":\"Staff members are expected to dress in smart casual attire, avoiding overly casual clothing such as ripped jeans or casual t-shirts unless specified for particular events or activities. The school encourages its faculty to model professionalism through their appearance.\",\"source_path\":\"Dress Code Policy — Students and Staff > Staff Requirements\"},{\"topic_slug\":\"dress-code-policy-students-and-staff/accessories\",\"scope_qualifier\":null,\"span_text\":\"Both students and staff may wear accessories that complement the dress code, provided they do not disrupt the learning environment or pose safety hazards. Headwear should not be worn indoors except for religious or medical purposes.\",\"source_path\":\"Dress Code Policy — Students and Staff > Accessory Guidelines\"}]}",
+  "parsed_output": {
+    "records": [
+      {
+        "topic_slug": "dress-code-policy-students-and-staff/principles",
+        "scope_qualifier": null,
+        "span_text": "The Image Montessori School Valencia strives to create an environment that reflects the values of respect, diversity, and professionalism. This objective sets the foundation for our dress code policy, ensuring every individual feels valued and respected while preserving the integrity of our educational setting.",
+        "source_path": "Dress Code Policy — Students and Staff > Statement of Values"
+      },
+      {
+        "topic_slug": "dress-code-policy-students-and-staff",
+        "scope_qualifier": "students",
+        "span_text": "All students are required to adhere to the dress code which mandates clean, appropriate attire that supports an effective learning atmosphere. Shorts and skirts must be of modest length, and clothing with offensive imagery or text is strictly prohibited.",
+        "source_path": "Dress Code Policy — Students and Staff > Student Requirements"
+      },
+      {
+        "topic_slug": "dress-code-policy-students-and-staff",
+        "scope_qualifier": "staff",
+        "span_text": "Staff members are expected to dress in smart casual attire, avoiding overly casual clothing such as ripped jeans or casual t-shirts unless specified for particular events or activities. The school encourages its faculty to model professionalism through their appearance.",
+        "source_path": "Dress Code Policy — Students and Staff > Staff Requirements"
+      },
+      {
+        "topic_slug": "dress-code-policy-students-and-staff/accessories",
+        "scope_qualifier": null,
+        "span_text": "Both students and staff may wear accessories that complement the dress code, provided they do not disrupt the learning environment or pose safety hazards. Headwear should not be worn indoors except for religious or medical purposes.",
+        "source_path": "Dress Code Policy — Students and Staff > Accessory Guidelines"
+      }
+    ]
+  }
+}

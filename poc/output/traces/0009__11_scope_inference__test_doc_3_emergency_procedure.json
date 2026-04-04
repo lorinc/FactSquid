@@ -1,0 +1,21 @@
+{
+  "seq": 9,
+  "call_number": 11,
+  "call_name": "scope_inference",
+  "description": "test_doc_3_emergency_procedure",
+  "validation": "PASS",
+  "tokens_in": 381,
+  "tokens_out": 20,
+  "latency_s": 0.61,
+  "prompt": "Determine the audience and channel scope of a school document.\n\nDocument:\n- Filename: test_doc_3_emergency_procedure.md\n- Title: Procedure in Case of an Accident or Emergency\n- Opening content:\n# Procedure in Case of an Accident or Emergency\n\n**Source**: Imagine Montessori School Valencia — School Outings Policy §8\n**Audience**: Staff\n\n## Procedure in Case of an Accident or Emergency\n\n*   **Minor Injuries:**\n    *   In case of minor injuries (such as cuts or bruises), first aid will be administered by the staff member trained in first aid. Families will be notified about the incident at \n\nAudience scope — who this document is addressed to (select all that apply):\n- parents: parents and guardians of enrolled students\n- staff: school employees (teachers and support staff)\n- students: enrolled pupils\n- visitors: people visiting the school temporarily\n- applicants: prospective families or job applicants\n- governors: school governors or board members\n\nChannel scope — which communication channels this document belongs to (select all that apply):\n- parent-handbook: the parent-facing handbook or information pack\n- staff-handbook: the staff-facing handbook or policy documentation\n- policy-documents: formal policy documents (not handbooks)\n- newsletter: the school newsletter\n- website: the school's public website\n- chatbot: the school's Q&A chatbot knowledge base\n\nReturn the correct audience_scope and channel_scope lists for this document.\nA document may have multiple audiences and multiple channels.",
+  "raw_response": "{\"audience_scope\":[\"staff\"],\"channel_scope\":[\"staff-handbook\",\"policy-documents\"]}",
+  "parsed_output": {
+    "audience_scope": [
+      "staff"
+    ],
+    "channel_scope": [
+      "staff-handbook",
+      "policy-documents"
+    ]
+  }
+}

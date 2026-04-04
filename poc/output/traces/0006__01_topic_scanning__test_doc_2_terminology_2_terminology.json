@@ -1,0 +1,46 @@
+{
+  "seq": 6,
+  "call_number": 1,
+  "call_name": "topic_scanning",
+  "description": "test_doc_2_terminology / 2. Terminology",
+  "validation": "PASS",
+  "tokens_in": 735,
+  "tokens_out": 324,
+  "latency_s": 2.15,
+  "prompt": "You are a structural analyst extracting topic records from a document section.\n\nFor each paragraph or logical block in the content, output one TopicScanRecord.\n\nRules:\n- ONE record per paragraph or distinct logical block — never merge multiple paragraphs into one record\n- `span_text` MUST be verbatim — never summarise, paraphrase, or rewrite any part of the source text\n- `topic_slug` is built from the base slug below:\n  - Use `terminology` as-is for paragraphs that belong to the main topic of this section\n  - Extend with a suffix ONLY when a paragraph introduces a clearly distinct sub-topic: `terminology/subtopic`\n  - Never invent a slug unrelated to `terminology`\n  - The same sub-topic appearing under a different heading in a different document must produce the same slug\n- `scope_qualifier` — omit (null) unless this specific instance is distinctly scoped: 'students', 'staff', '2024-2025'.\n  The heading may already imply a scope (e.g. \"Student Dress Code\" → 'students') — confirm or refine from paragraph content\n- Orphan preamble (pure rationale, goals, aspirational framing with no policy content) → slug `terminology/principles` or 'skip-candidate'\n\nDocument context:\nSection: 2. Terminology\nSource path: School Outings — Definitions and Principles > 2. Terminology\nBase slug: terminology\n\nContent:\n*   **School Outing:** Any trip organized by the school for educational, cultural, or recreational purposes, typically extending beyond the regular school grounds and outside the classroom.\n*   **Pedagogical Coordinator:** The staff member responsible for ensuring the educational objectives of outings align with the curriculum and the broader goals of the school.\n*   **Risk Assessment:** A process of identifying, evaluating, and mitigating potential risks involved in the outing to ensure the safety and well-being of all participants.\n*   **External Providers:** Outside individuals or organizations providing services or expertise during an outing, such as guides, instructors, or activity leaders.\n*   **Emergency Contact:** A designated individual, typically a family member, who can be reached in case of emergencies involving a student.",
+  "raw_response": "{\"records\":[{\"topic_slug\":\"terminology\",\"scope_qualifier\":null,\"span_text\":\"School Outing: Any trip organized by the school for educational, cultural, or recreational purposes, typically extending beyond the regular school grounds and outside the classroom.\",\"source_path\":\"School Outings — Definitions and Principles > 2. Terminology\"},{\"topic_slug\":\"terminology/pedagogical-coordinator\",\"scope_qualifier\":null,\"span_text\":\"Pedagogical Coordinator: The staff member responsible for ensuring the educational objectives of outings align with the curriculum and the broader goals of the school.\",\"source_path\":\"School Outings — Definitions and Principles > 2. Terminology\"},{\"topic_slug\":\"terminology/risk-assessment\",\"scope_qualifier\":null,\"span_text\":\"Risk Assessment: A process of identifying, evaluating, and mitigating potential risks involved in the outing to ensure the safety and well-being of all participants.\",\"source_path\":\"School Outings — Definitions and Principles > 2. Terminology\"},{\"topic_slug\":\"terminology/external-providers\",\"scope_qualifier\":null,\"span_text\":\"External Providers: Outside individuals or organizations providing services or expertise during an outing, such as guides, instructors, or activity leaders.\",\"source_path\":\"School Outings — Definitions and Principles > 2. Terminology\"},{\"topic_slug\":\"terminology/emergency-contact\",\"scope_qualifier\":null,\"span_text\":\"Emergency Contact: A designated individual, typically a family member, who can be reached in case of emergencies involving a student.\",\"source_path\":\"School Outings — Definitions and Principles > 2. Terminology\"}]}",
+  "parsed_output": {
+    "records": [
+      {
+        "topic_slug": "terminology",
+        "scope_qualifier": null,
+        "span_text": "School Outing: Any trip organized by the school for educational, cultural, or recreational purposes, typically extending beyond the regular school grounds and outside the classroom.",
+        "source_path": "School Outings — Definitions and Principles > 2. Terminology"
+      },
+      {
+        "topic_slug": "terminology/pedagogical-coordinator",
+        "scope_qualifier": null,
+        "span_text": "Pedagogical Coordinator: The staff member responsible for ensuring the educational objectives of outings align with the curriculum and the broader goals of the school.",
+        "source_path": "School Outings — Definitions and Principles > 2. Terminology"
+      },
+      {
+        "topic_slug": "terminology/risk-assessment",
+        "scope_qualifier": null,
+        "span_text": "Risk Assessment: A process of identifying, evaluating, and mitigating potential risks involved in the outing to ensure the safety and well-being of all participants.",
+        "source_path": "School Outings — Definitions and Principles > 2. Terminology"
+      },
+      {
+        "topic_slug": "terminology/external-providers",
+        "scope_qualifier": null,
+        "span_text": "External Providers: Outside individuals or organizations providing services or expertise during an outing, such as guides, instructors, or activity leaders.",
+        "source_path": "School Outings — Definitions and Principles > 2. Terminology"
+      },
+      {
+        "topic_slug": "terminology/emergency-contact",
+        "scope_qualifier": null,
+        "span_text": "Emergency Contact: A designated individual, typically a family member, who can be reached in case of emergencies involving a student.",
+        "source_path": "School Outings — Definitions and Principles > 2. Terminology"
+      }
+    ]
+  }
+}

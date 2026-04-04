@@ -1,0 +1,25 @@
+{
+  "seq": 31,
+  "call_number": 99,
+  "call_name": "reconstruction_critique",
+  "description": "critique: student-dress-code-general-guidance/headwear/stude",
+  "validation": "PASS",
+  "tokens_in": 638,
+  "tokens_out": 150,
+  "latency_s": 1.94,
+  "prompt": "Compare a topic document to its reconstruction from extracted facts.\nIdentify specific extraction problems against the Five Tests.\n\nTOPIC DOCUMENT (source of truth):\n━━━\n### Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\n\nHats will only be worn during playground time to protect from the sun.\n\n### Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\n\nReligious headwear may always be worn, provided it does not obscure the student's vision; it must be removed for all PE lessons for health and safety reasons.\n\n### Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\n\nHair can be any length and any style. For PE, long hair must be tied back for safety.\n━━━\n\nRECONSTRUCTION (concatenated extracted facts):\n━━━\n## Wearing hats during playground time\n\nStudents are permitted to wear hats only during playground time to protect from the sun.\n\n## Religious headwear permissions\n\nStudents may wear religious headwear at all times, provided that it does not obscure their vision. During PE lessons, religious headwear must be removed for health and safety reasons.\n\n## Hair length and style\n\nStudents may have any length and style of hair, but during PE lessons, any long hair must be tied back for safety reasons.\n\n━━━\n\nFind up to 4 specific problems. For each, classify as:\n- over-atomized: one logical unit split into too many facts\n- under-atomized: multiple distinct topics merged into one fact\n- missing-content: any obligation, permission, exception, or numerical value absent from reconstruction\n- not-standalone: fails Test 1 — implied \"who\", \"when\", or \"except what\" without stating it explicitly\n- not-canonical: fails Test 4 — navigation language, passive construction, redundant preamble\n- not-template-ready: fails Test 5 — audience-specific or channel-specific framing baked in\n- wrong-tags: topic tags missing or inconsistent with topic_slug\n- other: any other quality issue\n\nQuote exact text from the topic document when describing each problem.\nIf the reconstruction is good, return an empty problems list.",
+  "raw_response": "{\"problems\":[{\"problem_type\":\"not-canonical\",\"description\":\"The phrase 'Students are permitted to wear hats only during playground time to protect from the sun.' uses a passive construction that is unnecessary. The original could instead use direct language like 'Hats will only be worn during playground time to protect from the sun.'\"},{\"problem_type\":\"not-standalone\",\"description\":\"The statement 'Students may wear religious headwear at all times, provided that it does not obscure their vision.' should explicitly mention 'Religious headwear may always be worn' as it was in the original to avoid any confusion.\"}],\"overall\":\"Most of the essential facts are present and well-organized, with some minor issues in extraction clarity and canonical structure.\"}",
+  "parsed_output": {
+    "problems": [
+      {
+        "problem_type": "not-canonical",
+        "description": "The phrase 'Students are permitted to wear hats only during playground time to protect from the sun.' uses a passive construction that is unnecessary. The original could instead use direct language like 'Hats will only be worn during playground time to protect from the sun.'"
+      },
+      {
+        "problem_type": "not-standalone",
+        "description": "The statement 'Students may wear religious headwear at all times, provided that it does not obscure their vision.' should explicitly mention 'Religious headwear may always be worn' as it was in the original to avoid any confusion."
+      }
+    ],
+    "overall": "Most of the essential facts are present and well-organized, with some minor issues in extraction clarity and canonical structure."
+  }
+}

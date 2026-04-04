@@ -1,4 +1,4 @@
-"""Embedding index for Chain B fact retrieval using sentence-transformers."""
+"""Embedding index for Chain B fact retrieval using OpenAI embeddings API."""
 from __future__ import annotations
 
 import json
@@ -8,7 +8,7 @@ import numpy as np
 
 from schemas import ExtractedFact
 
-EMBED_MODEL = "all-MiniLM-L6-v2"
+EMBED_MODEL = "text-embedding-3-small"
 
 
 class EmbeddingIndex:
@@ -21,17 +21,13 @@ class EmbeddingIndex:
         self.facts = facts
         self.embeddings = embeddings  # shape (n, dim), L2-normalised
         self.model_name = model_name
-        self._model = None
-
-    def _get_model(self):
-        if self._model is None:
-            from sentence_transformers import SentenceTransformer
-            self._model = SentenceTransformer(self.model_name)
-        return self._model
 
     def search(self, query: str, k: int = 10) -> list[tuple[ExtractedFact, float]]:
-        model = self._get_model()
-        q_emb = model.encode([query], normalize_embeddings=True)[0]
+        import openai
+        client = openai.OpenAI()
+        resp = client.embeddings.create(input=[query], model=self.model_name)
+        q_emb = np.array(resp.data[0].embedding)
+        q_emb /= np.linalg.norm(q_emb)
         scores = self.embeddings @ q_emb
         top_idx = np.argsort(scores)[::-1][:k]
         return [(self.facts[i], float(scores[i])) for i in top_idx]
@@ -57,16 +53,19 @@ class EmbeddingIndex:
 
 
 def build_index(facts: list[ExtractedFact], model_name: str = EMBED_MODEL) -> EmbeddingIndex:
-    """Embed all facts and build in-memory cosine-similarity index."""
+    """Embed all facts via OpenAI API and build in-memory cosine-similarity index."""
     try:
-        from sentence_transformers import SentenceTransformer
+        import openai
     except ImportError:
         raise ImportError(
-            "sentence-transformers is required for Chain B.\n"
-            "Install with: pip install sentence-transformers"
+            "openai is required for Chain B.\n"
+            "Install with: pip install openai"
         )
-    model = SentenceTransformer(model_name)
+    client = openai.OpenAI()
     texts = [f.content for f in facts]
     print(f"Embedding {len(texts)} facts with {model_name}...")
-    embeddings = model.encode(texts, normalize_embeddings=True, show_progress_bar=True)
-    return EmbeddingIndex(facts=facts, embeddings=np.array(embeddings), model_name=model_name)
+    resp = client.embeddings.create(input=texts, model=model_name)
+    embeddings = np.array([d.embedding for d in resp.data])
+    norms = np.linalg.norm(embeddings, axis=1, keepdims=True)
+    embeddings = embeddings / norms
+    return EmbeddingIndex(facts=facts, embeddings=embeddings, model_name=model_name)

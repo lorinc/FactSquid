@@ -1,0 +1,25 @@
+{
+  "seq": 18,
+  "call_number": 99,
+  "call_name": "reconstruction_critique",
+  "description": "critique: dress-code-policy-students-and-staff/accessories",
+  "validation": "PASS",
+  "tokens_in": 520,
+  "tokens_out": 123,
+  "latency_s": 1.55,
+  "prompt": "Compare a topic document to its reconstruction from extracted facts.\nIdentify specific extraction problems against the Five Tests.\n\nTOPIC DOCUMENT (source of truth):\n━━━\n### Dress Code Policy — Students and Staff > Accessory Guidelines\n\nBoth students and staff may wear accessories that complement the dress code, provided they do not disrupt the learning environment or pose safety hazards. Headwear should not be worn indoors except for religious or medical purposes.\n━━━\n\nRECONSTRUCTION (concatenated extracted facts):\n━━━\n## Accessory guidelines for students and staff\n\nStudents and staff are allowed to wear accessories that align with the dress code, ensuring they do not disrupt the learning environment or pose safety risks.\n\n## Headwear policy\n\nHeadwear is not permitted indoors unless worn for religious or medical reasons.\n\n━━━\n\nFind up to 4 specific problems. For each, classify as:\n- over-atomized: one logical unit split into too many facts\n- under-atomized: multiple distinct topics merged into one fact\n- missing-content: any obligation, permission, exception, or numerical value absent from reconstruction\n- not-standalone: fails Test 1 — implied \"who\", \"when\", or \"except what\" without stating it explicitly\n- not-canonical: fails Test 4 — navigation language, passive construction, redundant preamble\n- not-template-ready: fails Test 5 — audience-specific or channel-specific framing baked in\n- wrong-tags: topic tags missing or inconsistent with topic_slug\n- other: any other quality issue\n\nQuote exact text from the topic document when describing each problem.\nIf the reconstruction is good, return an empty problems list.",
+  "raw_response": "{\"problems\":[{\"problem_type\":\"missing-content\",\"description\":\"The reconstruction contains the main points but misses this exact clause: \\\"provided they do not disrupt the learning environment or pose safety hazards.\\\" This is quoted in source document but slightly altered, changing 'pose safety hazards' to 'pose safety risks'.\"},{\"problem_type\":\"other\",\"description\":\"The separation of accessory guidelines and headwear policy creates a logical division that did not exist in the original document, although no direct misinterpretation occurs.\"}],\"overall\":\"The reconstruction effectively captures the essence of the original document but introduces slight alterations and structural deviations.\"}",
+  "parsed_output": {
+    "problems": [
+      {
+        "problem_type": "missing-content",
+        "description": "The reconstruction contains the main points but misses this exact clause: \"provided they do not disrupt the learning environment or pose safety hazards.\" This is quoted in source document but slightly altered, changing 'pose safety hazards' to 'pose safety risks'."
+      },
+      {
+        "problem_type": "other",
+        "description": "The separation of accessory guidelines and headwear policy creates a logical division that did not exist in the original document, although no direct misinterpretation occurs."
+      }
+    ],
+    "overall": "The reconstruction effectively captures the essence of the original document but introduces slight alterations and structural deviations."
+  }
+}

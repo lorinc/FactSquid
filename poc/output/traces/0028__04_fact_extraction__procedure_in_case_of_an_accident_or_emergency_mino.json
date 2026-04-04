@@ -1,0 +1,44 @@
+{
+  "seq": 28,
+  "call_number": 4,
+  "call_name": "fact_extraction",
+  "description": "procedure-in-case-of-an-accident-or-emergency/minor-injuries",
+  "validation": "PASS",
+  "tokens_in": 698,
+  "tokens_out": 158,
+  "latency_s": 2.01,
+  "prompt": "You are extracting atomic facts from a topic document.\n\nThe topic document below contains all source text for one specific topic, assembled with provenance headings. Your output must pass all Five Tests.\n\n**Test 1 — Stand-Alone**: A reader with no other facts must fully understand the policy. No implied \"who does this apply to?\", \"when does it apply?\", \"except what?\". Include the subject explicitly in every fact.\n\n**Test 2 — One Topic**: A single noun phrase names the subject. If \"and\" is needed to name the subject, split into two facts.\n\n**Test 3 — Reconstruction**: Concatenating all your facts must be informationally equivalent to the topic document: same obligations, permissions, exceptions, numerical values. No information omitted, none added.\n\n**Test 4 — Canonical Form**: Active voice. No document-navigation language (\"as mentioned in\", \"refer to\", \"see above\", \"this section\"). No redundant preamble (\"it is important to note that\", \"this policy states\", \"please be aware\").\n\n**Test 5 — Template-Slot Ready**: No audience-specific framing baked in (\"as a parent, you should…\", \"staff are reminded that…\"). No channel-specific framing (\"as you read this handbook…\").\n\nInstructions:\n- This is the only pass that writes content — rewrite source text into canonical form\n- Eliminate redundancy across provenance spans (same obligation stated in multiple spans → one fact)\n- Split only at true topic boundaries (when the subject noun phrase changes)\n- `title`: short noun phrase naming the subject of this fact\n- `kind`: assign ONLY for clearly non-policy content — 'rationale', 'principle', or 'context'. Leave null for all policy facts (rules, procedures, fees, contact details, definitions)\n- `topic_tags`: kebab-case tags, consistent with the topic_slug used in grouping\n\nAudience scope: staff\nChannel scope: staff-handbook, policy-documents\n\nTopic document:\n### Procedure in Case of an Accident or Emergency > Procedure in Case of an Accident or Emergency\n\nIn case of minor injuries (such as cuts or bruises), first aid will be administered by the staff member trained in first aid. Families will be notified about the incident at the end of the outing, unless further medical attention is required.",
+  "raw_response": "{\"facts\":[{\"title\":\"first aid provision for minor injuries\",\"content\":\"A staff member trained in first aid will administer first aid in case of minor injuries such as cuts or bruises.\",\"kind\":null,\"topic_tags\":[\"first-aid\",\"accident-procedure\"]},{\"title\":\"notification of families about minor injuries\",\"content\":\"Families will be notified about the incident at the end of the outing if only minor injuries occurred.\",\"kind\":null,\"topic_tags\":[\"family-notification\",\"accident-procedure\"]},{\"title\":\"emergency medical attention requirement\",\"content\":\"If further medical attention is required for an injury, families will be notified immediately, not waiting until the end of the outing.\",\"kind\":null,\"topic_tags\":[\"emergency-response\",\"medical-attention\",\"family-notification\"]}]}",
+  "parsed_output": {
+    "facts": [
+      {
+        "title": "first aid provision for minor injuries",
+        "content": "A staff member trained in first aid will administer first aid in case of minor injuries such as cuts or bruises.",
+        "kind": null,
+        "topic_tags": [
+          "first-aid",
+          "accident-procedure"
+        ]
+      },
+      {
+        "title": "notification of families about minor injuries",
+        "content": "Families will be notified about the incident at the end of the outing if only minor injuries occurred.",
+        "kind": null,
+        "topic_tags": [
+          "family-notification",
+          "accident-procedure"
+        ]
+      },
+      {
+        "title": "emergency medical attention requirement",
+        "content": "If further medical attention is required for an injury, families will be notified immediately, not waiting until the end of the outing.",
+        "kind": null,
+        "topic_tags": [
+          "emergency-response",
+          "medical-attention",
+          "family-notification"
+        ]
+      }
+    ]
+  }
+}

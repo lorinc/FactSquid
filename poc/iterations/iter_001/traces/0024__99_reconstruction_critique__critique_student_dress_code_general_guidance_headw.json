@@ -1,0 +1,25 @@
+{
+  "seq": 24,
+  "call_number": 99,
+  "call_name": "reconstruction_critique",
+  "description": "critique: student-dress-code-general-guidance/headwear/stude",
+  "validation": "PASS",
+  "tokens_in": 633,
+  "tokens_out": 185,
+  "latency_s": 2.26,
+  "prompt": "Compare a topic document to its reconstruction from extracted facts.\nIdentify specific extraction problems against the Five Tests.\n\nTOPIC DOCUMENT (source of truth):\n━━━\n### Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\n\nHats will only be worn during playground time to protect from the sun.\n\n### Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\n\nReligious headwear may always be worn, provided it does not obscure the student's vision; it must be removed for all PE lessons for health and safety reasons.\n\n### Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\n\nHair can be any length and any style. For PE, long hair must be tied back for safety.\n━━━\n\nRECONSTRUCTION (concatenated extracted facts):\n━━━\n## Hats during playground time\n\nStudents and staff are allowed to wear hats during playground time to protect from the sun.\n\n## Religious headwear regulations\n\nStudents may wear religious headwear at all times, provided it does not obscure their vision, but it must be removed during PE lessons for health and safety reasons.\n\n## Hair length and style\n\nStudents can have hair of any length and any style, but long hair must be tied back during PE classes for safety.\n\n━━━\n\nFind up to 4 specific problems. For each, classify as:\n- over-atomized: one logical unit split into too many facts\n- under-atomized: multiple distinct topics merged into one fact\n- missing-content: any obligation, permission, exception, or numerical value absent from reconstruction\n- not-standalone: fails Test 1 — implied \"who\", \"when\", or \"except what\" without stating it explicitly\n- not-canonical: fails Test 4 — navigation language, passive construction, redundant preamble\n- not-template-ready: fails Test 5 — audience-specific or channel-specific framing baked in\n- wrong-tags: topic tags missing or inconsistent with topic_slug\n- other: any other quality issue\n\nQuote exact text from the topic document when describing each problem.\nIf the reconstruction is good, return an empty problems list.",
+  "raw_response": "{\"problems\":[{\"problem_type\":\"not-template-ready\",\"description\":\"### Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\\n\\nThe reconstruction uses the phrases \\\"Students and staff\\\" which were not present in the original topic document text, potentially baking in audience-specific framing not required by the original document. The exact text from the topic document is:\\n\\n\\\"Hats will only be worn during playground time to protect from the sun.\\\"\"},{\"problem_type\":\"wrong-tags\",\"description\":\"The tags \\\"Students and Staff\\\" are used in the reconstruction, but the reconstruction primarily focuses on the \\\"Student Dress Code.\\\" The specifics of staff regulations are not addressed in the \\\"Student Dress Code\\\" passages quoted from the original.\"}],\"overall\":\"The reconstruction is mostly accurate but introduces minor audience-specific framing and misalignment in tagging that deviate from the original document's breadth and focus.\"}",
+  "parsed_output": {
+    "problems": [
+      {
+        "problem_type": "not-template-ready",
+        "description": "### Dress Code Policy — Students and Staff > 2.4. Student Dress Code — General Guidance\n\nThe reconstruction uses the phrases \"Students and staff\" which were not present in the original topic document text, potentially baking in audience-specific framing not required by the original document. The exact text from the topic document is:\n\n\"Hats will only be worn during playground time to protect from the sun.\""
+      },
+      {
+        "problem_type": "wrong-tags",
+        "description": "The tags \"Students and Staff\" are used in the reconstruction, but the reconstruction primarily focuses on the \"Student Dress Code.\" The specifics of staff regulations are not addressed in the \"Student Dress Code\" passages quoted from the original."
+      }
+    ],
+    "overall": "The reconstruction is mostly accurate but introduces minor audience-specific framing and misalignment in tagging that deviate from the original document's breadth and focus."
+  }
+}
